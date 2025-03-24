@@ -1,6 +1,6 @@
-import type { CodeDiff } from '@onlook/models/code';
-import type { TemplateNode } from '@onlook/models/element';
-import { DEFAULT_IDE } from '@onlook/models/ide';
+import type { CodeDiff } from '@analogia/models/code';
+import type { TemplateNode } from '@analogia/models/element';
+import { DEFAULT_IDE } from '@analogia/models/ide';
 import { dialog, shell } from 'electron';
 import { GENERATE_CODE_OPTIONS } from '../run/helpers';
 import { PersistentStorage } from '../storage';

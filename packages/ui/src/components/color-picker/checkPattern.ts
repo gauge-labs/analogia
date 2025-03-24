@@ -5,7 +5,7 @@ export function checkPattern(
     color1: string,
     size: string,
     offsetX = '0px',
-    offsetY = '0px',
+    offsetY = '0px'
 ) {
     return css`
         background-color: ${color0};

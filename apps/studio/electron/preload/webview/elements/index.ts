@@ -1,5 +1,5 @@
-import { EditorAttributes } from '@onlook/models/constants';
-import type { DomElement } from '@onlook/models/element';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { DomElement } from '@analogia/models/element';
 import { getDomElement } from './helpers';
 import { elementFromDomId } from '/common/helpers';
 
@@ -43,8 +43,8 @@ export const updateElementInstance = (domId: string, instanceId: string, compone
         console.warn('Failed to updateElementInstanceId: Element not found');
         return;
     }
-    el.setAttribute(EditorAttributes.DATA_ONLOOK_INSTANCE_ID, instanceId);
-    el.setAttribute(EditorAttributes.DATA_ONLOOK_COMPONENT_NAME, component);
+    el.setAttribute(EditorAttributes.DATA_ANALOGIA_INSTANCE_ID, instanceId);
+    el.setAttribute(EditorAttributes.DATA_ANALOGIA_COMPONENT_NAME, component);
 };
 
 export const getParentElement = (domId: string) => {

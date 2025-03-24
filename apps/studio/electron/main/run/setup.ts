@@ -1,7 +1,7 @@
 import traverse, { NodePath } from '@babel/traverse';
 import * as t from '@babel/types';
-import { EditorAttributes } from '@onlook/models/constants';
-import type { DynamicType, TemplateNode } from '@onlook/models/element';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { DynamicType, TemplateNode } from '@analogia/models/element';
 import { generateCode } from '../code/diff/helpers';
 import { formatContent, readFile } from '../code/files';
 import { parseJsxFile } from '../code/helpers';
@@ -46,7 +46,7 @@ function addIdsToAst(ast: t.File) {
             }
             const attributes = path.node.attributes;
             const existingAttrIndex = attributes.findIndex(
-                (attr: any) => attr.name?.name === EditorAttributes.DATA_ONLOOK_ID,
+                (attr: any) => attr.name?.name === EditorAttributes.DATA_ANALOGIA_ID,
             );
 
             if (existingAttrIndex !== -1) {
@@ -63,7 +63,7 @@ function addIdsToAst(ast: t.File) {
 
             const elementId = generateId();
             const oid = t.jSXAttribute(
-                t.jSXIdentifier(EditorAttributes.DATA_ONLOOK_ID),
+                t.jSXIdentifier(EditorAttributes.DATA_ANALOGIA_ID),
                 t.stringLiteral(elementId),
             );
             attributes.push(oid);
@@ -149,7 +149,7 @@ function createMapping(ast: t.File, filename: string): Record<string, TemplateNo
 
             const attributes = path.node.openingElement.attributes;
             const idAttr = attributes.find(
-                (attr: any) => attr.name?.name === EditorAttributes.DATA_ONLOOK_ID,
+                (attr: any) => attr.name?.name === EditorAttributes.DATA_ANALOGIA_ID,
             );
 
             if (idAttr) {

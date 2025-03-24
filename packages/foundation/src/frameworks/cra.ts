@@ -3,7 +3,7 @@ import {
     CRA_COMMON_FILES,
     DEPENDENCY_NAME,
     FILE_EXTENSION,
-    ONLOOK_PLUGIN,
+    ANALOGIA_PLUGIN,
     PACKAGE_JSON,
 } from '../constants';
 import { exists, genASTParserOptionsByFileExtension, hasDependency } from '../utils';
@@ -26,7 +26,7 @@ const defaultContent = `
 
     module.exports = override(
         ...addBabelPlugins(
-            '${ONLOOK_PLUGIN.WEBPACK}'
+            '${ANALOGIA_PLUGIN.WEBPACK}'
         )
     );
 `;
@@ -54,7 +54,7 @@ export const ensureConfigOverrides = (): void => {
         const ast = parse(fileContent, genASTParserOptionsByFileExtension(FILE_EXTENSION.JS));
 
         let hasCustomizeCraImport = false;
-        let hasOnlookReactPlugin = false;
+        let hasAnalogiaReactPlugin = false;
 
         traverse(ast, {
             ImportDeclaration(path) {
@@ -80,10 +80,10 @@ export const ensureConfigOverrides = (): void => {
                             t.isCallExpression(arg.argument) &&
                             t.isIdentifier(arg.argument.callee, { name: 'addBabelPlugins' }) &&
                             arg.argument.arguments.some((pluginArg) =>
-                                t.isStringLiteral(pluginArg, { value: ONLOOK_PLUGIN.WEBPACK }),
+                                t.isStringLiteral(pluginArg, { value: ANALOGIA_PLUGIN.WEBPACK })
                             )
                         ) {
-                            hasOnlookReactPlugin = true;
+                            hasAnalogiaReactPlugin = true;
                         }
                     });
                 }
@@ -97,18 +97,18 @@ export const ensureConfigOverrides = (): void => {
                         t.objectProperty(t.identifier('override'), t.identifier('override')),
                         t.objectProperty(
                             t.identifier('addBabelPlugins'),
-                            t.identifier('addBabelPlugins'),
+                            t.identifier('addBabelPlugins')
                         ),
                     ]),
                     t.callExpression(t.identifier('require'), [
                         t.stringLiteral(requiredImportSource),
-                    ]),
+                    ])
                 ),
             ]);
             ast.program.body.unshift(requireDeclaration);
         }
 
-        if (!hasOnlookReactPlugin) {
+        if (!hasAnalogiaReactPlugin) {
             traverse(ast, {
                 AssignmentExpression(path) {
                     if (
@@ -120,9 +120,9 @@ export const ensureConfigOverrides = (): void => {
                         path.node.right.arguments.push(
                             t.spreadElement(
                                 t.callExpression(t.identifier('addBabelPlugins'), [
-                                    t.stringLiteral(ONLOOK_PLUGIN.WEBPACK),
-                                ]),
-                            ),
+                                    t.stringLiteral(ANALOGIA_PLUGIN.WEBPACK),
+                                ])
+                            )
                         );
                     }
                 },
@@ -179,7 +179,7 @@ export const modifyStartScript = (): void => {
             } else {
                 packageJSON.scripts[script] = packageJSON.scripts[script].replace(
                     /react-scripts/,
-                    'react-app-rewired',
+                    'react-app-rewired'
                 );
             }
         });

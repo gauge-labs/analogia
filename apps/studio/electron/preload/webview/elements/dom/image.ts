@@ -1,4 +1,4 @@
-import { StyleChangeType } from '@onlook/models/style';
+import { StyleChangeType } from '@analogia/models/style';
 import cssManager from '../../style';
 
 export function insertImage(domId: string, image: string) {

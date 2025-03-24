@@ -7,7 +7,7 @@ export type GetOrganizationParams = {
 export async function getOrganizationQuery(
     { organization_id }: GetOrganizationParams,
     supabase: Client,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (!organization_id) {
         return;
@@ -20,7 +20,7 @@ export async function getOrganizationQuery(
       *,
       users (*, organization_role:users_on_organization(membership_role)),
       projects (*)
-      `,
+      `
         )
         .eq('id', organization_id);
 
@@ -52,7 +52,7 @@ export type GetUserOrganizationsParams = {
 export async function getUserOrganizationsQuery(
     { user_id }: GetUserOrganizationsParams,
     supabase: Client,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (!user_id) {
         throw new Error('user_id is required');
@@ -88,7 +88,7 @@ export type GetOrganizationUsersParams = {
 export async function getOrganizationUsersQuery(
     { organization_id }: GetOrganizationUsersParams,
     supabase: Client,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (!organization_id) {
         throw new Error('organization_id is required');
@@ -128,7 +128,7 @@ export type GetOrganizationUserParams = {
 export async function getOrganizationUserQuery(
     { organization_id, user_id }: GetOrganizationUserParams,
     supabase: Client,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (!organization_id) {
         throw new Error('organization_id is required');

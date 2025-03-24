@@ -1,5 +1,5 @@
 import i18n from '@/i18n';
-import { Language } from '@onlook/models/constants';
+import { Language } from '@analogia/models/constants';
 
 export class LanguageManager {
     constructor() {

@@ -1,11 +1,11 @@
 import { invokeMainChannel, sendAnalytics } from '@/lib/utils';
 import { CreateMethod } from '@/routes/projects/helpers';
-import type { SetupStage } from '@onlook/models';
-import { MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
-import { CardDescription, CardTitle } from '@onlook/ui/card';
-import { Icons } from '@onlook/ui/icons';
-import { Progress } from '@onlook/ui/progress';
+import type { SetupStage } from '@analogia/models';
+import { MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
+import { CardDescription, CardTitle } from '@analogia/ui/card';
+import { Icons } from '@analogia/ui/icons';
+import { Progress } from '@analogia/ui/progress';
 import { AnimatePresence, motion, MotionConfig } from 'motion/react';
 import { useEffect, useState } from 'react';
 import type { StepComponent } from '../withStepProps';
@@ -137,13 +137,13 @@ const LoadSetupProject: StepComponent = ({ props, variant }) => {
 
     function renderDescription(): string | JSX.Element {
         if (state === StepState.INSTALLED) {
-            return 'Open this project in Onlook any time to start designing';
+            return 'Open this project in Analogia any time to start designing';
         }
         if (state === StepState.ERROR) {
             return (
                 <p>
                     {`Please try again or `}
-                    <a href="mailto:support@onlook.com" className="underline">
+                    <a href="mailto:support@analogia.ai" className="underline">
                         {'contact support'}
                     </a>
                     {` for help.`}

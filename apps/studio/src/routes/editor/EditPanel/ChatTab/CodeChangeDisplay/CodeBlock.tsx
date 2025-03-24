@@ -1,5 +1,5 @@
 import { useTheme } from '@/components/ThemeProvider';
-import { cn } from '@onlook/ui/utils';
+import { cn } from '@analogia/ui/utils';
 import { shikiToMonaco } from '@shikijs/monaco/index.mjs';
 import * as monaco from 'monaco-editor';
 import { useEffect, useRef } from 'react';

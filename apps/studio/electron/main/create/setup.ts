@@ -1,4 +1,4 @@
-import { SetupStage, type SetupCallback } from '@onlook/models';
+import { SetupStage, type SetupCallback } from '@analogia/models';
 import { runBunCommand } from '../bun';
 import fs from 'fs';
 import path from 'path';

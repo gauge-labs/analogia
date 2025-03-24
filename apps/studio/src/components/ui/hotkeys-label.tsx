@@ -1,5 +1,5 @@
-import { Kbd } from '@onlook/ui/kbd';
-import { cn } from '@onlook/ui/utils';
+import { Kbd } from '@analogia/ui/kbd';
+import { cn } from '@analogia/ui/utils';
 import type { Hotkey } from '/common/hotkeys';
 
 export function HotKeyLabel({ hotkey, className }: { hotkey: Hotkey; className?: string }) {

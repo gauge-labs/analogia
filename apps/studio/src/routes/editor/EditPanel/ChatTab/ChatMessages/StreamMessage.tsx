@@ -1,5 +1,5 @@
 import { useEditorEngine } from '@/components/Context';
-import { Icons } from '@onlook/ui/icons/index';
+import { Icons } from '@analogia/ui/icons/index';
 import type { AssistantContent } from 'ai';
 import { observer } from 'mobx-react-lite';
 import { MessageContent } from './MessageContent';

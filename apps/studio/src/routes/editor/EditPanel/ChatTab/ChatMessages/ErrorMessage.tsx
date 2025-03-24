@@ -1,6 +1,6 @@
 import { useEditorEngine } from '@/components/Context';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
 import { observer } from 'mobx-react-lite';
 
 export const ErrorMessage = observer(() => {

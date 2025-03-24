@@ -1,6 +1,6 @@
 import { getTruncatedFileName } from '@/lib/utils';
-import { MessageContextType, type ChatMessageContext } from '@onlook/models/chat';
-import { Icons } from '@onlook/ui/icons/index';
+import { MessageContextType, type ChatMessageContext } from '@analogia/models/chat';
+import { Icons } from '@analogia/ui/icons/index';
 import React from 'react';
 import NodeIcon from '../../../LayersPanel/Tree/NodeIcon';
 import { assertNever } from '/common/helpers';

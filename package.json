@@ -1,13 +1,13 @@
 {
-    "name": "@onlook/repo",
+    "name": "@analogia/repo",
     "version": "0.0.0",
-    "description": "Onlook Monorepo",
-    "homepage": "https://onlook.com",
+    "description": "Analogia Monorepo",
+    "homepage": "https://analogia.ai",
     "license": "Apache-2.0",
     "private": true,
     "author": {
-        "name": "Onlook",
-        "email": "contact@onlook.com"
+        "name": "Analogia",
+        "email": "contact@analogia.ai"
     },
     "workspaces": [
         "packages/*",
@@ -15,21 +15,21 @@
         "tooling/*"
     ],
     "scripts": {
-        "build:foundation": "bun --filter @onlook/foundation build",
-        "build:cli": "bun build:foundation && bun --elide-lines 0 --filter onlook typecheck && bun --elide-lines 0 --filter onlook build",
-        "build:studio": "bun build:foundation && bun --elide-lines 0 --filter @onlook/studio build",
+        "build:foundation": "bun --filter @analogia/foundation build",
+        "build:cli": "bun build:foundation && bun --elide-lines 0 --filter analogia typecheck && bun --elide-lines 0 --filter analogia build",
+        "build:studio": "bun build:foundation && bun --elide-lines 0 --filter @analogia/studio build",
         "clean": "git clean -xdf node_modules",
         "clean:workspaces": "bun --elide-lines 0 --filter '*' clean",
-        "db:gen": "bun --elide-lines 0 --filter @onlook/supabase db:gen",
-        "db:gen:local": "bun --elide-lines 0 --filter @onlook/backend db:gen",
-        "dev:foundation": "bun --elide-lines 0 --filter @onlook/foundation dev",
-        "dev:studio": "bun --elide-lines 0 --filter @onlook/studio dev",
+        "db:gen": "bun --elide-lines 0 --filter @analogia/supabase db:gen",
+        "db:gen:local": "bun --elide-lines 0 --filter @analogia/backend db:gen",
+        "dev:foundation": "bun --elide-lines 0 --filter @analogia/foundation dev",
+        "dev:studio": "bun --elide-lines 0 --filter @analogia/studio dev",
         "build": "bun --elide-lines 0 --filter '*' build",
         "ci:build": "bun run build:foundation && bun --filter '*' build",
         "dev": "bun --elide-lines 0 --filter '*' dev",
         "test": "bun --elide-lines 0 --filter '*' test",
-        "format": "bun --elide-lines 0 --filter '*' format",
-        "lint": "bun --elide-lines 0 --filter @onlook/studio lint",
+        "lint": "node -e \"process.stdout.isTTY ? process.exit(0) : process.exit(1)\" && bun --elide-lines 0 --filter @analogia/studio lint || bun --filter @analogia/studio lint",
+        "format": "node -e \"process.stdout.isTTY ? process.exit(0) : process.exit(1)\" && bun --elide-lines 0 --filter '*' format || bun --filter '*' format",
         "typecheck": "bun --elide-lines 0 --filter '*' typecheck",
         "increment_tag": "./scripts/increment_tag.sh",
         "publish_tag": "./scripts/publish_tag.sh",
@@ -39,13 +39,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/onlook-dev/onlook.git"
+        "url": "git+https://github.com/AnalogiaAI/analogia.git"
     },
     "bugs": {
-        "url": "https://github.com/onlook-dev/onlook/issues"
+        "url": "https://github.com/AnalogiaAI/analogia/issues"
     },
     "devDependencies": {
         "extract-zip": "^2.0.1",
-        "husky": "^9.1.6"
+        "husky": "^9.1.6",
+        "prettier": "^3.5.3"
     }
 }

@@ -1,5 +1,5 @@
-import { MainChannels } from '@onlook/models/constants';
-import type { AppState, UserMetadata, UserSettings } from '@onlook/models/settings';
+import { MainChannels } from '@analogia/models/constants';
+import type { AppState, UserMetadata, UserSettings } from '@analogia/models/settings';
 import { ipcMain } from 'electron';
 import mixpanel from '../analytics';
 import { getRefreshedAuthTokens } from '../auth';

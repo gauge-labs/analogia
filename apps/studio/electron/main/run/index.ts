@@ -1,6 +1,6 @@
-import { MainChannels } from '@onlook/models/constants';
-import type { TemplateNode } from '@onlook/models/element';
-import { RunState } from '@onlook/models/run';
+import { MainChannels } from '@analogia/models/constants';
+import type { TemplateNode } from '@analogia/models/element';
+import { RunState } from '@analogia/models/run';
 import { subscribe, type AsyncSubscription } from '@parcel/watcher';
 import { mainWindow } from '..';
 import { sendAnalytics } from '../analytics';

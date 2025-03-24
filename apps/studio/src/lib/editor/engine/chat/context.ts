@@ -7,9 +7,9 @@ import {
     type HighlightMessageContext,
     type ImageMessageContext,
     type ProjectMessageContext,
-} from '@onlook/models/chat';
-import type { DomElement } from '@onlook/models/element';
-import type { ParsedError } from '@onlook/utility';
+} from '@analogia/models/chat';
+import type { DomElement } from '@analogia/models/element';
+import type { ParsedError } from '@analogia/utility';
 import { makeAutoObservable, reaction } from 'mobx';
 import type { EditorEngine } from '..';
 export class ChatContext {

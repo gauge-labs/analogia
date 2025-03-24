@@ -1,6 +1,6 @@
 import { useEditorEngine } from '@/components/Context';
-import { MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
+import { MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
 import { observer } from 'mobx-react-lite';
 import { useCallback } from 'react';
 import type { ReactComponentDescriptor } from '/electron/main/code/components';

@@ -55,7 +55,7 @@ describe('Search and Replace Strategies', () => {
         const result = dmpLinesApply(
             'line1\nline2',
             'line1\nmodified\nline2',
-            'prefix\nline1\nline2\nsuffix',
+            'prefix\nline1\nline2\nsuffix'
         );
         expect(result.success).toBe(true);
         expect(result.text).toBe('prefix\nline1\nmodified\nline2\nsuffix');

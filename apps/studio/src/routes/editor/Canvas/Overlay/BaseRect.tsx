@@ -1,6 +1,6 @@
 import type { RectDimensions } from '@/lib/editor/engine/overlay/rect';
-import { EditorAttributes } from '@onlook/models/constants';
-import { colors } from '@onlook/ui/tokens';
+import { EditorAttributes } from '@analogia/models/constants';
+import { colors } from '@analogia/ui/tokens';
 import React from 'react';
 
 export interface RectProps extends RectDimensions {
@@ -33,8 +33,8 @@ export const BaseRect: React.FC<RectProps> = ({
                 pointerEvents: 'none',
             }}
             className={className}
-            data-onlook-ignore="true"
-            id={EditorAttributes.ONLOOK_RECT_ID}
+            data-analogia-ignore="true"
+            id={EditorAttributes.ANALOGIA_RECT_ID}
         >
             <svg
                 overflow="visible"

@@ -1,6 +1,6 @@
 import type { RectDimensions } from '@/lib/editor/engine/overlay/rect';
 import { adaptValueToCanvas } from '@/lib/editor/engine/overlay/utils';
-import { colors } from '@onlook/ui/tokens';
+import { colors } from '@analogia/ui/tokens';
 import { nanoid } from 'nanoid';
 import { BaseRect } from './BaseRect';
 import { ResizeHandles } from './ResizeHandles';

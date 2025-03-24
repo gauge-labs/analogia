@@ -1,6 +1,6 @@
 {
-    "name": "@onlook/ui",
-    "description": "A ui library for Onlook",
+    "name": "@analogia/ui",
+    "description": "A ui library for Analogia",
     "version": "0.0.0",
     "private": true,
     "type": "module",
@@ -9,7 +9,7 @@
     "types": "src/index.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/onlook-dev/onlook.git"
+        "url": "https://github.com/AnalogiaAI/analogia.git"
     },
     "files": [
         "tokens.ts",
@@ -24,18 +24,18 @@
         "typecheck": "tsc --noEmit"
     },
     "keywords": [
-        "onlook",
+        "analogia",
         "ui"
     ],
     "author": {
-        "name": "Onlook",
-        "email": "contact@onlook.com"
+        "name": "Analogia",
+        "email": "contact@analogia.ai"
     },
     "license": "Apache-2.0",
-    "homepage": "https://onlook.com",
+    "homepage": "https://analogia.ai",
     "devDependencies": {
-        "@onlook/utility": "*",
-        "@onlook/typescript": "*",
+        "@analogia/utility": "*",
+        "@analogia/typescript": "*",
         "@types/color-namer": "^1.3.3",
         "autoprefixer": "^10.4.20",
         "react": "^18.3.1",
@@ -56,7 +56,7 @@
     "dependencies": {
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
-        "@onlook/foundation": "*",
+        "@analogia/foundation": "*",
         "@radix-ui/react-accordion": "^1.2.0",
         "@radix-ui/react-alert-dialog": "^1.1.1",
         "@radix-ui/react-checkbox": "^1.1.2",

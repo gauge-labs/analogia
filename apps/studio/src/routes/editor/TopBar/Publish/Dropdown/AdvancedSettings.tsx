@@ -1,7 +1,7 @@
 import { useEditorEngine } from '@/components/Context';
 import { SettingsTabValue } from '@/lib/models';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
 
 export const AdvancedSettingsSection = () => {
     const editorEngine = useEditorEngine();

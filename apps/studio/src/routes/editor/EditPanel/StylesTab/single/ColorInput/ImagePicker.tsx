@@ -1,13 +1,13 @@
 import { useEditorEngine } from '@/components/Context';
 import type { CompoundStyle } from '@/lib/editor/styles/models';
-import { Button } from '@onlook/ui/button';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
 import { memo, useCallback, useState } from 'react';
 
 enum ImageFit {

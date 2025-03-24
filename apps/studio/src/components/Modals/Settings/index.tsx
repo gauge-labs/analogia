@@ -1,9 +1,9 @@
 import { useEditorEngine, useProjectsManager } from '@/components/Context';
 import { SettingsTabValue } from '@/lib/models';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Separator } from '@onlook/ui/separator';
-import { cn } from '@onlook/ui/utils';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Separator } from '@analogia/ui/separator';
+import { cn } from '@analogia/ui/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
 import AdvancedTab from './Advance';

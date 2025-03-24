@@ -7,33 +7,46 @@ async function downloadBun() {
     // Determine platform and architecture
     const PLATFORM = (() => {
         switch (platform()) {
-            case 'darwin': return 'darwin';
-            case 'linux': return 'linux';
-            case 'win32': return 'win64';
-            default: throw new Error('Unsupported platform');
+            case 'darwin':
+                return 'darwin';
+            case 'linux':
+                return 'linux';
+            case 'win32':
+                return 'win64';
+            default:
+                throw new Error('Unsupported platform');
         }
     })();
 
     // Modified to handle multiple architectures for macOS
-    const ARCHITECTURES = PLATFORM === 'darwin'
-        ? ['x64', 'aarch64']
-        : [(() => {
-            // Check for CI environment variable first
-            const ciArch = process.env.CI_ARCH;
-            if (ciArch) {
-                switch (ciArch) {
-                    case 'x64': return 'x64';
-                    case 'arm64': return 'aarch64';
-                    default: throw new Error('Unsupported CI architecture');
-                }
-            }
-            // Fall back to runtime detection
-            switch (arch()) {
-                case 'x64': return 'x64';
-                case 'arm64': return 'aarch64';
-                default: throw new Error('Unsupported architecture');
-            }
-        })()];
+    const ARCHITECTURES =
+        PLATFORM === 'darwin'
+            ? ['x64', 'aarch64']
+            : [
+                  (() => {
+                      // Check for CI environment variable first
+                      const ciArch = process.env.CI_ARCH;
+                      if (ciArch) {
+                          switch (ciArch) {
+                              case 'x64':
+                                  return 'x64';
+                              case 'arm64':
+                                  return 'aarch64';
+                              default:
+                                  throw new Error('Unsupported CI architecture');
+                          }
+                      }
+                      // Fall back to runtime detection
+                      switch (arch()) {
+                          case 'x64':
+                              return 'x64';
+                          case 'arm64':
+                              return 'aarch64';
+                          default:
+                              throw new Error('Unsupported architecture');
+                      }
+                  })(),
+              ];
 
     const BUN_VERSION = '1.2.5';
     const RESOURCES_DIR = resolve(process.cwd(), 'apps', 'studio', 'resources', 'bun');
@@ -43,16 +56,15 @@ async function downloadBun() {
 
     // Download for each architecture
     for (const ARCH of ARCHITECTURES) {
-        const FILENAME = PLATFORM === 'win64'
-            ? `bun-windows-${ARCH}-baseline.zip`
-            : `bun-${PLATFORM}-${ARCH}.zip`;
+        const FILENAME =
+            PLATFORM === 'win64'
+                ? `bun-windows-${ARCH}-baseline.zip`
+                : `bun-${PLATFORM}-${ARCH}.zip`;
 
         const DOWNLOAD_URL = `https://github.com/oven-sh/bun/releases/download/bun-v${BUN_VERSION}/${FILENAME}`;
         const BUN_EXECUTABLE = join(
             RESOURCES_DIR,
-            PLATFORM === 'win64'
-                ? 'bun.exe'
-                : `bun-${ARCH}`  // Add architecture to the filename
+            PLATFORM === 'win64' ? 'bun.exe' : `bun-${ARCH}` // Add architecture to the filename
         );
 
         // Check if this version is already downloaded

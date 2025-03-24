@@ -1,8 +1,8 @@
 import { useProjectsManager } from '@/components/Context';
-import { PublishStatus } from '@onlook/models/hosting';
-import { DomainType } from '@onlook/models/projects';
-import { Button } from '@onlook/ui/button';
-import { toast } from '@onlook/ui/use-toast';
+import { PublishStatus } from '@analogia/models/hosting';
+import { DomainType } from '@analogia/models/projects';
+import { Button } from '@analogia/ui/button';
+import { toast } from '@analogia/ui/use-toast';
 import { observer } from 'mobx-react-lite';
 
 const DangerZone = observer(() => {

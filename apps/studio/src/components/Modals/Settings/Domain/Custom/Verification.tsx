@@ -4,22 +4,22 @@ import {
     FREESTYLE_IP_ADDRESS,
     FRESTYLE_CUSTOM_HOSTNAME,
     MainChannels,
-} from '@onlook/models/constants';
+} from '@analogia/models/constants';
 import type {
     CreateDomainVerificationResponse,
     VerifyDomainResponse,
-} from '@onlook/models/hosting';
-import { Button } from '@onlook/ui/button';
+} from '@analogia/models/hosting';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Input } from '@onlook/ui/input';
-import { toast } from '@onlook/ui/use-toast';
-import { getValidUrl, isApexDomain } from '@onlook/utility';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Input } from '@analogia/ui/input';
+import { toast } from '@analogia/ui/use-toast';
+import { getValidUrl, isApexDomain } from '@analogia/utility';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
 import { RecordField } from './RecordField';

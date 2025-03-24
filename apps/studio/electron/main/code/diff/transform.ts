@@ -1,7 +1,7 @@
 import traverse, { type NodePath } from '@babel/traverse';
 import type * as t from '@babel/types';
-import { type CodeAction, CodeActionType } from '@onlook/models/actions';
-import type { CodeDiffRequest } from '@onlook/models/code';
+import { type CodeAction, CodeActionType } from '@analogia/models/actions';
+import type { CodeDiffRequest } from '@analogia/models/code';
 import { groupElementsInNode, ungroupElementsInNode } from './group';
 import { getOidFromJsxElement } from './helpers';
 import { insertImageToNode, removeImageFromNode } from './image';

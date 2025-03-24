@@ -2,9 +2,9 @@ import {
     type Change,
     type StyleActionTarget,
     type UpdateStyleAction,
-} from '@onlook/models/actions';
-import type { DomElement } from '@onlook/models/element';
-import { StyleChangeType, type StyleChange } from '@onlook/models/style';
+} from '@analogia/models/actions';
+import type { DomElement } from '@analogia/models/element';
+import { StyleChangeType, type StyleChange } from '@analogia/models/style';
 import { makeAutoObservable, reaction } from 'mobx';
 import type { EditorEngine } from '..';
 

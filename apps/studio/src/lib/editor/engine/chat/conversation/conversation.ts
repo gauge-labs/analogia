@@ -1,5 +1,5 @@
-import { ChatMessageRole, type ChatConversation, type TokenUsage } from '@onlook/models/chat';
-import { MAX_NAME_LENGTH } from '@onlook/models/constants';
+import { ChatMessageRole, type ChatConversation, type TokenUsage } from '@analogia/models/chat';
+import { MAX_NAME_LENGTH } from '@analogia/models/constants';
 import type { CoreMessage } from 'ai';
 import { makeAutoObservable } from 'mobx';
 import { nanoid } from 'nanoid/non-secure';

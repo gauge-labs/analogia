@@ -1,14 +1,14 @@
-import { extractCodeBlocks } from '@onlook/ai/src/coder';
-import { PAGE_SYSTEM_PROMPT, PromptProvider } from '@onlook/ai/src/prompt';
-import { CreateStage, type CreateCallback, type CreateProjectResponse } from '@onlook/models';
+import { extractCodeBlocks } from '@analogia/ai/src/coder';
+import { PAGE_SYSTEM_PROMPT, PromptProvider } from '@analogia/ai/src/prompt';
+import { CreateStage, type CreateCallback, type CreateProjectResponse } from '@analogia/models';
 import {
     StreamRequestType,
     type ErrorStreamResponse,
     type ImageMessageContext,
     type PartialStreamResponse,
     type RateLimitedStreamResponse,
-} from '@onlook/models/chat';
-import { MainChannels } from '@onlook/models/constants';
+} from '@analogia/models/chat';
+import { MainChannels } from '@analogia/models/constants';
 import type { CoreMessage, CoreSystemMessage } from 'ai';
 import fs from 'fs';
 import path from 'path';

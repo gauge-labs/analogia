@@ -1,9 +1,9 @@
 import { useEditorEngine, useProjectsManager } from '@/components/Context';
-import { PublishStatus } from '@onlook/models/hosting';
-import { Button } from '@onlook/ui/button';
-import { DropdownMenuTrigger } from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons/index';
-import { cn } from '@onlook/ui/utils';
+import { PublishStatus } from '@analogia/models/hosting';
+import { Button } from '@analogia/ui/button';
+import { DropdownMenuTrigger } from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons/index';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 
 export const PublishButton = observer(() => {
@@ -34,7 +34,7 @@ export const PublishButton = observer(() => {
 
     const status: PublishStatus = computeStatus();
 
-    let colorClasses = 'border-input bg-background hover:bg-background-onlook text-foreground';
+    let colorClasses = 'border-input bg-background hover:bg-background-analogiagia text-foreground';
     let icon: React.ReactNode | null = <Icons.Globe className="mr-2 h-4 w-4" />;
     let text = 'Publish';
 
@@ -47,7 +47,7 @@ export const PublishButton = observer(() => {
         icon = <Icons.Shadow className="mr-2 h-4 w-4 animate-spin" />;
         text = 'Publishing';
     } else if (status === PublishStatus.UNPUBLISHED) {
-        colorClasses = 'border-input bg-background hover:bg-background-onlook text-foreground';
+        colorClasses = 'border-input bg-background hover:bg-background-analogia text-foreground';
     } else if (status === PublishStatus.ERROR) {
         colorClasses =
             'border-red-500/30 bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 hover:border-red-500';

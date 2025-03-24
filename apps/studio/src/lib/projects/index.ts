@@ -1,6 +1,6 @@
-import { MainChannels } from '@onlook/models/constants';
-import type { Project } from '@onlook/models/projects';
-import type { AppState, ProjectsCache } from '@onlook/models/settings';
+import { MainChannels } from '@analogia/models/constants';
+import type { Project } from '@analogia/models/projects';
+import type { AppState, ProjectsCache } from '@analogia/models/settings';
 import { makeAutoObservable } from 'mobx';
 import { nanoid } from 'nanoid/non-secure';
 import type { EditorEngine } from '../editor/engine';

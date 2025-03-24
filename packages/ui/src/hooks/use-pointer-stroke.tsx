@@ -11,7 +11,7 @@ interface UsePointerStrokeOptions<T extends Element, InitData> {
             deltaX: number;
             deltaY: number;
             initData: InitData;
-        },
+        }
     ) => void;
     onEnd?: (
         e: React.PointerEvent<T>,
@@ -19,7 +19,7 @@ interface UsePointerStrokeOptions<T extends Element, InitData> {
             totalDeltaX: number;
             totalDeltaY: number;
             initData: InitData;
-        },
+        }
     ) => void;
     onHover?: (e: React.PointerEvent<T>) => void;
 }
@@ -34,7 +34,7 @@ interface State<InitData> {
 
 export function usePointerStroke<T extends Element = Element, InitData = void>(
     { onBegin, onMove, onEnd, onHover }: UsePointerStrokeOptions<T, InitData>,
-    deps?: DependencyList,
+    deps?: DependencyList
 ): {
     onPointerDown: (e: React.PointerEvent<T>) => void;
     onPointerMove: (e: React.PointerEvent<T>) => void;
@@ -117,7 +117,7 @@ export function usePointerStroke<T extends Element = Element, InitData = void>(
 
 export function usePointerStrokeCapture<T extends Element = Element, InitData = void>(
     options: UsePointerStrokeOptions<T, InitData>,
-    deps?: DependencyList,
+    deps?: DependencyList
 ): {
     onPointerDownCapture: (e: React.PointerEvent<T>) => void;
     onPointerMoveCapture: (e: React.PointerEvent<T>) => void;

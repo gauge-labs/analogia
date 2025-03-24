@@ -5,17 +5,17 @@ import { useTheme } from '@/components/ThemeProvider';
 import { SettingsTabValue } from '@/lib/models';
 import { ProjectTabs } from '@/lib/projects';
 import { CreateState } from '@/lib/projects/create';
-import { Theme } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
+import { Theme } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@onlook/ui/tooltip';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@analogia/ui/tooltip';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -135,7 +135,7 @@ export const PromptCreation = observer(({ initialScreen = false }: { initialScre
                                     <DropdownMenuContent align="end">
                                         <DropdownMenuItem
                                             onClick={() =>
-                                                window.open('https://onlook.com/', '_blank')
+                                                window.open('https://analogia.ai/', '_blank')
                                             }
                                         >
                                             {t('projects.actions.about')}

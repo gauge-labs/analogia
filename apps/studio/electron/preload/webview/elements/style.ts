@@ -1,4 +1,4 @@
-import { jsonClone } from '@onlook/utility';
+import { jsonClone } from '@analogia/utility';
 import { elementFromDomId } from '/common/helpers';
 
 export function getStyles(element: HTMLElement): {

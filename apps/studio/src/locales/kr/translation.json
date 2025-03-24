@@ -15,12 +15,12 @@
                 "load": "기존 프로젝트 불러오기"
             },
             "loading": {
-                "title": "새 Onlook 앱 설정 중입니다...",
+                "title": "새 Analogia 앱 설정 중입니다...",
                 "description": "몇 초 정도 걸릴 수 있습니다.",
                 "cancel": "취소"
             },
             "error": {
-                "title": "Onlook 앱 생성 중 오류가 발생했습니다.",
+                "title": "Analogia 앱 생성 중 오류가 발생했습니다.",
                 "backToPrompt": "프롬프트로 돌아가기"
             }
         },
@@ -35,7 +35,7 @@
         "actions": {
             "import": "가져오기",
             "close": "닫기",
-            "about": "Onlook 소개",
+            "about": "Analogia 소개",
             "signOut": "로그아웃",
             "editApp": "앱 편집",
             "projectSettings": "프로젝트 설정",
@@ -77,9 +77,9 @@
         }
     },
     "welcome": {
-        "title": "Onlook에 오신 것을 환영합니다",
-        "titleReturn": "Onlook에 다시 오신 것을 환영합니다",
-        "description": "Onlook은 React 앱을 위한 오픈소스 비주얼 에디터입니다. 라이브 제품에서 직접 디자인하세요.",
+        "title": "Analogia에 오신 것을 환영합니다",
+        "titleReturn": "Analogia에 다시 오신 것을 환영합니다",
+        "description": "Analogia은 React 앱을 위한 오픈소스 비주얼 에디터입니다. 라이브 제품에서 직접 디자인하세요.",
         "alpha": "알파",
         "login": {
             "github": "GitHub으로 로그인",
@@ -97,7 +97,7 @@
     "pricing": {
         "plans": {
             "basic": {
-                "name": "Onlook 베이직",
+                "name": "Analogia 베이직",
                 "price": "$0/월",
                 "description": "코드로 쉽게 프로토타입을 만들고 실험해보세요.",
                 "features": [
@@ -109,7 +109,7 @@
                 ]
             },
             "pro": {
-                "name": "Onlook 프로",
+                "name": "Analogia 프로",
                 "price": "$20/월",
                 "description": "창의성의 한계를 넘어서다. AI로 멋진 사이트를 만들어보세요.",
                 "features": [
@@ -117,8 +117,8 @@
                     "무제한 프로젝트",
                     "매일 무제한 AI 채팅 메시지",
                     "월 무제한 채팅",
-                    "Onlook 워터마크 제거",
-                    "Onlook에서 호스팅되는 1개의 무료 사용자 지정 도메인",
+                    "Analogia 워터마크 제거",
+                    "Analogia에서 호스팅되는 1개의 무료 사용자 지정 도메인",
                     "우선 지원 서비스"
                 ]
             }
@@ -290,7 +290,7 @@
     },
     "help": {
         "menu": {
-            "reloadOnlook": "Onlook 새로고침",
+            "reloadAnalogia": "Analogia 새로고침",
             "theme": {
                 "title": "테마",
                 "light": "라이트",

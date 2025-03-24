@@ -1,7 +1,7 @@
 import pkg from 'electron-updater';
 const { autoUpdater } = pkg;
 
-import { MainChannels } from '@onlook/models/constants';
+import { MainChannels } from '@analogia/models/constants';
 import log from 'electron-log';
 import { mainWindow } from '..';
 

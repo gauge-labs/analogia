@@ -1,6 +1,6 @@
 import traverse, { NodePath } from '@babel/traverse';
 import * as t from '@babel/types';
-import { EditorAttributes } from '@onlook/models/constants';
+import { EditorAttributes } from '@analogia/models/constants';
 import { generateCode } from '../code/diff/helpers';
 import { formatContent, readFile, writeFile } from '../code/files';
 import { parseJsxFile } from '../code/helpers';
@@ -47,7 +47,7 @@ export function removeIdsFromAst(ast: t.File) {
             }
             const attributes = path.node.attributes;
             const existingAttrIndex = attributes.findIndex(
-                (attr: any) => attr.name?.name === EditorAttributes.DATA_ONLOOK_ID,
+                (attr: any) => attr.name?.name === EditorAttributes.DATA_ANALOGIA_ID,
             );
 
             if (existingAttrIndex !== -1) {
@@ -59,7 +59,7 @@ export function removeIdsFromAst(ast: t.File) {
                 const value = path.node.value;
                 if (
                     t.isStringLiteral(value) &&
-                    value.value.startsWith(EditorAttributes.ONLOOK_MOVE_KEY_PREFIX)
+                    value.value.startsWith(EditorAttributes.ANALOGIA_MOVE_KEY_PREFIX)
                 ) {
                     return path.remove();
                 }

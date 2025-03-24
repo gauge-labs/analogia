@@ -4,7 +4,7 @@ import {
     type PropsParsingResult,
     PropsType,
     type TemplateNode,
-} from '@onlook/models/element';
+} from '@analogia/models/element';
 import { readCodeBlock } from '.';
 import { parseJsxCodeBlock } from './helpers';
 

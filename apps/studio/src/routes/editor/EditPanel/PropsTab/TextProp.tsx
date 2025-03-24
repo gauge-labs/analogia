@@ -1,5 +1,5 @@
-import { PropsType } from '@onlook/models/element';
-import { Input } from '@onlook/ui/input';
+import { PropsType } from '@analogia/models/element';
+import { Input } from '@analogia/ui/input';
 import type { Prop } from '.';
 interface TextPropProps {
     prop: Prop;

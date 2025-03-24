@@ -1,5 +1,5 @@
-import { MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
+import { MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
 import {
     Card,
     CardContent,
@@ -7,9 +7,9 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from '@onlook/ui/card';
-import { Input } from '@onlook/ui/input';
-import { Label } from '@onlook/ui/label';
+} from '@analogia/ui/card';
+import { Input } from '@analogia/ui/input';
+import { Label } from '@analogia/ui/label';
 import type { StepProps } from '..';
 import { getRandomPlaceholder } from '../../../helpers';
 import { invokeMainChannel } from '@/lib/utils';
@@ -36,7 +36,7 @@ export const LoadNameProject = ({
                 <CardTitle>{'Let’s name your project'}</CardTitle>
                 <CardDescription>
                     {
-                        "This is your Onlook project name. Don't worry, This will not rename your actual folder."
+                        "This is your Analogia project name. Don't worry, This will not rename your actual folder."
                     }
                 </CardDescription>
             </CardHeader>
@@ -52,7 +52,7 @@ export const LoadNameProject = ({
                 </div>
             </CardContent>
             <CardFooter className="text-sm">
-                <p className="text-foreground-onlook">{`${currentStep + 1} of ${totalSteps}`}</p>
+                <p className="text-foreground-analogia">{`${currentStep + 1} of ${totalSteps}`}</p>
                 <div className="flex ml-auto gap-2">
                     <Button type="button" onClick={goBack} variant="ghost">
                         Back

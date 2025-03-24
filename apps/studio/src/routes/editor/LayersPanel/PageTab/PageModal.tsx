@@ -4,7 +4,7 @@ import {
     normalizeRoute,
     validateNextJsRoute,
 } from '@/lib/editor/engine/pages/helper';
-import { Button } from '@onlook/ui/button';
+import { Button } from '@analogia/ui/button';
 import {
     Dialog,
     DialogContent,
@@ -12,10 +12,10 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from '@onlook/ui/dialog';
-import { Input } from '@onlook/ui/input';
-import { toast } from '@onlook/ui/use-toast';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dialog';
+import { Input } from '@analogia/ui/input';
+import { toast } from '@analogia/ui/use-toast';
+import { cn } from '@analogia/ui/utils';
 import { useEffect, useMemo, useState } from 'react';
 
 interface PageModalProps {

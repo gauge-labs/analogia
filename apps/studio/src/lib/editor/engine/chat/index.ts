@@ -8,9 +8,9 @@ import {
     type CompletedStreamResponse,
     type ErrorStreamResponse,
     type RateLimitedStreamResponse,
-} from '@onlook/models/chat';
-import { MainChannels } from '@onlook/models/constants';
-import type { ParsedError } from '@onlook/utility';
+} from '@analogia/models/chat';
+import { MainChannels } from '@analogia/models/constants';
+import type { ParsedError } from '@analogia/utility';
 import type { CoreMessage } from 'ai';
 import { makeAutoObservable } from 'mobx';
 import { nanoid } from 'nanoid/non-secure';

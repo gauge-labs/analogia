@@ -1,12 +1,12 @@
 import generate, { type GeneratorOptions } from '@babel/generator';
 import * as t from '@babel/types';
-import { EditorAttributes } from '@onlook/models/constants';
+import { EditorAttributes } from '@analogia/models/constants';
 import { nanoid } from 'nanoid/non-secure';
 
 export function getOidFromJsxElement(element: t.JSXOpeningElement): string | null {
     const attribute = element.attributes.find(
         (attr): attr is t.JSXAttribute =>
-            t.isJSXAttribute(attr) && attr.name.name === EditorAttributes.DATA_ONLOOK_ID,
+            t.isJSXAttribute(attr) && attr.name.name === EditorAttributes.DATA_ANALOGIA_ID,
     );
 
     if (!attribute || !attribute.value) {
@@ -61,7 +61,7 @@ export function addKeyToElement(element: t.JSXElement | t.JSXFragment, replace =
         return;
     }
 
-    const keyValue = EditorAttributes.ONLOOK_MOVE_KEY_PREFIX + nanoid(4);
+    const keyValue = EditorAttributes.ANALOGIA_MOVE_KEY_PREFIX + nanoid(4);
     const keyAttribute = t.jsxAttribute(t.jsxIdentifier('key'), t.stringLiteral(keyValue));
 
     // Replace existing key or add new one

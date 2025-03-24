@@ -1,7 +1,7 @@
 import { useProjectsManager } from '@/components/Context';
 import { ProjectTabs } from '@/lib/projects';
-import { Card } from '@onlook/ui/card';
-import { Icons } from '@onlook/ui/icons';
+import { Card } from '@analogia/ui/card';
+import { Icons } from '@analogia/ui/icons';
 
 const NoProjectsScreen = () => {
     const projectsManager = useProjectsManager();
@@ -27,7 +27,7 @@ const NoProjectsScreen = () => {
         <div className="flex flex-col w-[40rem] gap-20 mt-40">
             <div className="gap-5 flex flex-col">
                 <h1 className="text-title1 text-foreground-active leading-none">{'Projects'}</h1>
-                <p className="text-foreground-onlook text-regular">{OPENING_MESSAGE}</p>
+                <p className="text-foreground-analogia text-regular">{OPENING_MESSAGE}</p>
             </div>
             <div className="flex flex-row w-full gap-8">
                 <Card
@@ -40,7 +40,7 @@ const NoProjectsScreen = () => {
                         <Icons.FilePlus className="w-4 h-4 text-np-primary-icon-shape" />
                     </div>
                     <h3 className="text-regular font-medium pt-2 text-np-primary-card-text">
-                        {'New Onlook project'}
+                        {'New Analogia project'}
                     </h3>
                     <p className="text-small text-np-primary-card-subtext">{'Start a React App'}</p>
                 </Card>

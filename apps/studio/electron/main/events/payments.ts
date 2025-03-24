@@ -1,4 +1,4 @@
-import { MainChannels } from '@onlook/models/constants';
+import { MainChannels } from '@analogia/models/constants';
 import { ipcMain } from 'electron';
 import { checkoutWithStripe, checkSubscription, manageSubscription } from '../payment';
 

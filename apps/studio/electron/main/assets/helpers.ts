@@ -1,5 +1,5 @@
 import type { Node, ObjectExpression } from '@babel/types';
-import type { ColorUpdate } from '@onlook/models/assets';
+import type { ColorUpdate } from '@analogia/models/assets';
 import fg from 'fast-glob';
 import fs from 'fs';
 import path from 'path';

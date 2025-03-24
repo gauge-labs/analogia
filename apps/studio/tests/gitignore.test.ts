@@ -1,4 +1,4 @@
-import { CUSTOM_OUTPUT_DIR } from '@onlook/models/constants';
+import { CUSTOM_OUTPUT_DIR } from '@analogia/models/constants';
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
 import { existsSync, mkdirSync, readFileSync, rmdirSync, unlinkSync, writeFileSync } from 'fs';
 import { join } from 'path';

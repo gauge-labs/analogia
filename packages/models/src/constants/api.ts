@@ -17,8 +17,8 @@ export const BASE_PROXY_ROUTE = '/proxy';
 export enum ProxyRoutes {
     ANTHROPIC = '/anthropic',
 }
-export const REDIRECT_APP_URL = 'https://onlook.dev/redirect-app';
-export const REQUEST_TYPE_HEADER = 'X-Onlook-Request-Type';
+export const REDIRECT_APP_URL = 'https://analogia.ai/redirect-app';
+export const REQUEST_TYPE_HEADER = 'X-Analogia-Request-Type';
 
 export enum HostingRoutes {
     CREATE_DOMAIN_VERIFICATION = '/create-domain-verification',

@@ -1,4 +1,4 @@
-import type { PageNode } from '@onlook/models/pages';
+import type { PageNode } from '@analogia/models/pages';
 import { promises as fs } from 'fs';
 import { nanoid } from 'nanoid';
 import * as path from 'path';

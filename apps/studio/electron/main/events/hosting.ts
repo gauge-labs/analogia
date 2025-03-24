@@ -1,5 +1,5 @@
-import { MainChannels } from '@onlook/models/constants';
-import type { PublishRequest, PublishResponse, UnpublishRequest } from '@onlook/models/hosting';
+import { MainChannels } from '@analogia/models/constants';
+import type { PublishRequest, PublishResponse, UnpublishRequest } from '@analogia/models/hosting';
 import { ipcMain } from 'electron';
 import hostingManager from '../hosting';
 import { createDomainVerification, getOwnedDomains, verifyDomain } from '../hosting/domains';

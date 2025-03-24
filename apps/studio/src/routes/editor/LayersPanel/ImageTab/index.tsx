@@ -1,19 +1,19 @@
 import { useEditorEngine, useProjectsManager } from '@/components/Context';
 import { EditorMode } from '@/lib/models';
 import { invokeMainChannel, platformSlash, sendAnalytics } from '@/lib/utils';
-import type { ImageContentData } from '@onlook/models';
-import { DefaultSettings, MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
+import type { ImageContentData } from '@analogia/models';
+import { DefaultSettings, MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Input } from '@onlook/ui/input';
-import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@onlook/ui/tooltip';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Input } from '@analogia/ui/input';
+import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@analogia/ui/tooltip';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import DeleteImageModal from './DeleteModal';
@@ -257,7 +257,7 @@ const ImagesTab = observer(() => {
                         />
                         {search && (
                             <button
-                                className="absolute right-[1px] top-[1px] bottom-[1px] aspect-square hover:bg-background-onlook active:bg-transparent flex items-center justify-center rounded-r-[calc(theme(borderRadius.md)-1px)] group"
+                                className="absolute right-[1px] top-[1px] bottom-[1px] aspect-square hover:bg-background-analogiagia active:bg-transparent flex items-center justify-center rounded-r-[calc(theme(borderRadius.md)-1px)] group"
                                 onClick={() => setSearch('')}
                             >
                                 <Icons.CrossS className="h-3 w-3 text-foreground-primary/50 group-hover:text-foreground-primary" />
@@ -269,7 +269,7 @@ const ImagesTab = observer(() => {
                             <Button
                                 variant={'default'}
                                 size={'icon'}
-                                className="p-2 w-fit h-fit text-foreground-primary border-border-primary hover:border-border-onlook bg-background-secondary hover:bg-background-onlook border"
+                                className="p-2 w-fit h-fit text-foreground-primary border-border-primary hover:border-border-analogia bg-background-secondary hover:bg-background-analogia border"
                                 onClick={handleClickAddButton}
                             >
                                 <Icons.Plus />
@@ -301,7 +301,7 @@ const ImagesTab = observer(() => {
                                 onClick={handleClickAddButton}
                                 variant={'ghost'}
                                 size={'icon'}
-                                className="p-2 w-fit h-fit hover:bg-background-onlook"
+                                className="p-2 w-fit h-fit hover:bg-background-analogia"
                             >
                                 <Icons.Plus />
                             </Button>

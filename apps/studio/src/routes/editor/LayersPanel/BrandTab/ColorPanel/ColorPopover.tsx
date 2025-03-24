@@ -1,8 +1,8 @@
-import { Popover, PopoverContent, PopoverTrigger } from '@onlook/ui/popover';
-import type { Color } from '@onlook/utility';
+import { Popover, PopoverContent, PopoverTrigger } from '@analogia/ui/popover';
+import type { Color } from '@analogia/utility';
 import { useState } from 'react';
 import ColorPickerContent from '../../../EditPanel/StylesTab/single/ColorInput/ColorPicker';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@onlook/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@analogia/ui/tooltip';
 
 export const ColorPopover = ({
     color,

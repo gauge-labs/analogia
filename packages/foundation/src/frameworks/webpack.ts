@@ -11,7 +11,7 @@ import {
     CONFIG_BASE_NAME,
     CONFIG_FILE_PATTERN,
     DEPENDENCY_NAME,
-    ONLOOK_PLUGIN,
+    ANALOGIA_PLUGIN,
 } from '../constants';
 
 import { exists, hasDependency, isSupportFileExtension } from '../utils';
@@ -55,11 +55,11 @@ const babelRule: t.ObjectExpression = t.objectExpression([
                         t.arrayExpression([
                             t.stringLiteral('@babel/preset-env'),
                             t.stringLiteral('@babel/preset-react'),
-                        ]),
+                        ])
                     ),
-                ]),
+                ])
             ),
-        ]),
+        ])
     ),
 ]);
 
@@ -110,7 +110,7 @@ export function modifyWebpackConfig(configFileExtension: string): void {
                     if (!rulesArray) {
                         const rulesProperty = t.objectProperty(
                             t.identifier('rules'),
-                            t.arrayExpression([]),
+                            t.arrayExpression([])
                         );
                         path.node.value.properties.push(rulesProperty);
                         rulesArray = (rulesProperty.value as t.ArrayExpression)
@@ -148,7 +148,7 @@ const defaultBabelrcContent = {
 };
 
 /**
- * Modify the .babelrc file to include the "@onlook/react" plugin
+ * Modify the .babelrc file to include the "@analogia/react" plugin
  */
 export const modifyBabelrc = (): void => {
     let babelrcContent: { plugins: string[] };
@@ -168,13 +168,13 @@ export const modifyBabelrc = (): void => {
         babelrcContent.plugins = [];
     }
 
-    // Check if "@onlook/react" is already in the plugins array
-    if (!babelrcContent.plugins.includes(ONLOOK_PLUGIN.WEBPACK)) {
-        // Add "@onlook/react" to the plugins array
-        babelrcContent.plugins.push(ONLOOK_PLUGIN.WEBPACK);
+    // Check if "@analogia/react" is already in the plugins array
+    if (!babelrcContent.plugins.includes(ANALOGIA_PLUGIN.WEBPACK)) {
+        // Add "@analogia/react" to the plugins array
+        babelrcContent.plugins.push(ANALOGIA_PLUGIN.WEBPACK);
     }
 
     // Write the updated content back to the .babelrc file
     fs.writeFileSync(babelrcPath, JSON.stringify(babelrcContent, null, 2), 'utf8');
-    console.log('.babelrc has been updated with the "@onlook/react" plugin.');
+    console.log('.babelrc has been updated with the "@analogia/react" plugin.');
 };

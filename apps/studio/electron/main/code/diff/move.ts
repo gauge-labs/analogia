@@ -1,6 +1,6 @@
 import type { NodePath } from '@babel/traverse';
 import type * as t from '@babel/types';
-import type { CodeMove } from '@onlook/models/actions';
+import type { CodeMove } from '@analogia/models/actions';
 import { addKeyToElement, getOidFromJsxElement, jsxFilter } from './helpers';
 
 export function moveElementInNode(path: NodePath<t.JSXElement>, element: CodeMove): void {

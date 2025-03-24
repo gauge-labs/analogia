@@ -2,23 +2,23 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@onlook/repo",
+      "name": "@analogia/repo",
       "devDependencies": {
         "extract-zip": "^2.0.1",
         "husky": "^9.1.6",
       },
     },
     "apps/studio": {
-      "name": "@onlook/studio",
+      "name": "@analogia/studio",
       "version": "0.2.17",
       "dependencies": {
         "@ai-sdk/anthropic": "^1.1.17",
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
         "@fontsource-variable/inter": "^5.1.0",
-        "@onlook/foundation": "*",
-        "@onlook/supabase": "*",
-        "@onlook/ui": "*",
+        "@analogia/foundation": "*",
+        "@analogia/supabase": "*",
+        "@analogia/ui": "*",
         "@parcel/watcher": "^2.5.1",
         "@shikijs/monaco": "^1.22.0",
         "@supabase/supabase-js": "^2.45.6",
@@ -66,7 +66,7 @@
       },
       "devDependencies": {
         "@eslint/js": "^9.7.0",
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
         "@playwright/test": "^1.42.1",
         "@tailwindcss/typography": "^0.5.15",
         "@types/babel-generator": "^6.25.8",
@@ -108,7 +108,7 @@
       },
     },
     "packages/ai": {
-      "name": "@onlook/ai",
+      "name": "@analogia/ai",
       "version": "0.0.0",
       "dependencies": {
         "@ai-sdk/anthropic": "^1.1.17",
@@ -118,11 +118,11 @@
         "marked": "^15.0.7",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
       },
     },
     "packages/foundation": {
-      "name": "@onlook/foundation",
+      "name": "@analogia/foundation",
       "version": "0.0.0",
       "dependencies": {
         "@babel/generator": "^7.14.5",
@@ -131,7 +131,7 @@
         "@babel/types": "^7.24.7",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
         "@types/babel__generator": "^7.6.8",
         "@types/babel__traverse": "^7.20.6",
         "@types/bun": "latest",
@@ -141,18 +141,18 @@
       },
     },
     "packages/git": {
-      "name": "@onlook/git",
+      "name": "@analogia/git",
       "version": "0.0.0",
       "dependencies": {
         "globby": "^14.1.0",
         "isomorphic-git": "^1.29.0",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
       },
     },
     "packages/growth": {
-      "name": "@onlook/growth",
+      "name": "@analogia/growth",
       "version": "0.0.0",
       "dependencies": {
         "@babel/generator": "^7.14.5",
@@ -161,49 +161,49 @@
         "@babel/types": "^7.24.7",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
       },
     },
     "packages/models": {
-      "name": "@onlook/models",
+      "name": "@analogia/models",
       "version": "0.0.0",
       "dependencies": {
         "type-fest": "^4.26.1",
         "zod": "^3.23.8",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
         "typescript": "^5.5.4",
       },
     },
     "packages/supabase": {
-      "name": "@onlook/supabase",
+      "name": "@analogia/supabase",
       "version": "0.0.0",
       "dependencies": {
         "@supabase/supabase-js": "^2.45.6",
         "react": "^18.3.1",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
         "supabase": "^2.2.1",
         "typescript": "^5.5.4",
       },
     },
     "packages/types": {
-      "name": "@onlook/types",
+      "name": "@analogia/types",
       "version": "0.0.0",
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
         "typescript": "^5.5.4",
       },
     },
     "packages/ui": {
-      "name": "@onlook/ui",
+      "name": "@analogia/ui",
       "version": "0.0.0",
       "dependencies": {
         "@emotion/react": "^11.13.3",
         "@emotion/styled": "^11.13.0",
-        "@onlook/foundation": "*",
+        "@analogia/foundation": "*",
         "@radix-ui/react-accordion": "^1.2.0",
         "@radix-ui/react-alert-dialog": "^1.1.1",
         "@radix-ui/react-checkbox": "^1.1.2",
@@ -240,8 +240,8 @@
         "use-eye-dropper": "^1.6.4",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
-        "@onlook/utility": "*",
+        "@analogia/typescript": "*",
+        "@analogia/utility": "*",
         "@types/color-namer": "^1.3.3",
         "autoprefixer": "^10.4.20",
         "react": "^18.3.1",
@@ -250,18 +250,18 @@
       },
     },
     "packages/utility": {
-      "name": "@onlook/utility",
+      "name": "@analogia/utility",
       "version": "0.0.0",
       "dependencies": {
         "normalize-url": "^8.0.1",
         "tldts": "^6.1.82",
       },
       "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
       },
     },
     "tooling/typescript": {
-      "name": "@onlook/typescript",
+      "name": "@analogia/typescript",
       "version": "0.0.0",
     },
   },
@@ -568,27 +568,27 @@
 
     "@npmcli/move-file": ["@npmcli/move-file@2.0.1", "", { "dependencies": { "mkdirp": "^1.0.4", "rimraf": "^3.0.2" } }, "sha512-mJd2Z5TjYWq/ttPLLGqArdtnC74J6bOzg4rMDnN+p1xTacZ2yPRCk2y0oSWQtygLR9YVQXgOcONrwtnk3JupxQ=="],
 
-    "@onlook/ai": ["@onlook/ai@workspace:packages/ai"],
+    "@analogia/ai": ["@analogia/ai@workspace:packages/ai"],
 
-    "@onlook/foundation": ["@onlook/foundation@workspace:packages/foundation"],
+    "@analogia/foundation": ["@analogia/foundation@workspace:packages/foundation"],
 
-    "@onlook/git": ["@onlook/git@workspace:packages/git"],
+    "@analogia/git": ["@analogia/git@workspace:packages/git"],
 
-    "@onlook/growth": ["@onlook/growth@workspace:packages/growth"],
+    "@analogia/growth": ["@analogia/growth@workspace:packages/growth"],
 
-    "@onlook/models": ["@onlook/models@workspace:packages/models"],
+    "@analogia/models": ["@analogia/models@workspace:packages/models"],
 
-    "@onlook/studio": ["@onlook/studio@workspace:apps/studio"],
+    "@analogia/studio": ["@analogia/studio@workspace:apps/studio"],
 
-    "@onlook/supabase": ["@onlook/supabase@workspace:packages/supabase"],
+    "@analogia/supabase": ["@analogia/supabase@workspace:packages/supabase"],
 
-    "@onlook/types": ["@onlook/types@workspace:packages/types"],
+    "@analogia/types": ["@analogia/types@workspace:packages/types"],
 
-    "@onlook/typescript": ["@onlook/typescript@workspace:tooling/typescript"],
+    "@analogia/typescript": ["@analogia/typescript@workspace:tooling/typescript"],
 
-    "@onlook/ui": ["@onlook/ui@workspace:packages/ui"],
+    "@analogia/ui": ["@analogia/ui@workspace:packages/ui"],
 
-    "@onlook/utility": ["@onlook/utility@workspace:packages/utility"],
+    "@analogia/utility": ["@analogia/utility@workspace:packages/utility"],
 
     "@opentelemetry/api": ["@opentelemetry/api@1.9.0", "", {}, "sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg=="],
 

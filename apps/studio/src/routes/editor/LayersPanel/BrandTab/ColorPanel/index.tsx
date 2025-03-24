@@ -1,9 +1,9 @@
 import { useEditorEngine } from '@/components/Context';
-import { Theme } from '@onlook/models/assets';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { cn } from '@onlook/ui/utils';
-import type { Color } from '@onlook/utility';
+import { Theme } from '@analogia/models/assets';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { cn } from '@analogia/ui/utils';
+import type { Color } from '@analogia/utility';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
 import { BrandPalletGroup } from './ColorPalletGroup';

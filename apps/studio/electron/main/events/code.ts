@@ -1,6 +1,6 @@
-import type { CodeDiff, CodeDiffRequest } from '@onlook/models/code';
-import { MainChannels } from '@onlook/models/constants';
-import type { TemplateNode } from '@onlook/models/element';
+import type { CodeDiff, CodeDiffRequest } from '@analogia/models/code';
+import { MainChannels } from '@analogia/models/constants';
+import type { TemplateNode } from '@analogia/models/element';
 import { ipcMain } from 'electron';
 import { openFileInIde, openInIde, pickDirectory, readCodeBlock, writeCode } from '../code/';
 import { getTemplateNodeClass } from '../code/classes';

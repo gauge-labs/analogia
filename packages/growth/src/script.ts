@@ -2,7 +2,7 @@ export const builtWithScript = `
 (function () {
     if (typeof window !== 'undefined') {
         // Define custom element
-        class BuiltWithOnlook extends HTMLElement {
+        class BuiltWithAnalogia extends HTMLElement {
             constructor() {
                 super();
                 const shadow = this.attachShadow({ mode: 'open' });
@@ -46,7 +46,7 @@ export const builtWithScript = `
                 svg.setAttribute('fill', 'none');
                 svg.classList.add('logo');
 
-                // Add SVG path for the Onlook logo
+                // Add SVG path for the Analogia logo
                 const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
                 path.setAttribute('fill', 'currentColor');
                 path.setAttribute(
@@ -57,13 +57,13 @@ export const builtWithScript = `
                 svg.appendChild(path);
 
                 const text = document.createElement('span');
-                text.textContent = 'Built with Onlook';
+                text.textContent = 'Built with Analogia';
 
                 badge.appendChild(svg);
                 badge.appendChild(text);
 
                 badge.addEventListener('click', () => {
-                    window.open('https://onlook.com', '_blank');
+                    window.open('https://analogia.ai', '_blank');
                 });
 
                 badge.addEventListener('mouseenter', () => {
@@ -80,12 +80,12 @@ export const builtWithScript = `
         }
 
         // Register custom element
-        customElements.define('built-with-onlook', BuiltWithOnlook);
+        customElements.define('built-with-analogia', BuiltWithAnalogia);
 
         // Run after page load
         window.addEventListener('load', function () {
             // Create and append the custom element
-            const badge = document.createElement('built-with-onlook');
+            const badge = document.createElement('built-with-analogia');
             document.body.appendChild(badge);
         });
     }

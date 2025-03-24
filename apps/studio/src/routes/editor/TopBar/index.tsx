@@ -1,9 +1,9 @@
 import { useEditorEngine } from '@/components/Context';
 import { HotKeyLabel } from '@/components/ui/hotkeys-label';
 import { SettingsTabValue } from '@/lib/models';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@onlook/ui/tooltip';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@analogia/ui/tooltip';
 import { motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
 import { useTranslation } from 'react-i18next';
@@ -32,7 +32,7 @@ export const EditorTopBar = observer(() => {
     ];
 
     return (
-        <div className="bg-background-onlook/60 backdrop-blur-sm flex flex-row h-10 p-2 justify-center items-center">
+        <div className="bg-background-analogia/60 backdrop-blur-sm flex flex-row h-10 p-2 justify-center items-center">
             <div className="flex flex-row flex-grow basis-0 space-x-1 justify-start items-center">
                 <ProjectBreadcrumb />
             </div>

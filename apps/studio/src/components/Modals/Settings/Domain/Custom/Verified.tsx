@@ -1,14 +1,14 @@
 import { useProjectsManager } from '@/components/Context';
-import { Button } from '@onlook/ui/button';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Input } from '@onlook/ui/input';
-import { timeAgo } from '@onlook/utility';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Input } from '@analogia/ui/input';
+import { timeAgo } from '@analogia/utility';
 
 export const Verified = () => {
     const projectsManager = useProjectsManager();

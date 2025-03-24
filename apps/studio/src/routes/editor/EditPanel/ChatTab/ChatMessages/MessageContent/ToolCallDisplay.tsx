@@ -1,7 +1,7 @@
 import { useUserManager } from '@/components/Context';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@onlook/ui/collapsible';
-import { Icons } from '@onlook/ui/icons';
-import { cn } from '@onlook/ui/utils';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@analogia/ui/collapsible';
+import { Icons } from '@analogia/ui/icons';
+import { cn } from '@analogia/ui/utils';
 import type { ToolCallPart } from 'ai';
 import { AnimatePresence, motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';

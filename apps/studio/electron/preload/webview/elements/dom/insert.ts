@@ -1,6 +1,6 @@
-import type { ActionElement, ActionLocation } from '@onlook/models/actions';
-import { EditorAttributes, INLINE_ONLY_CONTAINERS } from '@onlook/models/constants';
-import type { DomElement } from '@onlook/models/element';
+import type { ActionElement, ActionLocation } from '@analogia/models/actions';
+import { EditorAttributes, INLINE_ONLY_CONTAINERS } from '@analogia/models/constants';
+import type { DomElement } from '@analogia/models/element';
 import { getOrAssignDomId } from '../../ids';
 import cssManager from '../../style';
 import { getDeepElement, getDomElement } from '../helpers';
@@ -119,7 +119,7 @@ export function insertElement(
 
 export function createElement(element: ActionElement) {
     const newEl = document.createElement(element.tagName);
-    newEl.setAttribute(EditorAttributes.DATA_ONLOOK_INSERTED, 'true');
+    newEl.setAttribute(EditorAttributes.DATA_ANALOGIA_INSERTED, 'true');
 
     for (const [key, value] of Object.entries(element.attributes)) {
         newEl.setAttribute(key, value);

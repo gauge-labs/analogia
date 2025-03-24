@@ -1,6 +1,6 @@
-import type { ActionElement, ActionLocation } from '@onlook/models/actions';
-import { EditorAttributes } from '@onlook/models/constants';
-import type { CoreElementType, DomElement, DynamicType } from '@onlook/models/element';
+import type { ActionElement, ActionLocation } from '@analogia/models/actions';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { CoreElementType, DomElement, DynamicType } from '@analogia/models/element';
 import { getOrAssignDomId } from '../../ids';
 import { getDomElement, getImmediateTextContent } from '../helpers';
 import { elementFromDomId } from '/common/helpers';
@@ -85,7 +85,7 @@ export function getElementType(domId: string): {
     coreType: CoreElementType | null;
 } {
     const el = document.querySelector(
-        `[${EditorAttributes.DATA_ONLOOK_DOM_ID}="${domId}"]`,
+        `[${EditorAttributes.DATA_ANALOGIA_DOM_ID}="${domId}"]`,
     ) as HTMLElement | null;
 
     if (!el) {
@@ -94,30 +94,30 @@ export function getElementType(domId: string): {
     }
 
     const dynamicType =
-        (el.getAttribute(EditorAttributes.DATA_ONLOOK_DYNAMIC_TYPE) as DynamicType) || null;
+        (el.getAttribute(EditorAttributes.DATA_ANALOGIA_DYNAMIC_TYPE) as DynamicType) || null;
     const coreType =
-        (el.getAttribute(EditorAttributes.DATA_ONLOOK_CORE_ELEMENT_TYPE) as CoreElementType) ||
+        (el.getAttribute(EditorAttributes.DATA_ANALOGIA_CORE_ELEMENT_TYPE) as CoreElementType) ||
         null;
 
     return { dynamicType, coreType };
 }
 
 export function setElementType(domId: string, dynamicType: string, coreElementType: string) {
-    const el = document.querySelector(`[${EditorAttributes.DATA_ONLOOK_DOM_ID}="${domId}"]`);
+    const el = document.querySelector(`[${EditorAttributes.DATA_ANALOGIA_DOM_ID}="${domId}"]`);
 
     if (el) {
         if (dynamicType) {
-            el.setAttribute(EditorAttributes.DATA_ONLOOK_DYNAMIC_TYPE, dynamicType);
+            el.setAttribute(EditorAttributes.DATA_ANALOGIA_DYNAMIC_TYPE, dynamicType);
         }
         if (coreElementType) {
-            el.setAttribute(EditorAttributes.DATA_ONLOOK_CORE_ELEMENT_TYPE, coreElementType);
+            el.setAttribute(EditorAttributes.DATA_ANALOGIA_CORE_ELEMENT_TYPE, coreElementType);
         }
     }
 }
 
-export function getFirstOnlookElement(): DomElement | null {
+export function getFirstAnalogiaElement(): DomElement | null {
     const body = document.body;
-    const firstElement = body.querySelector(`[${EditorAttributes.DATA_ONLOOK_ID}]`);
+    const firstElement = body.querySelector(`[${EditorAttributes.DATA_ANALOGIA_ID}]`);
     if (firstElement) {
         return getDomElement(firstElement as HTMLElement, true);
     }

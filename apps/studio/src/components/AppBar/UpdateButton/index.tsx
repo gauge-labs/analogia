@@ -1,6 +1,6 @@
 import { useUpdateManager } from '@/components/Context';
-import { Icons } from '@onlook/ui/icons';
-import { Button } from '@onlook/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Button } from '@analogia/ui/button';
 import { observer } from 'mobx-react-lite';
 
 const UpdateButton = observer(() => {

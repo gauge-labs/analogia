@@ -1,6 +1,6 @@
-import { PromptProvider } from '@onlook/ai/src/prompt/provider';
-import type { ChatMessageContext } from '@onlook/models/chat';
-import { ChatMessageRole, type UserChatMessage } from '@onlook/models/chat';
+import { PromptProvider } from '@analogia/ai/src/prompt/provider';
+import type { ChatMessageContext } from '@analogia/models/chat';
+import { ChatMessageRole, type UserChatMessage } from '@analogia/models/chat';
 import type { CoreUserMessage, UserContent } from 'ai';
 import { nanoid } from 'nanoid/non-secure';
 

@@ -1,8 +1,8 @@
 import { useEditorEngine } from '@/components/Context';
-import { Button } from '@onlook/ui/button';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@onlook/ui/collapsible';
-import { Icons } from '@onlook/ui/icons';
-import { cn } from '@onlook/ui/utils';
+import { Button } from '@analogia/ui/button';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@analogia/ui/collapsible';
+import { Icons } from '@analogia/ui/icons';
+import { cn } from '@analogia/ui/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';

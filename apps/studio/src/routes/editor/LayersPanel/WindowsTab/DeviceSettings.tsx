@@ -1,8 +1,8 @@
 import { useEditorEngine } from '@/components/Context';
-import { Theme } from '@onlook/models/constants';
-import type { FrameSettings } from '@onlook/models/projects';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons/index';
+import { Theme } from '@analogia/models/constants';
+import type { FrameSettings } from '@analogia/models/projects';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons/index';
 import { useEffect, useState } from 'react';
 
 const DeviceSettings = ({ settings }: { settings: FrameSettings }) => {
@@ -54,7 +54,7 @@ const DeviceSettings = ({ settings }: { settings: FrameSettings }) => {
                         className={`h-full w-full px-0.5 py-1.5 bg-background-secondary rounded-sm ${
                             deviceTheme === Theme.System
                                 ? 'bg-background-tertiary hover:bg-background-tertiary'
-                                : 'hover:bg-background-tertiary/50 text-foreground-onlook'
+                                : 'hover:bg-background-tertiary/50 text-foreground-analogia'
                         }`}
                         variant={'ghost'}
                         onClick={() => changeTheme(Theme.System)}
@@ -66,7 +66,7 @@ const DeviceSettings = ({ settings }: { settings: FrameSettings }) => {
                         className={`h-full w-full px-0.5 py-1.5 bg-background-secondary rounded-sm ${
                             deviceTheme === Theme.Dark
                                 ? 'bg-background-tertiary hover:bg-background-tertiary'
-                                : 'hover:bg-background-tertiary/50 text-foreground-onlook'
+                                : 'hover:bg-background-tertiary/50 text-foreground-analogia'
                         }`}
                         variant={'ghost'}
                         onClick={() => changeTheme(Theme.Dark)}
@@ -78,7 +78,7 @@ const DeviceSettings = ({ settings }: { settings: FrameSettings }) => {
                         className={`h-full w-full px-0.5 py-1.5 bg-background-secondary rounded-sm ${
                             deviceTheme === Theme.Light
                                 ? 'bg-background-tertiary hover:bg-background-tertiary'
-                                : 'hover:bg-background-tertiary/50 text-foreground-onlook'
+                                : 'hover:bg-background-tertiary/50 text-foreground-analogia'
                         }`}
                         variant={'ghost'}
                         onClick={() => changeTheme(Theme.Light)}

@@ -1,4 +1,4 @@
-use onlook::Options;
+use analogia::Options;
 use std::path::PathBuf;
 use swc_common::FileName;
 use swc_common::{chain, Mark};
@@ -25,13 +25,13 @@ fn fixture(input: PathBuf) {
             let file_name = FileName::Real(input.clone()).to_string();
             chain!(
                 resolver(unresolved_mark, top_level_mark, false),
-                onlook::onlook(
+                analogia::analogia(
                     if input.to_string_lossy().contains("custom") {
-                        onlook::Config::WithOptions(Options {
+                        analogia::Config::WithOptions(Options {
                             properties: vec!["^data-custom$".into()],
                         })
                     } else {
-                        onlook::Config::All(true)
+                        analogia::Config::All(true)
                     },
                     file_name,
                     source_map

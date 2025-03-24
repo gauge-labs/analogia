@@ -1,10 +1,10 @@
 {
-    "name": "@onlook/babel-plugin-react",
+    "name": "@analogia/babel-plugin-react",
     "version": "2.1.1",
     "main": "build/bundle.cjs",
     "repository": {
         "type": "git",
-        "url": "https://github.com/onlook-dev/onlook.git"
+        "url": "https://github.com/AnalogiaAI/analogia.git"
     },
     "type": "module",
     "dependencies": {
@@ -15,7 +15,7 @@
         "@babel/types": "^7.24.7",
         "fflate": "^0.8.2"
     },
-    "description": "React babel preprocessor for onlook",
+    "description": "React babel preprocessor for analogia",
     "directories": {
         "test": "tests"
     },
@@ -28,11 +28,11 @@
         "react",
         "babel",
         "preprocessor",
-        "onlook"
+        "analogia"
     ],
-    "author": "onlook",
+    "author": "analogia",
     "license": "Apache-2.0",
-    "homepage": "https://onlook.com",
+    "homepage": "https://analogia.ai",
     "devDependencies": {
         "@rollup/plugin-json": "^6.1.0",
         "@rollup/plugin-terser": "^0.4.4",

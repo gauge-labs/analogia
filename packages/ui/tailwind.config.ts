@@ -18,7 +18,7 @@ const config = {
             colors: {
                 background: {
                     DEFAULT: 'hsl(var(--background))',
-                    onlook: 'hsl(var(--background-onlook))',
+                    analogia: 'hsl(var(--background-analogia))',
                     brand: {
                         DEFAULT: 'hsl(var(--background-brand))',
                         secondary: 'hsl(var(--background-brand-secondary))',
@@ -33,7 +33,7 @@ const config = {
                 },
                 foreground: {
                     DEFAULT: 'hsl(var(--foreground))',
-                    onlook: 'hsl(var(--foreground-onlook))',
+                    analogia: 'hsl(var(--foreground-analogia))',
                     brand: 'hsl(var(--foreground-brand))',
                     primary: 'hsl(var(--foreground-primary))',
                     secondary: 'hsl(var(--foreground-secondary))',

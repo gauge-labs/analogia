@@ -3,8 +3,8 @@ import {
     MainChannels,
     WebviewChannels,
     type Channels,
-} from '@onlook/models/constants';
-import { jsonClone } from '@onlook/utility';
+} from '@analogia/models/constants';
+import { jsonClone } from '@analogia/utility';
 import imageCompression from 'browser-image-compression';
 import type { WebviewTag } from 'electron/renderer';
 import { customAlphabet } from 'nanoid/non-secure';

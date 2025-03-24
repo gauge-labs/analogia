@@ -1,4 +1,4 @@
-import type { RunBunCommandResult } from '@onlook/models';
+import type { RunBunCommandResult } from '@analogia/models';
 import { runBunCommand } from '../bun';
 
 export async function runBuildScript(

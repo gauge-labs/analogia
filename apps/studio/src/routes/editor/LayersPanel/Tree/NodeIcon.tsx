@@ -1,4 +1,4 @@
-import { Icons } from '@onlook/ui/icons';
+import { Icons } from '@analogia/ui/icons';
 
 interface NodeIconProps {
     iconClass: string;

@@ -6,7 +6,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 /**
- * Removes the Built with Onlook script from a Next.js layout file
+ * Removes the Built with Analogia script from a Next.js layout file
  * @param projectPath Path to the project root
  */
 export async function removeBuiltWithScriptFromLayout(projectPath: string): Promise<boolean> {
@@ -56,7 +56,7 @@ export async function removeBuiltWithScriptFromLayout(projectPath: string): Prom
                                     t.isJSXIdentifier(attr.name) &&
                                     attr.name.name === 'src' &&
                                     t.isStringLiteral(attr.value) &&
-                                    attr.value.value === '/builtwith.js',
+                                    attr.value.value === '/builtwith.js'
                             );
 
                             if (hasSrcAttr) {
@@ -101,7 +101,7 @@ export async function removeBuiltWithScriptFromLayout(projectPath: string): Prom
                             (specifier) =>
                                 t.isImportDefaultSpecifier(specifier) &&
                                 t.isIdentifier(specifier.local) &&
-                                specifier.local.name === 'Script',
+                                specifier.local.name === 'Script'
                         )
                     ) {
                         path.remove();

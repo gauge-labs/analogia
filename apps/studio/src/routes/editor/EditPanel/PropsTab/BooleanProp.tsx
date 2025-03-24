@@ -1,4 +1,4 @@
-import { Button } from '@onlook/ui/button';
+import { Button } from '@analogia/ui/button';
 
 interface BooleanPropProps {
     value: boolean;

@@ -1,7 +1,7 @@
 import { useEditorEngine } from '@/components/Context';
 import type { SelectedStyle } from '@/lib/editor/engine/style';
 import { type CompoundStyle, StyleType } from '@/lib/editor/styles/models';
-import { isColorEmpty } from '@onlook/utility';
+import { isColorEmpty } from '@analogia/utility';
 import { observer } from 'mobx-react-lite';
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
@@ -70,7 +70,7 @@ const BorderInput = observer(({ compoundStyle }: { compoundStyle: CompoundStyle 
         const elementStyle = compoundStyle.head;
         return (
             <div key={elementStyle.key} className="flex flex-row items-center col-span-2">
-                <p className="text-xs text-left text-foreground-onlook">
+                <p className="text-xs text-left text-foreground-analogia">
                     {elementStyle.displayName}
                 </p>
                 <div className="ml-auto h-8 flex flex-row w-32 space-x-2">
@@ -92,7 +92,7 @@ const BorderInput = observer(({ compoundStyle }: { compoundStyle: CompoundStyle 
                     >
                         {compoundStyle.children.map((elementStyle) => (
                             <div key={elementStyle.key} className="ml-2 flex flex-row items-center">
-                                <div className="text-foreground-onlook">
+                                <div className="text-foreground-analogia">
                                     <p className="text-xs text-left">{elementStyle.displayName}</p>
                                 </div>
                                 <div className="w-32 ml-auto">

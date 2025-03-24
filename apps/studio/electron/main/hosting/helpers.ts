@@ -1,5 +1,5 @@
-import { addNextBuildConfig } from '@onlook/foundation';
-import { CUSTOM_OUTPUT_DIR } from '@onlook/models/constants';
+import { addNextBuildConfig } from '@analogia/foundation';
+import { CUSTOM_OUTPUT_DIR } from '@analogia/models/constants';
 import {
     appendFileSync,
     copyFileSync,

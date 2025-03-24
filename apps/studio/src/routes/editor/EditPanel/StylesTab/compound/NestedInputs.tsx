@@ -1,7 +1,7 @@
 import { useEditorEngine } from '@/components/Context';
 import type { CompoundStyleImpl } from '@/lib/editor/styles';
-import { Icons } from '@onlook/ui/icons';
-import { ToggleGroup, ToggleGroupItem } from '@onlook/ui/toggle-group';
+import { Icons } from '@analogia/ui/icons';
+import { ToggleGroup, ToggleGroupItem } from '@analogia/ui/toggle-group';
 import { observer } from 'mobx-react-lite';
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useState } from 'react';
@@ -70,7 +70,7 @@ const NestedInputs = observer(({ compoundStyle }: { compoundStyle: CompoundStyle
         const elementStyle = compoundStyle.head;
         return (
             <div key={`${elementStyle.key}`} className="flex flex-row items-center col-span-2">
-                <p className="text-xs text-left text-foreground-onlook">
+                <p className="text-xs text-left text-foreground-analogia">
                     {elementStyle.displayName}
                 </p>
                 <div className="ml-auto h-8 flex flex-row w-32 space-x-1">
@@ -83,13 +83,13 @@ const NestedInputs = observer(({ compoundStyle }: { compoundStyle: CompoundStyle
                     >
                         <ToggleGroupItem
                             value="false"
-                            className="data-[state=on]:bg-background-onlook/75 data-[state=on]:text-foreground-onlook"
+                            className="data-[state=on]:bg-background-analogia/75 data-[state=on]:text-foreground-analogia"
                         >
                             <Icons.BorderAll className="w-4 h-5" />
                         </ToggleGroupItem>
                         <ToggleGroupItem
                             value="true"
-                            className="data-[state=on]:bg-background-onlook/75 data-[state=on]:text-foreground-onlook"
+                            className="data-[state=on]:bg-background-analogia/75 data-[state=on]:text-foreground-analogia"
                         >
                             <Icons.Corners className="w-4 h-5" />
                         </ToggleGroupItem>
@@ -111,7 +111,7 @@ const NestedInputs = observer(({ compoundStyle }: { compoundStyle: CompoundStyle
                     >
                         {compoundStyle.children.map((elementStyle) => (
                             <div key={elementStyle.key} className="flex flex-row items-center">
-                                <div className="w-12 text-foreground-onlook">
+                                <div className="w-12 text-foreground-analogia">
                                     {DISPLAY_NAME_OVERRIDE[elementStyle.displayName] ||
                                         elementStyle.displayName}
                                 </div>

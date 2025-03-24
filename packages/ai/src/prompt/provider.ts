@@ -4,7 +4,7 @@ import type {
     FileMessageContext,
     HighlightMessageContext,
     ProjectMessageContext,
-} from '@onlook/models/chat';
+} from '@analogia/models/chat';
 import type { CoreUserMessage, ImagePart, UserContent } from 'ai';
 import { CONTEXT_PROMPTS } from './context';
 import { CREATE_PAGE_EXAMPLE_CONVERSATION, PAGE_SYSTEM_PROMPT } from './create';
@@ -28,7 +28,7 @@ export class PromptProvider {
             prompt += wrapXml('search-replace-rules', EDIT_PROMPTS.searchReplaceRules);
             prompt += wrapXml(
                 'example-conversation',
-                this.getExampleConversation(SEARCH_REPLACE_EXAMPLE_CONVERSATION),
+                this.getExampleConversation(SEARCH_REPLACE_EXAMPLE_CONVERSATION)
             );
         } else {
             prompt += EDIT_PROMPTS.system;
@@ -47,7 +47,7 @@ export class PromptProvider {
             prompt += wrapXml('rules', PAGE_SYSTEM_PROMPT.rules);
             prompt += wrapXml(
                 'example-conversation',
-                this.getExampleConversation(CREATE_PAGE_EXAMPLE_CONVERSATION),
+                this.getExampleConversation(CREATE_PAGE_EXAMPLE_CONVERSATION)
             );
         } else {
             prompt += PAGE_SYSTEM_PROMPT.role;
@@ -61,7 +61,7 @@ export class PromptProvider {
         conversation: {
             role: string;
             content: string;
-        }[],
+        }[]
     ) {
         let prompt = '';
         for (const message of conversation) {
@@ -188,7 +188,7 @@ export class PromptProvider {
             if (this.shouldWrapXml) {
                 highlightPrompt = wrapXml(
                     fileHighlights.length > 1 ? `highlight-${index}` : 'highlight',
-                    highlightPrompt,
+                    highlightPrompt
                 );
             }
             prompt += highlightPrompt;
@@ -209,7 +209,7 @@ export class PromptProvider {
             prompt += wrapXml('example-conversation', this.getSummaryExampleConversation());
             prompt += wrapXml(
                 'example-summary-output',
-                'EXAMPLE SUMMARY:\n' + SUMMARY_PROMPTS.summary,
+                'EXAMPLE SUMMARY:\n' + SUMMARY_PROMPTS.summary
             );
         } else {
             prompt += SUMMARY_PROMPTS.rules + '\n\n';

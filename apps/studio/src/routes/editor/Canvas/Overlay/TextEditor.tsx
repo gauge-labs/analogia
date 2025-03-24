@@ -4,8 +4,8 @@ import {
     schema,
 } from '@/lib/editor/engine/overlay/prosemirror/';
 import type { RectDimensions } from '@/lib/editor/engine/overlay/rect';
-import { EditorAttributes } from '@onlook/models/constants';
-import { colors } from '@onlook/ui/tokens';
+import { EditorAttributes } from '@analogia/models/constants';
+import { colors } from '@analogia/ui/tokens';
 import { EditorState } from 'prosemirror-state';
 import { EditorView } from 'prosemirror-view';
 import React, { useEffect, useRef } from 'react';
@@ -121,8 +121,8 @@ export const TextEditor: React.FC<TextEditorProps> = ({
                 outlineOffset: '-1px',
                 borderRadius: '1px',
             }}
-            data-onlook-ignore={EditorAttributes.DATA_ONLOOK_IGNORE}
-            id={EditorAttributes.ONLOOK_RECT_ID}
+            data-analogia-ignore={EditorAttributes.DATA_ANALOGIA_IGNORE}
+            id={EditorAttributes.ANALOGIA_RECT_ID}
         />
     );
 };

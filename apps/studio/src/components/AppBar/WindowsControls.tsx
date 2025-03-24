@@ -1,8 +1,8 @@
 import { invokeMainChannel } from '@/lib/utils';
-import { MainChannels } from '@onlook/models/constants';
-import { WindowCommand } from '@onlook/models/projects';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
+import { MainChannels } from '@analogia/models/constants';
+import { WindowCommand } from '@analogia/models/projects';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
 import { useState } from 'react';
 
 export const WindowsControls = () => {
@@ -24,7 +24,7 @@ export const WindowsControls = () => {
             <Button
                 onClick={() => sendCommand(WindowCommand.MINIMIZE)}
                 variant={'ghost'}
-                className="hover:bg-background-onlook/30  hover:text-foreground outline-border w-full h-full rounded-none"
+                className="hover:bg-background-analogia/30  hover:text-foreground outline-border w-full h-full rounded-none"
                 aria-label="Minimize"
             >
                 <Icons.Minus className="h-3 w-3" />
@@ -34,7 +34,7 @@ export const WindowsControls = () => {
                     sendCommand(isMaximized ? WindowCommand.UNMAXIMIZE : WindowCommand.MAXIMIZE)
                 }
                 variant={'ghost'}
-                className="hover:bg-background-onlook/30 hover:text-foreground outline-border w-full h-full rounded-none"
+                className="hover:bg-background-analogia/30 hover:text-foreground outline-border w-full h-full rounded-none"
                 aria-label="Maximize"
             >
                 <Icons.Copy className="h-3 w-3 scale-x-[-1]" />

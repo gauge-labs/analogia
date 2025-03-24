@@ -1,4 +1,4 @@
-import { type CodeBlock } from '@onlook/models/chat/message';
+import { type CodeBlock } from '@analogia/models/chat/message';
 import { FENCE } from '../prompt/format';
 import { flexibleSearchAndReplace } from './search-replace';
 
@@ -49,7 +49,7 @@ export class CodeBlockProcessor {
      */
     async applyDiff(
         originalText: string,
-        diffText: string,
+        diffText: string
     ): Promise<{
         success: boolean;
         text: string;

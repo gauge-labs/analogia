@@ -4,15 +4,15 @@ import { ColorSlider } from './ColorSlider';
 import { SVPicker } from './SVPicker';
 import tw from 'tailwind-styled-components';
 import { twMerge } from 'tailwind-merge';
-import { Color } from '@onlook/utility';
-import { mod } from '@onlook/utility';
+import { Color } from '@analogia/utility';
+import { mod } from '@analogia/utility';
 import { DraftableInput } from '../draftable-input';
 import styled from '@emotion/styled';
 import { InputGroup } from '../input-group';
 import EyeDropperButton from './EyeDropperButton';
 
 const Input = tw(DraftableInput)`
-  outline-0 w-full h-6 bg-background-onlook/70 rounded focus:ring-1 ring-inset ring-foreground-active text-foreground-primary placeholder:text-foreground-disabled text-center
+  outline-0 w-full h-6 bg-background-analogia/70 rounded focus:ring-1 ring-inset ring-foreground-active text-foreground-primary placeholder:text-foreground-disabled text-center
 `;
 
 type SliderMode = 'hsl' | 'hsv' | 'rgb' | 'hex';
@@ -251,7 +251,7 @@ export const ColorPicker: React.FC<{
             setLocalColor(newColor);
             onChange?.(newColor);
         },
-        [localColor, onChange],
+        [localColor, onChange]
     );
 
     const handleSVChange = useCallback(
@@ -266,7 +266,7 @@ export const ColorPicker: React.FC<{
             setLocalColor(updatedColor);
             onChange?.(updatedColor);
         },
-        [activeHue, localColor.a, onChange],
+        [activeHue, localColor.a, onChange]
     );
 
     return (

@@ -4,9 +4,9 @@ import type {
     ActionLocation,
     ActionTarget,
     InsertElementAction,
-} from '@onlook/models/actions';
-import { EditorAttributes } from '@onlook/models/constants';
-import type { DomElement } from '@onlook/models/element';
+} from '@analogia/models/actions';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { DomElement } from '@analogia/models/element';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
 
@@ -131,9 +131,9 @@ export class CopyManager {
     getCleanedCopyEl(copiedEl: ActionElement, domId: string, oid: string): ActionElement {
         const filteredAttr: Record<string, string> = {
             class: copiedEl.attributes['class'] || '',
-            [EditorAttributes.DATA_ONLOOK_DOM_ID]: domId,
-            [EditorAttributes.DATA_ONLOOK_ID]: oid,
-            [EditorAttributes.DATA_ONLOOK_INSERTED]: 'true',
+            [EditorAttributes.DATA_ANALOGIA_DOM_ID]: domId,
+            [EditorAttributes.DATA_ANALOGIA_ID]: oid,
+            [EditorAttributes.DATA_ANALOGIA_INSERTED]: 'true',
         };
 
         // Process children recursively

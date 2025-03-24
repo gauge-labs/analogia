@@ -1,5 +1,5 @@
 import { useAppStateManager } from '@/components/Context';
-import { Icons } from '@onlook/ui/icons/index';
+import { Icons } from '@analogia/ui/icons/index';
 import { AnimatePresence, motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
 
@@ -30,7 +30,7 @@ export const QuittingModal = observer(() => {
                         <div className="bg-background border rounded-lg shadow-lg p-0 pointer-events-auto">
                             <div className="p-10 text-xl flex flex-row gap-2 h-full overflow-hidden items-center justify-center">
                                 <Icons.Shadow className="w-7 h-7 animate-spin" />
-                                <p className="">Closing Onlook...</p>
+                                <p className="">Closing Analogia...</p>
                             </div>
                         </div>
                     </motion.div>

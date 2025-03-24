@@ -24,8 +24,8 @@ export interface GitCommit {
     timestamp: number;
 }
 
-const GIT_AUTHOR = { name: 'Onlook', email: 'git@onlook.com' };
-const DISPLAY_NAME_NAMESPACE = 'onlook-display-name';
+const GIT_AUTHOR = { name: 'Analogia', email: 'git@analogia.ai' };
+const DISPLAY_NAME_NAMESPACE = 'analogia-display-name';
 
 export async function isRepoInitialized(dir: string) {
     try {
@@ -58,7 +58,7 @@ export async function isEmptyCommit(repoPath: string): Promise<boolean> {
                 // filter unchanged
                 // https://github.com/isomorphic-git/isomorphic-git/issues/865#issuecomment-533028127
                 // https://isomorphic-git.org/docs/en/statusMatrix.html
-                !(HEAD == 1 && WORKDIR == 1 && STAGE == 1),
+                !(HEAD == 1 && WORKDIR == 1 && STAGE == 1)
         );
         return changes.length === 0;
     } catch (error) {
@@ -82,7 +82,7 @@ export async function addAll(repoPath: string) {
             } catch (error) {
                 console.error(`Error processing file ${filepath}:`, error);
             }
-        }),
+        })
     );
 }
 
@@ -93,7 +93,7 @@ export async function status(repoPath: string, filepath: string = '.') {
 export async function commit(
     repoPath: string,
     message: string,
-    author = GIT_AUTHOR,
+    author = GIT_AUTHOR
 ): Promise<string> {
     return await gitCommit({
         fs,
@@ -135,7 +135,7 @@ export async function getCommits(repoPath: string): Promise<GitCommit[]> {
             author: commit.commit.author,
             timestamp: commit.commit.author.timestamp,
             displayName: await getCommitDisplayName(repoPath, commit.oid),
-        })),
+        }))
     );
 }
 

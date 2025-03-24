@@ -1,7 +1,7 @@
 import { useEditorEngine } from '@/components/Context';
 import { EditorMode } from '@/lib/models';
-import { Icons } from '@onlook/ui/icons';
-import { cn } from '@onlook/ui/utils';
+import { Icons } from '@analogia/ui/icons';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -89,7 +89,7 @@ export const LayersPanel = observer(() => {
             onMouseLeave={handleMouseLeave}
         >
             {/* Left sidebar with tabs */}
-            <div className="w-20 bg-background-onlook/60 backdrop-blur-xl flex flex-col items-center py-0.5 gap-2">
+            <div className="w-20 bg-background-analogia/60 backdrop-blur-xl flex flex-col items-center py-0.5 gap-2">
                 <button
                     className={cn(
                         'w-16 h-16 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2',

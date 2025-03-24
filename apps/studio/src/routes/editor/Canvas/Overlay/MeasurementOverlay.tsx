@@ -1,5 +1,5 @@
-import { colors } from '@onlook/ui/tokens';
-import { EditorAttributes } from '@onlook/models/constants';
+import { colors } from '@analogia/ui/tokens';
+import { EditorAttributes } from '@analogia/models/constants';
 import type { RectDimensions } from '../../../../lib/editor/engine/overlay/rect';
 import React, { memo, useMemo } from 'react';
 import { BaseRect } from './BaseRect';

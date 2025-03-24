@@ -1,6 +1,6 @@
 {
-    "name": "@onlook/git",
-    "description": "A git library for Onlook",
+    "name": "@analogia/git",
+    "description": "A git library for Analogia",
     "main": "./src/index.ts",
     "type": "module",
     "module": "src/index.ts",
@@ -9,7 +9,7 @@
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/onlook-dev/onlook.git"
+        "url": "https://github.com/AnalogiaAI/analogia.git"
     },
     "scripts": {
         "clean": "rm -rf node_modules",
@@ -18,17 +18,17 @@
         "typecheck": "tsc --noEmit"
     },
     "keywords": [
-        "onlook",
+        "analogia",
         "git"
     ],
     "author": {
-        "name": "Onlook",
-        "email": "contact@onlook.com"
+        "name": "Analogia",
+        "email": "contact@analogia.ai"
     },
     "license": "Apache-2.0",
-    "homepage": "https://onlook.com",
+    "homepage": "https://analogia.ai",
     "devDependencies": {
-        "@onlook/typescript": "*"
+        "@analogia/typescript": "*"
     },
     "dependencies": {
         "globby": "^14.1.0",

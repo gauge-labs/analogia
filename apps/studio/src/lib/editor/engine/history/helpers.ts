@@ -4,7 +4,7 @@ import type {
     IndexActionLocation,
     UpdateStyleAction,
     WriteCodeAction,
-} from '@onlook/models/actions';
+} from '@analogia/models/actions';
 import { assertNever } from '/common/helpers';
 
 export function reverse<T>(change: Change<T>): Change<T> {

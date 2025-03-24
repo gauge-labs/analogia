@@ -1,12 +1,12 @@
-import { Button } from '@onlook/ui/button';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuCheckboxItem,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
 import { useState } from 'react';
 
 interface FontVariantProps {

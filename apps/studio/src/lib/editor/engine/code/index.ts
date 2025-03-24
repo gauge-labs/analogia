@@ -14,16 +14,16 @@ import type {
     UngroupElementsAction,
     UpdateStyleAction,
     WriteCodeAction,
-} from '@onlook/models/actions';
+} from '@analogia/models/actions';
 import {
     CodeActionType,
     type CodeGroup,
     type CodeMove,
     type CodeRemove,
     type CodeUngroup,
-} from '@onlook/models/actions';
-import type { CodeDiff, CodeDiffRequest } from '@onlook/models/code';
-import { MainChannels, WebviewChannels } from '@onlook/models/constants';
+} from '@analogia/models/actions';
+import type { CodeDiff, CodeDiffRequest } from '@analogia/models/code';
+import { MainChannels, WebviewChannels } from '@analogia/models/constants';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
 import { addTailwindToRequest, getOrCreateCodeDiffRequest } from './helpers';

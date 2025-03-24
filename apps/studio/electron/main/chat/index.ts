@@ -1,6 +1,6 @@
-import { PromptProvider } from '@onlook/ai/src/prompt/provider';
-import { chatToolSet } from '@onlook/ai/src/tools';
-import { CLAUDE_MODELS, LLMProvider } from '@onlook/models';
+import { PromptProvider } from '@analogia/ai/src/prompt/provider';
+import { chatToolSet } from '@analogia/ai/src/tools';
+import { CLAUDE_MODELS, LLMProvider } from '@analogia/models';
 import {
     ChatSuggestionSchema,
     ChatSummarySchema,
@@ -9,8 +9,8 @@ import {
     type CompletedStreamResponse,
     type PartialStreamResponse,
     type UsageCheckResult,
-} from '@onlook/models/chat';
-import { MainChannels } from '@onlook/models/constants';
+} from '@analogia/models/chat';
+import { MainChannels } from '@analogia/models/constants';
 import {
     generateObject,
     streamText,

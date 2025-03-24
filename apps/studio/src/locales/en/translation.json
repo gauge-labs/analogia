@@ -15,12 +15,12 @@
                 "load": "Load Existing Project"
             },
             "loading": {
-                "title": "Setting up your new Onlook app...",
+                "title": "Setting up your new Analogia app...",
                 "description": "This may take a few seconds",
                 "cancel": "Cancel"
             },
             "error": {
-                "title": "Error creating your Onlook app",
+                "title": "Error creating your Analogia app",
                 "backToPrompt": "Back to Prompting"
             }
         },
@@ -35,7 +35,7 @@
         "actions": {
             "import": "Import",
             "close": "Close",
-            "about": "About Onlook",
+            "about": "About Analogia",
             "signOut": "Sign out",
             "editApp": "Edit App",
             "projectSettings": "Project settings",
@@ -77,9 +77,9 @@
         }
     },
     "welcome": {
-        "title": "Welcome to Onlook",
-        "titleReturn": "Welcome back to Onlook",
-        "description": "Onlook is an open-source visual editor for React apps. Design directly in your live product.",
+        "title": "Welcome to Analogia",
+        "titleReturn": "Welcome back to Analogia",
+        "description": "Analogia is an open-source visual editor for React apps. Design directly in your live product.",
         "alpha": "Alpha",
         "login": {
             "github": "Login with GitHub",
@@ -97,7 +97,7 @@
     "pricing": {
         "plans": {
             "basic": {
-                "name": "Onlook Basic",
+                "name": "Analogia Basic",
                 "price": "$0/month",
                 "description": "Prototype and experiment in code with ease.",
                 "features": [
@@ -109,7 +109,7 @@
                 ]
             },
             "pro": {
-                "name": "Onlook Pro",
+                "name": "Analogia Pro",
                 "price": "$20/month",
                 "description": "Creativity – unconstrained. Build stunning sites with AI.",
                 "features": [
@@ -117,8 +117,8 @@
                     "Unlimited projects",
                     "Unlimited AI chat messages a day",
                     "Unlimited monthly chats",
-                    "Remove built with Onlook watermark",
-                    "1 free custom domain hosted with Onlook",
+                    "Remove built with Analogia watermark",
+                    "1 free custom domain hosted with Analogia",
                     "Priority support"
                 ]
             }
@@ -290,7 +290,7 @@
     },
     "help": {
         "menu": {
-            "reloadOnlook": "Reload Onlook",
+            "reloadAnalogia": "Reload Analogia",
             "theme": {
                 "title": "Theme",
                 "light": "Light",

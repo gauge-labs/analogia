@@ -1,5 +1,5 @@
 import { useProjectsManager } from '@/components/Context';
-import { Separator } from '@onlook/ui/separator';
+import { Separator } from '@analogia/ui/separator';
 import { observer } from 'mobx-react-lite';
 import { NoSavedVersions } from './EmptyState/Saved';
 import { VersionRow, VersionRowType } from './VersionRow';

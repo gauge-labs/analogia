@@ -1,5 +1,5 @@
-import { EditorAttributes, WebviewChannels } from '@onlook/models/constants';
-import type { LayerNode } from '@onlook/models/element';
+import { EditorAttributes, WebviewChannels } from '@analogia/models/constants';
+import type { LayerNode } from '@analogia/models/element';
 import { ipcRenderer } from 'electron';
 import { debounce } from './bundles/helpers';
 import { getOrAssignDomId } from './ids';
@@ -19,7 +19,7 @@ const processDebounced = debounce((root: HTMLElement) => {
         return false;
     }
 
-    const rootDomId = root.getAttribute(EditorAttributes.DATA_ONLOOK_DOM_ID);
+    const rootDomId = root.getAttribute(EditorAttributes.DATA_ANALOGIA_DOM_ID);
     if (!rootDomId) {
         console.warn('Root dom id not found');
         return false;
@@ -73,7 +73,7 @@ export function buildLayerTree(root: HTMLElement): Map<string, LayerNode> | null
         // Get parent's domId
         const parentElement = (currentNode as HTMLElement).parentElement;
         if (parentElement) {
-            const parentDomId = parentElement.getAttribute(EditorAttributes.DATA_ONLOOK_DOM_ID);
+            const parentDomId = parentElement.getAttribute(EditorAttributes.DATA_ANALOGIA_DOM_ID);
             if (parentDomId) {
                 layerNode.parent = parentDomId;
 
@@ -102,7 +102,7 @@ function processNode(node: HTMLElement): LayerNode {
         .trim()
         .slice(0, 500);
     const style = window.getComputedStyle(node);
-    const component = node.getAttribute(EditorAttributes.DATA_ONLOOK_COMPONENT_NAME) as
+    const component = node.getAttribute(EditorAttributes.DATA_ANALOGIA_COMPONENT_NAME) as
         | string
         | null;
 

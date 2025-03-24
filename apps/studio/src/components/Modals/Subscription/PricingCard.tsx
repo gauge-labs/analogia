@@ -1,6 +1,6 @@
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { MotionCard } from '@onlook/ui/motion-card';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { MotionCard } from '@analogia/ui/motion-card';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -35,7 +35,7 @@ export const PricingCard = ({
             <motion.div className="p-6 flex flex-col h-full">
                 <div className="space-y-1">
                     <h2 className="text-title2">{plan}</h2>
-                    <p className="text-foreground-onlook text-largePlus">{price}</p>
+                    <p className="text-foreground-analogia text-largePlus">{price}</p>
                 </div>
                 <div className="border-[0.5px] border-border-primary -mx-6 my-6" />
                 <p className="text-foreground-primary text-title3 text-balance">{description}</p>

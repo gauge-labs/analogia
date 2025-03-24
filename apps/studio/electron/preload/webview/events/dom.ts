@@ -1,5 +1,5 @@
-import { EditorAttributes, WebviewChannels } from '@onlook/models/constants';
-import type { LayerNode } from '@onlook/models/element';
+import { EditorAttributes, WebviewChannels } from '@analogia/models/constants';
+import type { LayerNode } from '@analogia/models/element';
 import { ipcRenderer } from 'electron';
 import { buildLayerTree } from '../dom';
 
@@ -57,11 +57,11 @@ export function listenForDomMutation() {
 }
 
 function shouldIgnoreMutatedNode(node: HTMLElement): boolean {
-    if (node.id === EditorAttributes.ONLOOK_STUB_ID) {
+    if (node.id === EditorAttributes.ANALOGIA_STUB_ID) {
         return true;
     }
 
-    if (node.getAttribute(EditorAttributes.DATA_ONLOOK_INSERTED)) {
+    if (node.getAttribute(EditorAttributes.DATA_ANALOGIA_INSERTED)) {
         return true;
     }
 
@@ -71,21 +71,21 @@ function shouldIgnoreMutatedNode(node: HTMLElement): boolean {
 function dedupNewElement(newEl: HTMLElement) {
     // If the element has an oid and there's an inserted element with the same oid,
     // replace the existing element with the new one and restore the attributes
-    const oid = newEl.getAttribute(EditorAttributes.DATA_ONLOOK_ID);
+    const oid = newEl.getAttribute(EditorAttributes.DATA_ANALOGIA_ID);
     if (!oid) {
         return;
     }
 
     document
         .querySelectorAll(
-            `[${EditorAttributes.DATA_ONLOOK_ID}="${oid}"][${EditorAttributes.DATA_ONLOOK_INSERTED}]`,
+            `[${EditorAttributes.DATA_ANALOGIA_ID}="${oid}"][${EditorAttributes.DATA_ANALOGIA_INSERTED}]`,
         )
         .forEach((targetEl) => {
             const ATTRIBUTES_TO_REPLACE = [
-                EditorAttributes.DATA_ONLOOK_DOM_ID,
-                EditorAttributes.DATA_ONLOOK_DRAG_SAVED_STYLE,
-                EditorAttributes.DATA_ONLOOK_EDITING_TEXT,
-                EditorAttributes.DATA_ONLOOK_INSTANCE_ID,
+                EditorAttributes.DATA_ANALOGIA_DOM_ID,
+                EditorAttributes.DATA_ANALOGIA_DRAG_SAVED_STYLE,
+                EditorAttributes.DATA_ANALOGIA_EDITING_TEXT,
+                EditorAttributes.DATA_ANALOGIA_INSTANCE_ID,
             ];
 
             ATTRIBUTES_TO_REPLACE.forEach((attr) => {

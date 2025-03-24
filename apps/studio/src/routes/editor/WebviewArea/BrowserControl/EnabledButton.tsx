@@ -1,9 +1,9 @@
 import { useEditorEngine } from '@/components/Context';
 import { WebviewState } from '@/lib/editor/engine/webview';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Popover, PopoverContent, PopoverTrigger } from '@onlook/ui/popover';
-import { cn } from '@onlook/ui/utils';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Popover, PopoverContent, PopoverTrigger } from '@analogia/ui/popover';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { assertNever } from '/common/helpers';
 
@@ -13,7 +13,7 @@ const EnabledButton = observer(({ webviewId }: { webviewId: string }) => {
     const state = editorEngine.webviews.getState(webviewId);
 
     // Only show button for error states
-    if (state !== WebviewState.DOM_NO_ONLOOK) {
+    if (state !== WebviewState.DOM_NO_ANALOGIA) {
         return null;
     }
 
@@ -36,13 +36,13 @@ const EnabledButton = observer(({ webviewId }: { webviewId: string }) => {
                 <div className="space-y-2 flex flex-col w-80 items-center">
                     <div className="flex gap-2 justify-center">
                         <p className="text-active text-regularPlus">
-                            {"Onlook won't work on this page"}
+                            {"Analogia won't work on this page"}
                         </p>
                         <Icons.CircleBackslash className="mt-[3px] text-red-500" />
                     </div>
-                    <p className="text-foreground-onlook text-small text-left">
+                    <p className="text-foreground-analogia text-small text-left">
                         {
-                            "This url is not linked to Onlook's editor. Please navigate to a url that is linked to Onlook's editor."
+                            "This url is not linked to Analogia's editor. Please navigate to a url that is linked to Analogia's editor."
                         }
                     </p>
                 </div>

@@ -3,7 +3,7 @@ import {
     injectBuiltWithScript,
     removeBuiltWithScript,
     removeBuiltWithScriptFromLayout,
-} from '@onlook/growth';
+} from '@analogia/growth';
 import {
     ApiRoutes,
     BASE_API_ROUTE,
@@ -12,14 +12,14 @@ import {
     FUNCTIONS_ROUTE,
     HostingRoutes,
     MainChannels,
-} from '@onlook/models/constants';
+} from '@analogia/models/constants';
 import {
     PublishStatus,
     type PublishOptions,
     type PublishRequest,
     type PublishResponse,
-} from '@onlook/models/hosting';
-import { isEmptyString, isNullOrUndefined } from '@onlook/utility';
+} from '@analogia/models/hosting';
+import { isEmptyString, isNullOrUndefined } from '@analogia/utility';
 import {
     type FreestyleDeployWebConfiguration,
     type FreestyleDeployWebSuccessResponse,
@@ -64,7 +64,7 @@ class HostingManager {
             if (!options?.skipBadge) {
                 this.emitState(PublishStatus.LOADING, 'Adding badge...');
                 await this.addBadge(folderPath);
-                timer.log('"Built with Onlook" badge added');
+                timer.log('"Built with Analogia" badge added');
             }
 
             // Run the build script
@@ -97,7 +97,7 @@ class HostingManager {
 
             if (!options?.skipBadge) {
                 await this.removeBadge(folderPath);
-                timer.log('"Built with Onlook" badge removed');
+                timer.log('"Built with Analogia" badge removed');
             }
 
             return {

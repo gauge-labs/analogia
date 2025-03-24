@@ -7,7 +7,7 @@ export type GetAccountParams = {
 export async function getAccountQuery(
     { account_name }: GetAccountParams,
     supabase: Client,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (!account_name) {
         throw new Error('account_name is required');
@@ -42,7 +42,7 @@ export type GetUserAccountsParams = {
 export async function getUserAccountsQuery(
     { user_id }: GetUserAccountsParams,
     supabase: Client,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (!user_id) {
         throw new Error('user_id is required');
@@ -58,7 +58,7 @@ export async function getUserAccountsQuery(
           ...users_on_organization()
         ),
         ...users()
-      `,
+      `
         )
         .or('users.id.eq.user_id, users_on_organization.user_id.eq.user_id');
 

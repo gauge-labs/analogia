@@ -2,9 +2,9 @@ import { useEditorEngine } from '@/components/Context';
 import type { CompoundStyle, SingleStyle } from '@/lib/editor/styles/models';
 import { invokeMainChannel } from '@/lib/utils';
 import type { ColorItem } from '@/routes/editor/LayersPanel/BrandTab/ColorPanel/ColorPalletGroup';
-import { MainChannels } from '@onlook/models/constants';
-import { Icons } from '@onlook/ui/icons';
-import { Color, isColorEmpty } from '@onlook/utility';
+import { MainChannels } from '@analogia/models/constants';
+import { Icons } from '@analogia/ui/icons';
+import { Color, isColorEmpty } from '@analogia/utility';
 import { observer } from 'mobx-react-lite';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 // import { BrandPopoverPicker } from './ColorBrandPicker';
@@ -199,7 +199,7 @@ const ColorInput = observer(
             return <Icons.CrossS />;
         };
         return (
-            <div className="w-32 p-[6px] gap-2 flex flex-row rounded cursor-pointer bg-background-onlook/75">
+            <div className="w-32 p-[6px] gap-2 flex flex-row rounded cursor-pointer bg-background-analogia/75">
                 {/* <BrandPopoverPicker
                     color={color}
                     onChange={sendStyleUpdate}
@@ -224,7 +224,7 @@ const ColorInput = observer(
                     onBlur={handleBlur}
                     backgroundImage={backgroundImage}
                 />
-                <button className="text-foreground-onlook" onClick={handleColorButtonClick}>
+                <button className="text-foreground-analogia" onClick={handleColorButtonClick}>
                     {renderButtonIcon()}
                 </button>
             </div>

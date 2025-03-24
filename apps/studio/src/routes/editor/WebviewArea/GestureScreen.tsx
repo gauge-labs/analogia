@@ -1,9 +1,9 @@
 import { useEditorEngine } from '@/components/Context';
 import { getRelativeMousePositionToWebview } from '@/lib/editor/engine/overlay/utils';
 import { EditorMode } from '@/lib/models';
-import { MouseAction } from '@onlook/models/editor';
-import type { DomElement, DropElementProperties, ElementPosition } from '@onlook/models/element';
-import { cn } from '@onlook/ui/utils';
+import { MouseAction } from '@analogia/models/editor';
+import type { DomElement, DropElementProperties, ElementPosition } from '@analogia/models/element';
+import { cn } from '@analogia/ui/utils';
 import throttle from 'lodash/throttle';
 import { observer } from 'mobx-react-lite';
 import { useCallback, useEffect, useMemo } from 'react';

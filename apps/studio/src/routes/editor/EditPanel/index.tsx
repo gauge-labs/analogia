@@ -1,18 +1,18 @@
 import { useEditorEngine, useUserManager } from '@/components/Context';
 import { EditorMode, EditorTabValue } from '@/lib/models';
-import { DefaultSettings } from '@onlook/models/constants';
+import { DefaultSettings } from '@analogia/models/constants';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import ResizablePanel from '@onlook/ui/resizable';
-import { Separator } from '@onlook/ui/separator';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@onlook/ui/tabs';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import ResizablePanel from '@analogia/ui/resizable';
+import { Separator } from '@analogia/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@analogia/ui/tabs';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';

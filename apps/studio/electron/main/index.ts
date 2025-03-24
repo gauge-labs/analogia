@@ -1,4 +1,4 @@
-import { APP_NAME, APP_SCHEMA, MainChannels } from '@onlook/models/constants';
+import { APP_NAME, APP_SCHEMA, MainChannels } from '@analogia/models/constants';
 import { BrowserWindow, app, shell } from 'electron';
 import fixPath from 'fix-path';
 import { createRequire } from 'node:module';

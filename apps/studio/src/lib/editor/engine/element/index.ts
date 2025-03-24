@@ -1,6 +1,6 @@
-import type { RemoveElementAction } from '@onlook/models/actions';
-import type { CoreElementType, DomElement, DynamicType } from '@onlook/models/element';
-import { toast } from '@onlook/ui/use-toast';
+import type { RemoveElementAction } from '@analogia/models/actions';
+import type { CoreElementType, DomElement, DynamicType } from '@analogia/models/element';
+import { toast } from '@analogia/ui/use-toast';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
 import { adaptRectToCanvas } from '../overlay/utils';

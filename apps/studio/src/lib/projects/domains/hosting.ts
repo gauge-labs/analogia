@@ -1,13 +1,13 @@
-import { DefaultSettings, MainChannels } from '@onlook/models/constants';
+import { DefaultSettings, MainChannels } from '@analogia/models/constants';
 import {
     PublishStatus,
     type PublishOptions,
     type PublishRequest,
     type PublishResponse,
     type PublishState,
-} from '@onlook/models/hosting';
-import { DomainType, type DomainSettings, type Project } from '@onlook/models/projects';
-import { getPublishUrls } from '@onlook/utility';
+} from '@analogia/models/hosting';
+import { DomainType, type DomainSettings, type Project } from '@analogia/models/projects';
+import { getPublishUrls } from '@analogia/utility';
 import { makeAutoObservable } from 'mobx';
 import { invokeMainChannel, sendAnalytics, sendAnalyticsError } from '../../utils/index.ts';
 import type { ProjectsManager } from '../index.ts';

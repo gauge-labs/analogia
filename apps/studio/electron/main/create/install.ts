@@ -1,4 +1,4 @@
-import { CreateStage, type CreateCallback } from '@onlook/models';
+import { CreateStage, type CreateCallback } from '@analogia/models';
 import download from 'download';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -15,7 +15,7 @@ export async function createProject(
         // Check if the directory already exists
         if (fs.existsSync(fullPath)) {
             throw new Error(
-                `Directory ${fullPath} already exists. Please import it to Onlook or go back to create a different folder.`,
+                `Directory ${fullPath} already exists. Please import it to Analogia or go back to create a different folder.`,
             );
         }
 
@@ -40,7 +40,7 @@ export async function createProject(
 
 async function downloadTemplate(fullPath: string) {
     try {
-        const zipUrl = `https://github.com/onlook-dev/starter/archive/refs/heads/main.zip`;
+        const zipUrl = `https://github.com/AnalogiaAI/starter/archive/refs/heads/main.zip`;
         await download(zipUrl, fullPath, {
             extract: true,
             strip: 1,

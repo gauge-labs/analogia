@@ -1,6 +1,6 @@
-import { DefaultSettings, MainChannels } from '@onlook/models/constants';
-import type { Project } from '@onlook/models/projects';
-import { RunState } from '@onlook/models/run';
+import { DefaultSettings, MainChannels } from '@analogia/models/constants';
+import type { Project } from '@analogia/models/projects';
+import { RunState } from '@analogia/models/run';
 import { makeAutoObservable, reaction } from 'mobx';
 import type { EditorEngine } from '../editor/engine';
 import { invokeMainChannel } from '../utils';

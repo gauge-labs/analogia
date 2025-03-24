@@ -1,4 +1,4 @@
-import baseConfig from '@onlook/ui/tailwind.config';
+import baseConfig from '@analogia/ui/tailwind.config';
 import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors.js';
 import typography from '@tailwindcss/typography';

@@ -1,5 +1,5 @@
-import { EditorAttributes } from '@onlook/models/constants';
-import type { ElementPosition } from '@onlook/models/element';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { ElementPosition } from '@analogia/models/element';
 import type { WebviewTag } from 'electron/renderer';
 import type { RectDimensions } from './rect';
 

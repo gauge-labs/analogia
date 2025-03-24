@@ -2,7 +2,7 @@
     "pricing": {
         "plans": {
             "basic": {
-                "name": "Onlook Basic",
+                "name": "Analogia Basic",
                 "price": "$0/月",
                 "description": "コードで簡単にプロトタイピングと実験を。",
                 "features": [
@@ -14,7 +14,7 @@
                 ]
             },
             "pro": {
-                "name": "Onlook Pro",
+                "name": "Analogia Pro",
                 "price": "$20/月",
                 "description": "創造性を解き放とう。AIで美しいサイトを構築。",
                 "features": [
@@ -22,8 +22,8 @@
                     "無制限のプロジェクト",
                     "無制限のAIチャットメッセージ（1日あたり）",
                     "無制限の月間チャット",
-                    "ビルド時にOnlookの透かしを削除",
-                    "Onlookでホスティングされた1つの無料カスタムドメイン",
+                    "ビルド時にAnalogiaの透かしを削除",
+                    "Analogiaでホスティングされた1つの無料カスタムドメイン",
                     "優先サポート"
                 ]
             }
@@ -209,12 +209,12 @@
                 "load": "既存のプロジェクトを読み込む"
             },
             "loading": {
-                "title": "新しいOnlookアプリをセットアップしています...",
+                "title": "新しいAnalogiaアプリをセットアップしています...",
                 "description": "数秒かかる場合があります",
                 "cancel": "キャンセル"
             },
             "error": {
-                "title": "Onlookアプリの作成中にエラーが発生しました",
+                "title": "Analogiaアプリの作成中にエラーが発生しました",
                 "backToPrompt": "プロンプトに戻る"
             }
         },
@@ -229,7 +229,7 @@
         "actions": {
             "import": "インポート",
             "close": "閉じる",
-            "about": "Onlookについて",
+            "about": "Analogiaについて",
             "signOut": "サインアウト",
             "editApp": "アプリを編集",
             "projectSettings": "プロジェクト設定",
@@ -271,9 +271,9 @@
         }
     },
     "welcome": {
-        "title": "Onlookへようこそ",
-        "titleReturn": "Onlookにお帰りなさい",
-        "description": "Onlookは、Reactアプリ向けのオープンソースビジュアルエディタです。実際に稼働する製品上で直接デザインできます。",
+        "title": "Analogiaへようこそ",
+        "titleReturn": "Analogiaにお帰りなさい",
+        "description": "Analogiaは、Reactアプリ向けのオープンソースビジュアルエディタです。実際に稼働する製品上で直接デザインできます。",
         "alpha": "アルファ版",
         "login": {
             "github": "GitHubでログイン",
@@ -290,7 +290,7 @@
     },
     "help": {
         "menu": {
-            "reloadOnlook": "Onlookを再読み込み",
+            "reloadAnalogia": "Analogiaを再読み込み",
             "theme": {
                 "title": "テーマ",
                 "light": "ライト",

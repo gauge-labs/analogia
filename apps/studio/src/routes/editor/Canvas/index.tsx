@@ -1,6 +1,6 @@
 import { useEditorEngine } from '@/components/Context';
 import { EditorMode } from '@/lib/models';
-import { EditorAttributes } from '@onlook/models/constants';
+import { EditorAttributes } from '@analogia/models/constants';
 import { observer } from 'mobx-react-lite';
 import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import HotkeysArea from './Hotkeys';
@@ -166,7 +166,7 @@ export const Canvas = observer(({ children }: { children: ReactNode }) => {
         <HotkeysArea>
             <div
                 ref={containerRef}
-                className="overflow-hidden bg-background-onlook flex flex-grow relative"
+                className="overflow-hidden bg-background-analogia flex flex-grow relative"
                 onMouseDown={handleCanvasMouseDown}
             >
                 <Overlay>

@@ -1,7 +1,7 @@
 import type { NodePath } from '@babel/traverse';
 import * as t from '@babel/types';
-import { type CodeInsertImage, type CodeRemoveImage } from '@onlook/models/actions';
-import { DefaultSettings } from '@onlook/models/constants';
+import { type CodeInsertImage, type CodeRemoveImage } from '@analogia/models/actions';
+import { DefaultSettings } from '@analogia/models/constants';
 import { join } from 'path';
 import { writeFile } from '../files';
 import { addClassToNode } from './style';

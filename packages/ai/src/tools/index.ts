@@ -2,7 +2,7 @@ import { anthropic } from '@ai-sdk/anthropic';
 import { tool, type ToolSet } from 'ai';
 import { readFile } from 'fs/promises';
 import { z } from 'zod';
-import { ONLOOK_PROMPT } from '../prompt/onlook';
+import { ANALOGIA_PROMPT } from '../prompt/analogia';
 import { getAllFiles } from './helpers';
 
 export const listFilesTool = tool({
@@ -11,7 +11,7 @@ export const listFilesTool = tool({
         path: z
             .string()
             .describe(
-                'The absolute path to the directory to get files from. This should be the root directory of the project.',
+                'The absolute path to the directory to get files from. This should be the root directory of the project.'
             ),
     }),
     execute: async ({ path }) => {
@@ -34,7 +34,7 @@ export const readFilesTool = tool({
                 paths.map(async (path) => {
                     const file = await readFile(path, 'utf8');
                     return { path, content: file };
-                }),
+                })
             );
             return files;
         } catch (error) {
@@ -43,11 +43,11 @@ export const readFilesTool = tool({
     },
 });
 
-export const onlookInstructionsTool = tool({
-    description: 'Get the instructions for the Onlook AI',
+export const analogiaInstructionsTool = tool({
+    description: 'Get the instructions for the Analogia AI',
     parameters: z.object({}),
     execute: async () => {
-        return ONLOOK_PROMPT;
+        return ANALOGIA_PROMPT;
     },
 });
 
@@ -102,7 +102,7 @@ export const getStrReplaceEditorTool = (handlers: FileOperationHandlers) => {
                     case 'insert': {
                         if (!new_str || insert_line === undefined) {
                             throw new Error(
-                                'new_str and insert_line are required for insert command',
+                                'new_str and insert_line are required for insert command'
                             );
                         }
                         const content = await handlers.readFile(path);
@@ -133,5 +133,5 @@ export const getStrReplaceEditorTool = (handlers: FileOperationHandlers) => {
 export const chatToolSet: ToolSet = {
     list_files: listFilesTool,
     read_files: readFilesTool,
-    onlook_instructions: onlookInstructionsTool,
+    analogia_instructions: analogiaInstructionsTool,
 };

@@ -1,8 +1,8 @@
 import { useEditorEngine } from '@/components/Context';
-import { Button } from '@onlook/ui/button';
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@onlook/ui/dialog';
-import { Icons } from '@onlook/ui/icons';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@onlook/ui/tabs';
+import { Button } from '@analogia/ui/button';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@analogia/ui/dialog';
+import { Icons } from '@analogia/ui/icons';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@analogia/ui/tabs';
 import { useState } from 'react';
 import { CodeBlock } from './CodeBlock';
 import { CodeDiff } from './CodeDiff';

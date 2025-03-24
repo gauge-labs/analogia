@@ -10,8 +10,8 @@ import {
     isRepoInitialized,
     status,
     updateCommitDisplayName,
-} from '@onlook/git';
-import { GitChannels } from '@onlook/models/constants';
+} from '@analogia/git';
+import { GitChannels } from '@analogia/models/constants';
 import { ipcMain } from 'electron';
 
 export function listenForVersionsMessages() {

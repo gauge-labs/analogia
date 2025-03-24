@@ -11,7 +11,7 @@ function getSupabaseClient(): ReturnType<typeof createClient> | undefined {
         }
         supabase = createClient(
             import.meta.env.VITE_SUPABASE_API_URL,
-            import.meta.env.VITE_SUPABASE_ANON_KEY,
+            import.meta.env.VITE_SUPABASE_ANON_KEY
         );
         return supabase;
     } catch (error) {

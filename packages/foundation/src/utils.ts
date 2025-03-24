@@ -50,7 +50,7 @@ export const getPackageManager = async (): Promise<PACKAGE_MANAGER> => {
 
 export const hasDependency = async (
     dependencyName: string,
-    targetPath?: string,
+    targetPath?: string
 ): Promise<boolean> => {
     const packageJsonPath = targetPath
         ? path.resolve(targetPath, PACKAGE_JSON)
@@ -69,7 +69,7 @@ export const hasDependency = async (
 
 export const getFileExtensionByPattern = async (
     dir: string,
-    filePattern: string,
+    filePattern: string
 ): Promise<string | null> => {
     const fullDirPattern = path.resolve(dir, filePattern);
     const files = await getFileNamesByPattern(fullDirPattern);
@@ -83,7 +83,7 @@ export const getFileExtensionByPattern = async (
 
 export const genASTParserOptionsByFileExtension = (
     fileExtension: string,
-    sourceType: string = 'module',
+    sourceType: string = 'module'
 ): object => {
     switch (fileExtension) {
         case FILE_EXTENSION.JS:
@@ -107,20 +107,20 @@ export const genASTParserOptionsByFileExtension = (
 
 export const genImportDeclaration = (
     fileExtension: string,
-    dependency: string,
+    dependency: string
 ): t.VariableDeclaration | t.ImportDeclaration | null => {
     switch (fileExtension) {
         case FILE_EXTENSION.JS:
             return t.variableDeclaration('const', [
                 t.variableDeclarator(
                     t.identifier(dependency),
-                    t.callExpression(t.identifier('require'), [t.stringLiteral(dependency)]),
+                    t.callExpression(t.identifier('require'), [t.stringLiteral(dependency)])
                 ),
             ]);
         case FILE_EXTENSION.MJS:
             return t.importDeclaration(
                 [t.importDefaultSpecifier(t.identifier(dependency))],
-                t.stringLiteral(dependency),
+                t.stringLiteral(dependency)
             );
         default:
             return null;
@@ -129,7 +129,7 @@ export const genImportDeclaration = (
 
 export const checkVariableDeclarationExist = (
     path: NodePath<t.VariableDeclarator>,
-    dependency: string,
+    dependency: string
 ): boolean => {
     return (
         t.isIdentifier(path.node.id, { name: dependency }) &&
@@ -142,7 +142,7 @@ export const checkVariableDeclarationExist = (
 export const isSupportFileExtension = (fileExtension: string): boolean => {
     return (
         [FILE_EXTENSION.JS, FILE_EXTENSION.MJS, FILE_EXTENSION.TS].indexOf(
-            fileExtension as FILE_EXTENSION,
+            fileExtension as FILE_EXTENSION
         ) !== -1
     );
 };

@@ -1,5 +1,5 @@
 import type { SingleStyle } from '@/lib/editor/styles/models';
-import { toast } from '@onlook/ui/use-toast';
+import { toast } from '@analogia/ui/use-toast';
 
 export function stringToParsedValue(
     val: string,

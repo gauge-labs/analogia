@@ -1,6 +1,6 @@
 {
-    "name": "@onlook/supabase",
-    "description": "Supabase client library for Onlook",
+    "name": "@analogia/supabase",
+    "description": "Supabase client library for Analogia",
     "version": "0.0.0",
     "private": true,
     "scripts": {
@@ -11,21 +11,21 @@
         "typecheck": "tsc --noEmit"
     },
     "keywords": [
-        "onlook",
+        "analogia",
         "supabase"
     ],
     "author": {
-        "name": "Onlook",
-        "email": "contact@onlook.com"
+        "name": "Analogia",
+        "email": "contact@analogia.ai"
     },
     "license": "Apache-2.0",
-    "homepage": "https://onlook.com",
+    "homepage": "https://analogia.ai",
     "dependencies": {
         "@supabase/supabase-js": "^2.45.6",
         "react": "^18.3.1"
     },
     "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
         "supabase": "^2.2.1",
         "typescript": "^5.5.4"
     },

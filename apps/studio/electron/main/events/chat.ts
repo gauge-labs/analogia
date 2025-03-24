@@ -1,6 +1,6 @@
-import type { ChatConversation, ProjectSuggestions } from '@onlook/models/chat';
-import { StreamRequestType } from '@onlook/models/chat';
-import { MainChannels } from '@onlook/models/constants';
+import type { ChatConversation, ProjectSuggestions } from '@analogia/models/chat';
+import { StreamRequestType } from '@analogia/models/chat';
+import { MainChannels } from '@analogia/models/constants';
 import type { CoreMessage } from 'ai';
 import { ipcMain } from 'electron';
 import Chat from '../chat';

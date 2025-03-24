@@ -1,9 +1,9 @@
 import { useEditorEngine } from '@/components/Context';
-import type { PageNode } from '@onlook/models/pages';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons/index';
-import { Input } from '@onlook/ui/input';
-import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@onlook/ui/tooltip';
+import type { PageNode } from '@analogia/models/pages';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons/index';
+import { Input } from '@analogia/ui/input';
+import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@analogia/ui/tooltip';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { type NodeApi, Tree, type TreeApi } from 'react-arborist';
@@ -172,7 +172,7 @@ const PagesTab = observer(() => {
                     />
                     {searchQuery && (
                         <button
-                            className="absolute right-[1px] top-[1px] bottom-[1px] aspect-square hover:bg-background-onlook active:bg-transparent flex items-center justify-center rounded-r-[calc(theme(borderRadius.md)-1px)] group"
+                            className="absolute right-[1px] top-[1px] bottom-[1px] aspect-square hover:bg-background-analogia active:bg-transparent flex items-center justify-center rounded-r-[calc(theme(borderRadius.md)-1px)] group"
                             onClick={() => setSearchQuery('')}
                         >
                             <Icons.CrossS className="h-3 w-3 text-foreground-primary/50 group-hover:text-foreground-primary" />
@@ -184,7 +184,7 @@ const PagesTab = observer(() => {
                         <Button
                             variant={'default'}
                             size={'icon'}
-                            className="p-2 w-fit h-fit text-foreground-primary border-border-primary hover:border-border-onlook bg-background-secondary hover:bg-background-onlook border"
+                            className="p-2 w-fit h-fit text-foreground-primary border-border-primary hover:border-border-analogia bg-background-secondary hover:bg-background-analogia border"
                             onClick={() => setShowCreateModal(true)}
                         >
                             <Icons.Plus />

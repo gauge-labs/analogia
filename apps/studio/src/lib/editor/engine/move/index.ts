@@ -1,5 +1,5 @@
-import type { MoveElementAction } from '@onlook/models/actions';
-import type { DomElement, ElementPosition } from '@onlook/models/element';
+import type { MoveElementAction } from '@analogia/models/actions';
+import type { DomElement, ElementPosition } from '@analogia/models/element';
 import type React from 'react';
 import type { EditorEngine } from '..';
 

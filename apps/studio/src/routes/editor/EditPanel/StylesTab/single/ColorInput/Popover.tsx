@@ -1,8 +1,8 @@
 import { useEditorEngine } from '@/components/Context';
 import type { CompoundStyle } from '@/lib/editor/styles/models';
-import { Popover, PopoverContent, PopoverTrigger } from '@onlook/ui/popover';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@onlook/ui/tabs';
-import { Color } from '@onlook/utility';
+import { Popover, PopoverContent, PopoverTrigger } from '@analogia/ui/popover';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@analogia/ui/tabs';
+import { Color } from '@analogia/utility';
 import { memo, useEffect, useState } from 'react';
 import { isBackgroundImageEmpty } from '.';
 import ColorButton from './ColorButton';

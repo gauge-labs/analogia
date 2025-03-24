@@ -1,4 +1,4 @@
-import { cn } from '@onlook/ui/utils';
+import { cn } from '@analogia/ui/utils';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 export function useResizable({
@@ -39,7 +39,7 @@ export function useResizable({
             document.body.style.cursor = 'col-resize';
             document.body.style.userSelect = 'none';
         },
-        [width],
+        [width]
     );
 
     const handleMouseMove = useCallback(
@@ -52,7 +52,7 @@ export function useResizable({
             newWidth = Math.max(minWidth, Math.min(maxWidth, newWidth));
             setWidth(newWidth);
         },
-        [side, minWidth, maxWidth],
+        [side, minWidth, maxWidth]
     );
 
     const handleMouseUp = useCallback(() => {
@@ -108,14 +108,14 @@ const ResizablePanel: React.FC<ResizablePanelProps> = ({
                 'h-full relative',
                 isAnimating && 'transition-[width] duration-300 ease-in-out',
                 side === 'left' ? 'left-0' : 'right-0',
-                className,
+                className
             )}
         >
             <div className="h-full">{children}</div>
             <div
                 className={cn(
                     'absolute top-0 h-full w-1 cursor-col-resize transition-all',
-                    side === 'left' ? 'right-0' : 'left-0',
+                    side === 'left' ? 'right-0' : 'left-0'
                 )}
                 onMouseDown={handleMouseDown}
             />

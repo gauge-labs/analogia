@@ -10,7 +10,7 @@ import {
     CONFIG_BASE_NAME,
     CONFIG_FILE_PATTERN,
     DEPENDENCY_NAME,
-    ONLOOK_PLUGIN,
+    ANALOGIA_PLUGIN,
 } from '../constants';
 import {
     exists,
@@ -27,7 +27,7 @@ function hasPlugin(pluginsArray: t.Expression[], pluginName: string): boolean {
             (t.isIdentifier(plugin) && plugin.name === pluginName) ||
             (t.isCallExpression(plugin) &&
                 t.isIdentifier(plugin.callee) &&
-                plugin.callee.name === pluginName),
+                plugin.callee.name === pluginName)
     );
 }
 
@@ -69,11 +69,11 @@ export const modifyViteConfig = (configFileExtension: string): void => {
     const viteConfigCode = fs.readFileSync(configPath, 'utf-8');
     const ast = parse(
         viteConfigCode,
-        genASTParserOptionsByFileExtension(configFileExtension, 'module'),
+        genASTParserOptionsByFileExtension(configFileExtension, 'module')
     );
 
     let reactPluginAdded = false;
-    let onlookBabelPluginAdded = false;
+    let analogiaBabelPluginAdded = false;
     let reactImportAdded = false;
 
     // Add import for react plugin if it doesn't exist
@@ -81,15 +81,15 @@ export const modifyViteConfig = (configFileExtension: string): void => {
         Program(path) {
             const reactImport = path.node.body.find(
                 (node) =>
-                    t.isImportDeclaration(node) && node.source.value === '@vitejs/plugin-react',
+                    t.isImportDeclaration(node) && node.source.value === '@vitejs/plugin-react'
             );
 
             if (!reactImport) {
                 path.node.body.unshift(
                     t.importDeclaration(
                         [t.importDefaultSpecifier(t.identifier('react'))],
-                        t.stringLiteral('@vitejs/plugin-react'),
-                    ),
+                        t.stringLiteral('@vitejs/plugin-react')
+                    )
                 );
                 reactImportAdded = true;
             }
@@ -104,13 +104,13 @@ export const modifyViteConfig = (configFileExtension: string): void => {
                     let pluginsProperty = configArg.properties.find(
                         (prop): prop is t.ObjectProperty =>
                             t.isObjectProperty(prop) &&
-                            t.isIdentifier(prop.key, { name: 'plugins' }),
+                            t.isIdentifier(prop.key, { name: 'plugins' })
                     );
 
                     if (!pluginsProperty) {
                         pluginsProperty = t.objectProperty(
                             t.identifier('plugins'),
-                            t.arrayExpression([]),
+                            t.arrayExpression([])
                         );
                         configArg.properties.push(pluginsProperty);
                     }
@@ -123,11 +123,11 @@ export const modifyViteConfig = (configFileExtension: string): void => {
                             (t.isIdentifier(plugin) && plugin.name === 'react') ||
                             (t.isCallExpression(plugin) &&
                                 t.isIdentifier(plugin.callee) &&
-                                plugin.callee.name === 'react'),
+                                plugin.callee.name === 'react')
                     );
 
                     if (reactPluginIndex === -1) {
-                        // If react plugin doesn't exist, add it with the Onlook Babel plugin
+                        // If react plugin doesn't exist, add it with the Analogia Babel plugin
                         const reactPlugin = t.callExpression(t.identifier('react'), [
                             t.objectExpression([
                                 t.objectProperty(
@@ -136,18 +136,18 @@ export const modifyViteConfig = (configFileExtension: string): void => {
                                         t.objectProperty(
                                             t.identifier('plugins'),
                                             t.arrayExpression([
-                                                t.stringLiteral(ONLOOK_PLUGIN.BABEL),
-                                            ]),
+                                                t.stringLiteral(ANALOGIA_PLUGIN.BABEL),
+                                            ])
                                         ),
-                                    ]),
+                                    ])
                                 ),
                             ]),
                         ]);
                         pluginsArray.push(reactPlugin);
                         reactPluginAdded = true;
-                        onlookBabelPluginAdded = true;
+                        analogiaBabelPluginAdded = true;
                     } else {
-                        // If react plugin exists, ensure it has the Onlook Babel plugin
+                        // If react plugin exists, ensure it has the Analogia Babel plugin
                         const reactPlugin = pluginsArray[reactPluginIndex];
                         if (t.isCallExpression(reactPlugin) && reactPlugin.arguments.length === 0) {
                             // React plugin exists but has no arguments, add the configuration
@@ -159,26 +159,26 @@ export const modifyViteConfig = (configFileExtension: string): void => {
                                             t.objectProperty(
                                                 t.identifier('plugins'),
                                                 t.arrayExpression([
-                                                    t.stringLiteral(ONLOOK_PLUGIN.BABEL),
-                                                ]),
+                                                    t.stringLiteral(ANALOGIA_PLUGIN.BABEL),
+                                                ])
                                             ),
-                                        ]),
+                                        ])
                                     ),
-                                ]),
+                                ])
                             );
                             reactPluginAdded = true;
-                            onlookBabelPluginAdded = true;
+                            analogiaBabelPluginAdded = true;
                         } else if (
                             t.isCallExpression(reactPlugin) &&
                             reactPlugin.arguments.length > 0
                         ) {
-                            // React plugin exists and has arguments, ensure it has the Onlook Babel plugin
+                            // React plugin exists and has arguments, ensure it has the Analogia Babel plugin
                             const reactConfig = reactPlugin.arguments[0];
                             if (t.isObjectExpression(reactConfig)) {
                                 let babelProp = reactConfig.properties.find(
                                     (prop): prop is t.ObjectProperty =>
                                         t.isObjectProperty(prop) &&
-                                        t.isIdentifier(prop.key, { name: 'babel' }),
+                                        t.isIdentifier(prop.key, { name: 'babel' })
                                 );
 
                                 if (!babelProp) {
@@ -188,43 +188,43 @@ export const modifyViteConfig = (configFileExtension: string): void => {
                                             t.objectProperty(
                                                 t.identifier('plugins'),
                                                 t.arrayExpression([
-                                                    t.stringLiteral(ONLOOK_PLUGIN.BABEL),
-                                                ]),
+                                                    t.stringLiteral(ANALOGIA_PLUGIN.BABEL),
+                                                ])
                                             ),
-                                        ]),
+                                        ])
                                     );
                                     reactConfig.properties.push(babelProp);
                                     reactPluginAdded = true;
-                                    onlookBabelPluginAdded = true;
+                                    analogiaBabelPluginAdded = true;
                                 } else if (t.isObjectExpression(babelProp.value)) {
                                     let pluginsProp = babelProp.value.properties.find(
                                         (prop): prop is t.ObjectProperty =>
                                             t.isObjectProperty(prop) &&
-                                            t.isIdentifier(prop.key, { name: 'plugins' }),
+                                            t.isIdentifier(prop.key, { name: 'plugins' })
                                     );
 
                                     if (!pluginsProp) {
                                         pluginsProp = t.objectProperty(
                                             t.identifier('plugins'),
                                             t.arrayExpression([
-                                                t.stringLiteral(ONLOOK_PLUGIN.BABEL),
-                                            ]),
+                                                t.stringLiteral(ANALOGIA_PLUGIN.BABEL),
+                                            ])
                                         );
                                         babelProp.value.properties.push(pluginsProp);
                                         reactPluginAdded = true;
-                                        onlookBabelPluginAdded = true;
+                                        analogiaBabelPluginAdded = true;
                                     } else if (t.isArrayExpression(pluginsProp.value)) {
                                         if (
                                             !hasPlugin(
                                                 pluginsProp.value.elements as t.Expression[],
-                                                ONLOOK_PLUGIN.BABEL,
+                                                ANALOGIA_PLUGIN.BABEL
                                             )
                                         ) {
                                             pluginsProp.value.elements.push(
-                                                t.stringLiteral(ONLOOK_PLUGIN.BABEL),
+                                                t.stringLiteral(ANALOGIA_PLUGIN.BABEL)
                                             );
                                             reactPluginAdded = true;
-                                            onlookBabelPluginAdded = true;
+                                            analogiaBabelPluginAdded = true;
                                         }
                                     }
                                 }
@@ -242,13 +242,13 @@ export const modifyViteConfig = (configFileExtension: string): void => {
     if (reactPluginAdded) {
         console.log(`React plugin added to ${configFileName}`);
     }
-    if (onlookBabelPluginAdded) {
-        console.log(`${ONLOOK_PLUGIN.BABEL} plugin added to ${configFileName}`);
+    if (analogiaBabelPluginAdded) {
+        console.log(`${ANALOGIA_PLUGIN.BABEL} plugin added to ${configFileName}`);
     }
     if (reactImportAdded) {
         console.log(`React import added to ${configFileName}`);
     }
-    if (!reactPluginAdded && !onlookBabelPluginAdded && !reactImportAdded) {
+    if (!reactPluginAdded && !analogiaBabelPluginAdded && !reactImportAdded) {
         console.log(`No changes were necessary in ${configFileName}`);
     }
 };

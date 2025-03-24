@@ -8,7 +8,7 @@ import {
     removeBuiltWithScriptFromLayout,
 } from '../src';
 
-describe('Built with Onlook Script', () => {
+describe('Built with Analogia Script', () => {
     const tempDir = path.join(process.cwd(), 'temp-test-project');
     const appDir = path.join(tempDir, 'app');
     const publicDir = path.join(tempDir, 'public');
@@ -56,7 +56,7 @@ describe('Built with Onlook Script', () => {
 
         // Verify Script component was added
         expect(layoutContent).toContain(
-            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />',
+            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />'
         );
     });
 
@@ -70,7 +70,7 @@ describe('Built with Onlook Script', () => {
 
         // Verify the content of the script
         const scriptContent = fs.readFileSync(scriptPath, 'utf8');
-        expect(scriptContent).toContain('class BuiltWithOnlook extends HTMLElement');
+        expect(scriptContent).toContain('class BuiltWithAnalogia extends HTMLElement');
     });
 
     test('removeBuiltWithScriptFromLayout removes Script component from layout.tsx', async () => {
@@ -89,7 +89,7 @@ describe('Built with Onlook Script', () => {
 
         // Verify Script component was removed
         expect(layoutContent).not.toContain(
-            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />',
+            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />'
         );
     });
 
@@ -142,7 +142,7 @@ describe('Built with Onlook Script', () => {
         expect(fs.existsSync(scriptPath)).toBe(true);
         let layoutContent = fs.readFileSync(layoutPath, 'utf8');
         expect(layoutContent).toContain(
-            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />',
+            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />'
         );
 
         // Remove the script from layout
@@ -157,7 +157,7 @@ describe('Built with Onlook Script', () => {
         expect(fs.existsSync(scriptPath)).toBe(false);
         layoutContent = fs.readFileSync(layoutPath, 'utf8');
         expect(layoutContent).not.toContain(
-            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />',
+            '<Script src=\"/builtwith.js\" strategy=\"afterInteractive\" />'
         );
     });
 });

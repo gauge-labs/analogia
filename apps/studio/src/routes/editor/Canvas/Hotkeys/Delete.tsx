@@ -6,9 +6,9 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-} from '@onlook/ui/alert-dialog';
-import { Button } from '@onlook/ui/button';
-import { Checkbox } from '@onlook/ui/checkbox';
+} from '@analogia/ui/alert-dialog';
+import { Button } from '@analogia/ui/button';
+import { Checkbox } from '@analogia/ui/checkbox';
 import { useState } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { Hotkey } from '/common/hotkeys';

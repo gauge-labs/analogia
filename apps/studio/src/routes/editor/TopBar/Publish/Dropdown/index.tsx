@@ -1,7 +1,7 @@
 import { useProjectsManager } from '@/components/Context';
-import { PublishStatus } from '@onlook/models/hosting';
-import { DomainType } from '@onlook/models/projects';
-import { Separator } from '@onlook/ui/separator';
+import { PublishStatus } from '@analogia/models/hosting';
+import { DomainType } from '@analogia/models/projects';
+import { Separator } from '@analogia/ui/separator';
 import { observer } from 'mobx-react-lite';
 import { AdvancedSettingsSection } from './AdvancedSettings';
 import { DomainSection } from './Domain';

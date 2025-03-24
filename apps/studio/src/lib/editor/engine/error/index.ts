@@ -1,5 +1,5 @@
 import type { ProjectsManager } from '@/lib/projects';
-import { type ParsedError, compareErrors } from '@onlook/utility';
+import { type ParsedError, compareErrors } from '@analogia/utility';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
 

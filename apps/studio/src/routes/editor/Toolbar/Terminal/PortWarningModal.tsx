@@ -1,9 +1,15 @@
 import { useEditorEngine, useProjectsManager } from '@/components/Context';
 import { SettingsTabValue } from '@/lib/models';
-import { Button } from '@onlook/ui/button';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@onlook/ui/dialog';
-import { Icons } from '@onlook/ui/icons/index';
-import { cn } from '@onlook/ui/utils';
+import { Button } from '@analogia/ui/button';
+import {
+    Dialog,
+    DialogContent,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from '@analogia/ui/dialog';
+import { Icons } from '@analogia/ui/icons/index';
+import { cn } from '@analogia/ui/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useMemo, useState } from 'react';

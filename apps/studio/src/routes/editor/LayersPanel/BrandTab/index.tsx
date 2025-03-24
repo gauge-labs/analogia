@@ -1,4 +1,4 @@
-import { Button } from '@onlook/ui/button';
+import { Button } from '@analogia/ui/button';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 import ColorPanel from './ColorPanel';

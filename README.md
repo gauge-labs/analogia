@@ -5,18 +5,18 @@
 ![image](https://github.com/user-attachments/assets/7b787ac7-96cd-44fd-90da-46996e1e1bf5)
 
 <div align="center">
-<h3 align="center">Onlook</h3>
+<h3 align="center">Analogia</h3>
   <p align="center">
     Cursor for Designers
     <br />
-    <a href="https://github.com/onlook-dev/onlook/wiki"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AnalogiaAI/analogia/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://youtu.be/RSX_3EaO5eU?feature=shared">View Demo</a>
     ·
-    <a href="https://github.com/onlook-dev/onlook/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/AnalogiaAI/analogia/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/onlook-dev/onlook/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/AnalogiaAI/analogia/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
   <!-- PROJECT SHIELDS -->
 <!--
@@ -57,25 +57,20 @@
 
 Seamlessly integrate with any website or web app running on React + TailwindCSS, and make live edits directly in the browser DOM. Customize your design, control your codebase, and push your changes without compromise.
 
-
-
 https://github.com/user-attachments/assets/c8782d1e-fedc-46f3-8735-c3a762d4db16
 
-
-
-![Onlook-GitHub-Example](https://github.com/user-attachments/assets/642de37a-72cc-4056-8eb7-8eb42714cdc4)
-
+![Analogia-GitHub-Example](https://github.com/user-attachments/assets/642de37a-72cc-4056-8eb7-8eb42714cdc4)
 
 ### Built With
 
--   [![React][React.js]][React-url]
--   [![Electron][Electron.js]][Electron-url]
--   [![Tailwind][TailwindCSS]][Tailwind-url]
--   [![Vite][Vite.js]][Vite-url]
+- [![React][React.js]][React-url]
+- [![Electron][Electron.js]][Electron-url]
+- [![Tailwind][TailwindCSS]][Tailwind-url]
+- [![Vite][Vite.js]][Vite-url]
 
 ## Stay up-to-date
 
-Onlook officially launched our first version of Onlook on July 08, 2024 and we've shipped a ton since then. Watch releases of this repository to be notified of future updates, and you can follow along with us on [LinkedIn](https://www.linkedin.com/company/onlook-dev) or [Substack](https://onlook.substack.com/) where we write a weekly newsletter.
+Analogia officially launched our first version of Analogia on July 08, 2024 and we've shipped a ton since then. Watch releases of this repository to be notified of future updates, and you can follow along with us on [LinkedIn](https://www.linkedin.com/company/onlook-dev) or [Medium](https://medium.com/@analogia) where we write a weekly newsletter.
 
 <!-- ![Starproject](https://github.com/user-attachments/assets/07742b21-dd98-4be3-b6a6-13d8132af398) -->
 
@@ -85,12 +80,12 @@ Onlook officially launched our first version of Onlook on July 08, 2024 and we'v
 
 ### Installation
 
- 1. Visit [onlook.com](https://onlook.com/) to download the app.
- 2. Run locally following [this guide](https://github.com/onlook-dev/onlook/wiki/Building-from-source)
+1.  Visit [analogia.ai](https://analogia.ai/) to download the app.
+2.  Run locally following [this guide](https://github.com/AnalogiaAI/analogia/wiki/Building-from-source)
 
 ### Usage
 
-Onlook will run on any React project, bring your own React project or create one using Onlook
+Analogia will run on any React project, bring your own React project or create one using Analogia
 
 <img width="676" alt="Screenshot 2024-11-27 at 9 36 47 AM" src="https://github.com/user-attachments/assets/ec5c9bb2-7d0a-4754-962e-5d0c9fe0d706">
 
@@ -100,54 +95,53 @@ Use the chat to create or edit a project you're working on. At any time, you can
 
 <img width="403" alt="image" src="https://github.com/user-attachments/assets/44339458-05a7-46c3-b4f8-b7e125260216" />
 
-
 ## Roadmap
 
 ![image](https://github.com/user-attachments/assets/f64b51df-03be-44d1-ae35-82e6dc960d06)
 
-See how we're tracking towards major [milestones](<[url](https://github.com/onlook-dev/onlook/milestones)>), and read the [wiki](https://github.com/onlook-dev/onlook/wiki/Roadmap) for details on each version of Onlook. Here's a rough overview of some of the major features we're looking at:
+See how we're tracking towards major [milestones](<[url](https://github.com/AnalogiaAI/analogia/milestones)>), and read the [wiki](https://github.com/AnalogiaAI/analogia/wiki/Roadmap) for details on each version of Analogia. Here's a rough overview of some of the major features we're looking at:
 
--   [x] Browser
--   [x] Editor
--   [x] Write-to-code
--   [X] AI chat
--   [ ] Variables
--   [ ] Components
--   [ ] Hosting
+- [x] Browser
+- [x] Editor
+- [x] Write-to-code
+- [x] AI chat
+- [ ] Variables
+- [ ] Components
+- [ ] Hosting
 
-Also check the [open issues](https://github.com/onlook-dev/onlook/issues) for a full list of proposed features (and known issues).
+Also check the [open issues](https://github.com/AnalogiaAI/analogia/issues) for a full list of proposed features (and known issues).
 
 ## Contributing
 
 ![image](https://github.com/user-attachments/assets/ecc94303-df23-46ae-87dc-66b040396e0b)
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also [open issues](https://github.com/onlook-dev/onlook/issues).
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also [open issues](https://github.com/AnalogiaAI/analogia/issues).
 
 See the [CONTRIBUTING.md](CONTRIBUTING.md) for instructions and code of conduct.
 
-#### Contributors
+<!-- #### Contributors
 
-<a href="https://github.com/onlook-dev/onlook/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=onlook-dev/onlook&t=1" />
-</a>
+<a href="https://github.com/AnalogiaAI/analogia/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AnalogiaAI/analogia&t=1" />
+</a> -->
 
 ## Contact
 
 ![image](https://github.com/user-attachments/assets/60684b68-1925-4550-8efd-51a1509fc953)
 
--   Team: [Discord](https://discord.gg/hERDfFZCsH) - [Twitter](https://twitter.com/onlookdev) - [LinkedIn](https://www.linkedin.com/company/onlook-dev/) - [Email](mailto:contact@onlook.com)
--   Project: [https://github.com/onlook-dev/onlook](https://github.com/onlook-dev/onlook)
--   Website: [https://onlook.com](https://onlook.com)
+- Team: [Discord](https://discord.gg/HYzeUDXJvZ) - [Twitter](https://twitter.com/analogia_ai) - [LinkedIn](https://www.linkedin.com/company/onlook-dev/) - [Email](mailto:contact@analogia.ai)
+- Project: [https://github.com/AnalogiaAI/analogia](https://github.com/AnalogiaAI/analogia)
+- Website: [https://analogia.ai](https://analogia.ai)
 
 ## Acknowledgments
 
 Projects we're inspired by:
 
--   [Visbug](https://github.com/GoogleChromeLabs/ProjectVisBug)
--   [Responsively](https://github.com/responsively-org/responsively-app)
--   [Supabase](https://github.com/supabase/supabase)
--   [ShadCN](https://github.com/shadcn-ui/ui)
--   [hymhub/css-to-tailwind](https://github.com/hymhub/css-to-tailwind)
+- [Visbug](https://github.com/GoogleChromeLabs/ProjectVisBug)
+- [Responsively](https://github.com/responsively-org/responsively-app)
+- [Supabase](https://github.com/supabase/supabase)
+- [ShadCN](https://github.com/shadcn-ui/ui)
+- [hymhub/css-to-tailwind](https://github.com/hymhub/css-to-tailwind)
 
 ## License
 
@@ -155,22 +149,22 @@ Distributed under the Apache 2.0 License. See [LICENSE.md](LICENSE.md) for more 
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/onlook-dev/studio.svg?style=for-the-badge
-[contributors-url]: https://github.com/onlook-dev/onlook/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/onlook-dev/studio.svg?style=for-the-badge
-[forks-url]: https://github.com/onlook-dev/onlook/network/members
-[stars-shield]: https://img.shields.io/github/stars/onlook-dev/studio.svg?style=for-the-badge
-[stars-url]: https://github.com/onlook-dev/onlook/stargazers
-[issues-shield]: https://img.shields.io/github/issues/onlook-dev/studio.svg?style=for-the-badge
-[issues-url]: https://github.com/onlook-dev/onlook/issues
-[license-shield]: https://img.shields.io/github/license/onlook-dev/studio.svg?style=for-the-badge
-[license-url]: https://github.com/onlook-dev/onlook/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/AnalogiaAI/studio.svg?style=for-the-badge
+[contributors-url]: https://github.com/AnalogiaAI/analogia/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AnalogiaAI/studio.svg?style=for-the-badge
+[forks-url]: https://github.com/AnalogiaAI/analogia/network/members
+[stars-shield]: https://img.shields.io/github/stars/AnalogiaAI/studio.svg?style=for-the-badge
+[stars-url]: https://github.com/AnalogiaAI/analogia/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AnalogiaAI/studio.svg?style=for-the-badge
+[issues-url]: https://github.com/AnalogiaAI/analogia/issues
+[license-shield]: https://img.shields.io/github/license/AnalogiaAI/studio.svg?style=for-the-badge
+[license-url]: https://github.com/AnalogiaAI/analogia/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/company/onlook-dev
+[linkedin-url]: https://www.linkedin.com/company/AnalogiaAI
 [twitter-shield]: https://img.shields.io/badge/-Twitter-black?logo=x&colorB=555
-[twitter-url]: https://x.com/onlookdev
+[twitter-url]: https://x.com/analogia_ai
 [discord-shield]: https://img.shields.io/badge/-Discord-black?logo=discord&colorB=555
-[discord-url]: https://discord.gg/hERDfFZCsH
+[discord-url]: https://discord.gg/HYzeUDXJvZ
 [React.js]: https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB
 [React-url]: https://reactjs.org/
 [TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?logo=tailwind-css&logoColor=white

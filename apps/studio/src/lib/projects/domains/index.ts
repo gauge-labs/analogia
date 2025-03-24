@@ -1,8 +1,8 @@
 import { invokeMainChannel } from '@/lib/utils';
-import { HOSTING_DOMAIN, MainChannels } from '@onlook/models/constants';
-import type { GetOwnedDomainsResponse } from '@onlook/models/hosting';
-import { DomainType, type Project } from '@onlook/models/projects';
-import { getValidSubdomain } from '@onlook/utility';
+import { HOSTING_DOMAIN, MainChannels } from '@analogia/models/constants';
+import type { GetOwnedDomainsResponse } from '@analogia/models/hosting';
+import { DomainType, type Project } from '@analogia/models/projects';
+import { getValidSubdomain } from '@analogia/utility';
 import { makeAutoObservable } from 'mobx';
 import type { ProjectsManager } from '../index';
 import { HostingManager } from './hosting';

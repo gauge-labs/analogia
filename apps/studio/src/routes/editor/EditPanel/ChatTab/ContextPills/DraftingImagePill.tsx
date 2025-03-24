@@ -1,5 +1,5 @@
-import { type ChatMessageContext, MessageContextType } from '@onlook/models/chat';
-import { Icons } from '@onlook/ui/icons/index';
+import { type ChatMessageContext, MessageContextType } from '@analogia/models/chat';
+import { Icons } from '@analogia/ui/icons/index';
 import { motion } from 'motion/react';
 import React from 'react';
 import { getTruncatedName } from './helpers';

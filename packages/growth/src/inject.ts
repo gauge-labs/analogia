@@ -7,7 +7,7 @@ import * as path from 'path';
 import { builtWithScript } from './script';
 
 /**
- * Injects the Built with Onlook script into a Next.js layout file
+ * Injects the Built with Analogia script into a Next.js layout file
  * @param projectPath Path to the project root
  */
 export async function injectBuiltWithScript(projectPath: string): Promise<boolean> {
@@ -44,7 +44,7 @@ export async function injectBuiltWithScript(projectPath: string): Promise<boolea
         if (!hasScriptImport) {
             const scriptImport = t.importDeclaration(
                 [t.importDefaultSpecifier(t.identifier('Script'))],
-                t.stringLiteral('next/script'),
+                t.stringLiteral('next/script')
             );
 
             // Find the position to insert the import
@@ -82,8 +82,8 @@ export async function injectBuiltWithScript(projectPath: string): Promise<boolea
                                     t.isJSXIdentifier(attr.name) &&
                                     attr.name.name === 'src' &&
                                     t.isStringLiteral(attr.value) &&
-                                    attr.value.value === '/builtwith.js',
-                            ),
+                                    attr.value.value === '/builtwith.js'
+                            )
                     );
 
                     if (!hasScript) {
@@ -94,18 +94,18 @@ export async function injectBuiltWithScript(projectPath: string): Promise<boolea
                                 [
                                     t.jsxAttribute(
                                         t.jsxIdentifier('src'),
-                                        t.stringLiteral('/builtwith.js'),
+                                        t.stringLiteral('/builtwith.js')
                                     ),
                                     t.jsxAttribute(
                                         t.jsxIdentifier('strategy'),
-                                        t.stringLiteral('afterInteractive'),
+                                        t.stringLiteral('afterInteractive')
                                     ),
                                 ],
-                                true,
+                                true
                             ),
                             null,
                             [],
-                            true,
+                            true
                         );
 
                         // Add Script element after children

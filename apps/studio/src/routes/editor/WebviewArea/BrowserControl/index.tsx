@@ -1,19 +1,19 @@
 import { useEditorEngine } from '@/components/Context';
 import { WebviewState } from '@/lib/editor/engine/webview';
 import { EditorMode } from '@/lib/models';
-import { DefaultSettings, Theme } from '@onlook/models/constants';
-import type { FrameSettings } from '@onlook/models/projects';
-import { Button } from '@onlook/ui/button';
+import { DefaultSettings, Theme } from '@analogia/models/constants';
+import type { FrameSettings } from '@analogia/models/projects';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Input } from '@onlook/ui/input';
-import { cn } from '@onlook/ui/utils';
-import { getValidUrl } from '@onlook/utility';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Input } from '@analogia/ui/input';
+import { cn } from '@analogia/ui/utils';
+import { getValidUrl } from '@analogia/utility';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useRef, useState } from 'react';
@@ -201,10 +201,10 @@ const BrowserControls = observer(
             if (editorEngine.mode === EditorMode.PREVIEW) {
                 return 'text-blue-400 fill-blue-400';
             }
-            if (domState === WebviewState.DOM_ONLOOK_ENABLED) {
+            if (domState === WebviewState.DOM_ANALOGIA_ENABLED) {
                 return 'text-teal-400 fill-teal-400';
             }
-            if (domState === WebviewState.DOM_NO_ONLOOK) {
+            if (domState === WebviewState.DOM_NO_ANALOGIA) {
                 return 'text-amber-400 fill-amber-400';
             }
             if (domState === WebviewState.NOT_RUNNING && editorEngine.mode === EditorMode.DESIGN) {
@@ -364,9 +364,9 @@ const BrowserControls = observer(
                             <Button
                                 className={cn(
                                     'group transition-none',
-                                    state === WebviewState.DOM_ONLOOK_ENABLED && selected
+                                    state === WebviewState.DOM_ANALOGIA_ENABLED && selected
                                         ? 'hover:text-teal-200 hover:bg-teal-400/10'
-                                        : state === WebviewState.DOM_NO_ONLOOK && selected
+                                        : state === WebviewState.DOM_NO_ANALOGIA && selected
                                           ? 'hover:text-amber-200 hover:bg-amber-400/10'
                                           : '',
                                 )}

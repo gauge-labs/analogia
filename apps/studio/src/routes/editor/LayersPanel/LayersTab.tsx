@@ -1,5 +1,5 @@
 import { useEditorEngine } from '@/components/Context';
-import type { LayerNode } from '@onlook/models/element';
+import type { LayerNode } from '@analogia/models/element';
 import { observer } from 'mobx-react-lite';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { type NodeApi, Tree, type TreeApi } from 'react-arborist';

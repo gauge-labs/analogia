@@ -1,7 +1,7 @@
 import traverse from '@babel/traverse';
 import type t from '@babel/types';
-import { EditorAttributes } from '@onlook/models/constants';
-import type { TemplateNode, TemplateTag } from '@onlook/models/element';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { TemplateNode, TemplateTag } from '@analogia/models/element';
 import { readCodeBlock } from '.';
 import { parseJsxFile } from './helpers';
 
@@ -50,7 +50,7 @@ function getOidFromNode(node: t.JSXElement): string | null {
         (attr): attr is t.JSXAttribute =>
             'name' in attr &&
             'name' in attr.name &&
-            attr.name.name === EditorAttributes.DATA_ONLOOK_ID,
+            attr.name.name === EditorAttributes.DATA_ANALOGIA_ID,
     );
     if (!attr) {
         return null;

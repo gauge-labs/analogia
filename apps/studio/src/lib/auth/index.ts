@@ -1,6 +1,6 @@
-import { MainChannels } from '@onlook/models/constants';
-import type { UserMetadata } from '@onlook/models/settings';
-import supabase from '@onlook/supabase/clients';
+import { MainChannels } from '@analogia/models/constants';
+import type { UserMetadata } from '@analogia/models/settings';
+import supabase from '@analogia/supabase/clients';
 import { makeAutoObservable } from 'mobx';
 import { invokeMainChannel } from '../utils';
 

@@ -1,4 +1,4 @@
-import type { LayerNode } from '@onlook/models/element';
+import type { LayerNode } from '@analogia/models/element';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
 

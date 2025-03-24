@@ -1,5 +1,5 @@
 import { useEditorEngine, useUserManager } from '@/components/Context';
-import { Icons } from '@onlook/ui/icons/index';
+import { Icons } from '@analogia/ui/icons/index';
 import { observer } from 'mobx-react-lite';
 import { motion } from 'motion/react';
 import { forwardRef, useImperativeHandle, useRef, useState } from 'react';

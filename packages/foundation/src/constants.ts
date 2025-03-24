@@ -40,10 +40,10 @@ export enum PACKAGE_MANAGER {
     BUN = 'bun',
 }
 
-export enum ONLOOK_PLUGIN {
-    NEXTJS = '@onlook/nextjs',
-    WEBPACK = '@onlook/react',
-    BABEL = '@onlook/babel-plugin-react',
+export enum ANALOGIA_PLUGIN {
+    NEXTJS = '@analogia/nextjs',
+    WEBPACK = '@analogia/react',
+    BABEL = '@analogia/babel-plugin-react',
 }
 
 export const NEXTJS_COMMON_FILES = ['pages', 'app', 'src/pages', 'src/app'];
@@ -58,12 +58,12 @@ export enum FILE_EXTENSION {
     TS = '.ts',
 }
 
-export const NEXT_DEPENDENCIES = [ONLOOK_PLUGIN.NEXTJS];
-export const CRA_DEPENDENCIES = [ONLOOK_PLUGIN.BABEL, 'customize-cra', 'react-app-rewired'];
-export const VITE_DEPENDENCIES = [ONLOOK_PLUGIN.BABEL];
+export const NEXT_DEPENDENCIES = [ANALOGIA_PLUGIN.NEXTJS];
+export const CRA_DEPENDENCIES = [ANALOGIA_PLUGIN.BABEL, 'customize-cra', 'react-app-rewired'];
+export const VITE_DEPENDENCIES = [ANALOGIA_PLUGIN.BABEL];
 
 export const WEBPACK_DEPENDENCIES = [
-    ONLOOK_PLUGIN.BABEL,
+    ANALOGIA_PLUGIN.BABEL,
     'babel-loader',
     '@babel/preset-react',
     '@babel/core',

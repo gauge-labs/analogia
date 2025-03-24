@@ -123,7 +123,7 @@ type UpdateOrganizationUserParams = {
 
 export async function updateOrganizationUser(
     params: UpdateOrganizationUserParams,
-    supabase: Client,
+    supabase: Client
 ) {
     try {
         const { error, data } = await supabase.rpc('update_user_on_organization', params);
@@ -194,7 +194,7 @@ type UpdateUserOnOrganizationParams = {
 
 export async function updateUserOnOrganization(
     params: UpdateUserOnOrganizationParams,
-    supabase: Client,
+    supabase: Client
 ) {
     try {
         const { error, data } = await supabase.rpc('update_user_on_organization', params);
@@ -262,7 +262,7 @@ type RemoveOrganizationUserParams = {
 
 export async function removeOrganizationUser(
     params: RemoveOrganizationUserParams,
-    supabase: Client,
+    supabase: Client
 ) {
     try {
         const { error, data } = await supabase.rpc('remove_organization_user', params);

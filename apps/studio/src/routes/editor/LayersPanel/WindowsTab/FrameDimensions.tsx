@@ -1,9 +1,9 @@
 import { useEditorEngine } from '@/components/Context';
-import { DefaultSettings, Orientation } from '@onlook/models/constants';
-import type { FrameSettings } from '@onlook/models/projects';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons/index';
-import { Input } from '@onlook/ui/input';
+import { DefaultSettings, Orientation } from '@analogia/models/constants';
+import type { FrameSettings } from '@analogia/models/projects';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons/index';
+import { Input } from '@analogia/ui/input';
 import {
     Select,
     SelectContent,
@@ -12,8 +12,8 @@ import {
     SelectLabel,
     SelectTrigger,
     SelectValue,
-} from '@onlook/ui/select';
-import { Separator } from '@onlook/ui/separator';
+} from '@analogia/ui/select';
+import { Separator } from '@analogia/ui/separator';
 import { Fragment, useEffect, useState } from 'react';
 
 type DeviceOptions = {
@@ -371,7 +371,7 @@ const FrameDimensions = ({ settings }: { settings: FrameSettings }) => {
                         onClick={handleOrientationChange}
                     >
                         <Icons.Potrait
-                            className={`h-4 w-4 ${orientation !== Orientation.Potrait ? 'text-foreground-secondary hover:text-foreground-onlook' : ''}`}
+                            className={`h-4 w-4 ${orientation !== Orientation.Potrait ? 'text-foreground-secondary hover:text-foreground-analogia' : ''}`}
                         />
                     </Button>
                     <Button
@@ -381,7 +381,7 @@ const FrameDimensions = ({ settings }: { settings: FrameSettings }) => {
                         onClick={handleOrientationChange}
                     >
                         <Icons.Landscape
-                            className={`h-4 w-4 ${orientation !== Orientation.Landscape ? 'text-foreground-secondary hover:text-foreground-onlook' : ''}`}
+                            className={`h-4 w-4 ${orientation !== Orientation.Landscape ? 'text-foreground-secondary hover:text-foreground-analogia' : ''}`}
                         />
                     </Button>
                 </div>

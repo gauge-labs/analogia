@@ -3,8 +3,8 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
 
 enum TabValue {
     CONSOLE = 'console',

@@ -6,7 +6,7 @@ I notice there's a significant issue in the code - there's a nested map that's c
 
 Here are the changes:
 
-/Users/kietho/workplace/onlook/test/hn_clone/app/page.tsx
+/Users/kietho/workplace/analogia/test/hn_clone/app/page.tsx
 ```tsx
 <<<<<<< SEARCH
         {posts.map((post) => (
@@ -35,7 +35,7 @@ Here are the changes:
 
 Let's also improve the Post component to better match HN's style:
 
-/Users/kietho/workplace/onlook/test/hn_clone/app/page.tsx
+/Users/kietho/workplace/analogia/test/hn_clone/app/page.tsx
 ```tsx
 <<<<<<< SEARCH
 function Post({ post }: { post: any }) {

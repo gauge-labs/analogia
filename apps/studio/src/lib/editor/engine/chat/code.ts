@@ -1,9 +1,9 @@
 import type { ProjectsManager } from '@/lib/projects';
 import { sendAnalytics } from '@/lib/utils';
-import { CodeBlockProcessor } from '@onlook/ai';
-import { ChatMessageRole, type AssistantChatMessage, type CodeBlock } from '@onlook/models/chat';
-import type { CodeDiff } from '@onlook/models/code';
-import { toast } from '@onlook/ui/use-toast';
+import { CodeBlockProcessor } from '@analogia/ai';
+import { ChatMessageRole, type AssistantChatMessage, type CodeBlock } from '@analogia/models/chat';
+import type { CodeDiff } from '@analogia/models/code';
+import { toast } from '@analogia/ui/use-toast';
 import { makeAutoObservable } from 'mobx';
 import type { ChatManager } from '.';
 import type { EditorEngine } from '..';

@@ -1,5 +1,5 @@
-import { type AssistantChatMessage, ChatMessageRole } from '@onlook/models/chat';
-import type { CodeDiff } from '@onlook/models/code';
+import { type AssistantChatMessage, ChatMessageRole } from '@analogia/models/chat';
+import type { CodeDiff } from '@analogia/models/code';
 import type { AssistantContent, CoreAssistantMessage } from 'ai';
 import { nanoid } from 'nanoid/non-secure';
 

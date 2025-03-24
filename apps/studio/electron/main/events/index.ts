@@ -1,5 +1,5 @@
-import { MainChannels } from '@onlook/models/constants';
-import { WindowCommand } from '@onlook/models/projects';
+import { MainChannels } from '@analogia/models/constants';
+import { WindowCommand } from '@analogia/models/projects';
 import { BrowserWindow, ipcMain, shell } from 'electron';
 import { mainWindow } from '..';
 import { imageStorage } from '../storage/images';

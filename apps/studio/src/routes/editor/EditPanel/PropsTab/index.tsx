@@ -1,10 +1,10 @@
 import { useEditorEngine } from '@/components/Context';
 import { invokeMainChannel, sendAnalytics } from '@/lib/utils';
-import type { CodeDiffRequest } from '@onlook/models';
-import { MainChannels } from '@onlook/models/constants';
-import { PropsType, type DomElement, type PropsParsingResult } from '@onlook/models/element';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons/index';
+import type { CodeDiffRequest } from '@analogia/models';
+import { MainChannels } from '@analogia/models/constants';
+import { PropsType, type DomElement, type PropsParsingResult } from '@analogia/models/element';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons/index';
 import { useEffect, useState } from 'react';
 import BooleanProp from './BooleanProp';
 import CodeProp from './CodeProp';

@@ -3,8 +3,8 @@ import {
     AlertDialogContent,
     AlertDialogFooter,
     AlertDialogTitle,
-} from '@onlook/ui/alert-dialog';
-import { Button } from '@onlook/ui/button';
+} from '@analogia/ui/alert-dialog';
+import { Button } from '@analogia/ui/button';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 import type { FontFile } from './FontFiles';
@@ -79,7 +79,7 @@ const UploadModal = observer(({ isOpen, onOpenChange, onUpload }: UploadModalPro
 
     return (
         <AlertDialog open={isOpen} onOpenChange={onOpenChange}>
-            <AlertDialogContent className="max-w-2xl bg-background-onlook/20 p-0 flex flex-col max-h-[80vh] gap-0">
+            <AlertDialogContent className="max-w-2xl bg-background-analogia/20 p-0 flex flex-col max-h-[80vh] gap-0">
                 <div className="flex items-center justify-between p-6 pt-4 pb-3">
                     <AlertDialogTitle className="text-left text-base font-medium">
                         Upload a font

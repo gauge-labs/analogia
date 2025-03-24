@@ -10,9 +10,9 @@ import {
     type RemoveImageAction,
     type UngroupElementsAction,
     type UpdateStyleAction,
-} from '@onlook/models/actions';
-import { WebviewChannels } from '@onlook/models/constants';
-import { StyleChangeType } from '@onlook/models/style';
+} from '@analogia/models/actions';
+import { WebviewChannels } from '@analogia/models/constants';
+import { StyleChangeType } from '@analogia/models/style';
 import type { EditorEngine } from '..';
 import { assertNever } from '/common/helpers';
 

@@ -3,13 +3,13 @@ import {
     BASE_API_ROUTE,
     FUNCTIONS_ROUTE,
     HostingRoutes,
-} from '@onlook/models/constants';
+} from '@analogia/models/constants';
 import type {
     CreateDomainVerificationResponse,
     CustomDomain,
     GetOwnedDomainsResponse,
     VerifyDomainResponse,
-} from '@onlook/models/hosting';
+} from '@analogia/models/hosting';
 import { getRefreshedAuthTokens } from '../auth';
 
 export async function getCustomDomains(): Promise<CustomDomain[]> {

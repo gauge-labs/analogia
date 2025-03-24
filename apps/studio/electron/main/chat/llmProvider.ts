@@ -1,17 +1,17 @@
 import { createAnthropic } from '@ai-sdk/anthropic';
-import type { StreamRequestType } from '@onlook/models/chat';
-import { BASE_PROXY_ROUTE, FUNCTIONS_ROUTE, ProxyRoutes } from '@onlook/models/constants';
-import { CLAUDE_MODELS, LLMProvider } from '@onlook/models/llm';
+import type { StreamRequestType } from '@analogia/models/chat';
+import { BASE_PROXY_ROUTE, FUNCTIONS_ROUTE, ProxyRoutes } from '@analogia/models/constants';
+import { CLAUDE_MODELS, LLMProvider } from '@analogia/models/llm';
 import { type LanguageModelV1 } from 'ai';
 import { getRefreshedAuthTokens } from '../auth';
-export interface OnlookPayload {
+export interface AnalogiaPayload {
     requestType: StreamRequestType;
 }
 
 export async function initModel(
     provider: LLMProvider,
     model: CLAUDE_MODELS,
-    payload: OnlookPayload,
+    payload: AnalogiaPayload,
 ): Promise<LanguageModelV1> {
     switch (provider) {
         case LLMProvider.ANTHROPIC:
@@ -23,7 +23,7 @@ export async function initModel(
 
 async function getAnthropicProvider(
     model: CLAUDE_MODELS,
-    payload: OnlookPayload,
+    payload: AnalogiaPayload,
 ): Promise<LanguageModelV1> {
     const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY;
     const proxyUrl = `${import.meta.env.VITE_SUPABASE_API_URL}${FUNCTIONS_ROUTE}${BASE_PROXY_ROUTE}${ProxyRoutes.ANTHROPIC}`;
@@ -45,7 +45,7 @@ async function getAnthropicProvider(
         config.baseURL = proxyUrl;
         config.headers = {
             Authorization: `Bearer ${authTokens.accessToken}`,
-            'X-Onlook-Request-Type': payload.requestType,
+            'X-Analogia-Request-Type': payload.requestType,
         };
     }
 

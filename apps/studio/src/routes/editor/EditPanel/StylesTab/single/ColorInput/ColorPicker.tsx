@@ -1,8 +1,8 @@
 import { useEditorEngine } from '@/components/Context';
-import { ColorPicker } from '@onlook/ui/color-picker';
-import { Icons } from '@onlook/ui/icons';
-import { PopoverScrollArea, PopoverSeparator } from '@onlook/ui/popover';
-import { Color, type Palette } from '@onlook/utility';
+import { ColorPicker } from '@analogia/ui/color-picker';
+import { Icons } from '@analogia/ui/icons';
+import { PopoverScrollArea, PopoverSeparator } from '@analogia/ui/popover';
+import { Color, type Palette } from '@analogia/utility';
 import { useEffect, useState } from 'react';
 
 interface ColorPickerProps {

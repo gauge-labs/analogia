@@ -3,8 +3,8 @@ import { SettingsTabValue } from '@/lib/models';
 import { ProjectTabs } from '@/lib/projects';
 import { Route } from '@/lib/routes';
 import { invokeMainChannel } from '@/lib/utils';
-import { MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
+import { MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -14,9 +14,9 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -92,20 +92,20 @@ const ProjectBreadcrumb = observer(() => {
                 <DropdownMenuTrigger asChild>
                     <Button
                         variant={'ghost'}
-                        className="mx-0 px-0 gap-2 text-foreground-onlook text-small hover:text-foreground-active hover:bg-transparent"
+                        className="mx-0 px-0 gap-2 text-foreground-analogia text-small hover:text-foreground-active hover:bg-transparent"
                     >
-                        <Icons.OnlookLogo
+                        <Icons.AnalogiaLogo
                             className={cn(
                                 'w-6 h-6 hidden md:block',
                                 isClosingProject && 'animate-pulse',
                             )}
                         />
-                        <span className="mx-0 max-w-[60px] md:max-w-[100px] lg:max-w-[200px] px-0 text-foreground-onlook text-small truncate cursor-pointer">
+                        <span className="mx-0 max-w-[60px] md:max-w-[100px] lg:max-w-[200px] px-0 text-foreground-analogia text-small truncate cursor-pointer">
                             {isClosingProject
                                 ? 'Stopping project...'
                                 : projectsManager.project?.name}
                         </span>
-                        <Icons.ChevronDown className="transition-all rotate-0 group-data-[state=open]:-rotate-180 duration-200 ease-in-out text-foreground-onlook " />
+                        <Icons.ChevronDown className="transition-all rotate-0 group-data-[state=open]:-rotate-180 duration-200 ease-in-out text-foreground-analogia " />
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent

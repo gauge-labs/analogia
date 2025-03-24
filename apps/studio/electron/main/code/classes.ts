@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import type { ClassParsingResult, TemplateNode } from '@onlook/models/element';
+import type { ClassParsingResult, TemplateNode } from '@analogia/models/element';
 import { readCodeBlock } from '.';
 import { parseJsxCodeBlock } from './helpers';
 

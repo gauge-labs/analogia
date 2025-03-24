@@ -1,5 +1,5 @@
-import { ApiRoutes, BASE_API_ROUTE, FUNCTIONS_ROUTE } from '@onlook/models/constants';
-import type { AuthTokens } from '@onlook/models/settings';
+import { ApiRoutes, BASE_API_ROUTE, FUNCTIONS_ROUTE } from '@analogia/models/constants';
+import type { AuthTokens } from '@analogia/models/settings';
 import { shell } from 'electron';
 import { getRefreshedAuthTokens } from '../auth';
 

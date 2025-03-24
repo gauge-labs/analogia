@@ -1,17 +1,17 @@
 import { EditorMode } from '@/lib/models';
 import { createDomId, createOid } from '@/lib/utils';
-import type { ImageContentData } from '@onlook/models';
+import type { ImageContentData } from '@analogia/models';
 import {
     type ActionElement,
     type ActionLocation,
     type ActionTarget,
     type InsertElementAction,
     type UpdateStyleAction,
-} from '@onlook/models/actions';
-import { DefaultSettings, EditorAttributes } from '@onlook/models/constants';
-import type { DropElementProperties, ElementPosition } from '@onlook/models/element';
-import { StyleChangeType } from '@onlook/models/style';
-import { colors } from '@onlook/ui/tokens';
+} from '@analogia/models/actions';
+import { DefaultSettings, EditorAttributes } from '@analogia/models/constants';
+import type { DropElementProperties, ElementPosition } from '@analogia/models/element';
+import { StyleChangeType } from '@analogia/models/style';
+import { colors } from '@analogia/ui/tokens';
 import type React from 'react';
 import type { EditorEngine } from '..';
 import type { RectDimensions } from '../overlay/rect';
@@ -187,9 +187,9 @@ export class InsertManager {
             oid,
             tagName: mode === EditorMode.INSERT_TEXT ? 'p' : 'div',
             attributes: {
-                [EditorAttributes.DATA_ONLOOK_DOM_ID]: domId,
-                [EditorAttributes.DATA_ONLOOK_INSERTED]: 'true',
-                [EditorAttributes.DATA_ONLOOK_ID]: oid,
+                [EditorAttributes.DATA_ANALOGIA_DOM_ID]: domId,
+                [EditorAttributes.DATA_ANALOGIA_INSERTED]: 'true',
+                [EditorAttributes.DATA_ANALOGIA_ID]: oid,
             },
             children: [],
             textContent: null,
@@ -258,9 +258,9 @@ export class InsertManager {
             tagName: 'img',
             children: [],
             attributes: {
-                [EditorAttributes.DATA_ONLOOK_ID]: oid,
-                [EditorAttributes.DATA_ONLOOK_DOM_ID]: domId,
-                [EditorAttributes.DATA_ONLOOK_INSERTED]: 'true',
+                [EditorAttributes.DATA_ANALOGIA_ID]: oid,
+                [EditorAttributes.DATA_ANALOGIA_DOM_ID]: domId,
+                [EditorAttributes.DATA_ANALOGIA_INSERTED]: 'true',
                 src: `/${prefix}/${imageData.fileName}`,
                 alt: imageData.fileName,
             },
@@ -343,9 +343,9 @@ export class InsertManager {
             styles: properties.styles,
             children: [],
             attributes: {
-                [EditorAttributes.DATA_ONLOOK_ID]: oid,
-                [EditorAttributes.DATA_ONLOOK_DOM_ID]: domId,
-                [EditorAttributes.DATA_ONLOOK_INSERTED]: 'true',
+                [EditorAttributes.DATA_ANALOGIA_ID]: oid,
+                [EditorAttributes.DATA_ANALOGIA_DOM_ID]: domId,
+                [EditorAttributes.DATA_ANALOGIA_INSERTED]: 'true',
             },
             textContent: properties.textContent || null,
         };

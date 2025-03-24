@@ -15,12 +15,12 @@
                 "load": "加载现有项目"
             },
             "loading": {
-                "title": "正在设置您的新 Onlook 应用...",
+                "title": "正在设置您的新 Analogia 应用...",
                 "description": "这可能需要几秒钟",
                 "cancel": "取消"
             },
             "error": {
-                "title": "创建 Onlook 应用时出错",
+                "title": "创建 Analogia 应用时出错",
                 "backToPrompt": "返回提示"
             }
         },
@@ -35,7 +35,7 @@
         "actions": {
             "import": "导入",
             "close": "关闭",
-            "about": "关于 Onlook",
+            "about": "关于 Analogia",
             "signOut": "退出登录",
             "editApp": "编辑应用",
             "projectSettings": "项目设置",
@@ -77,9 +77,9 @@
         }
     },
     "welcome": {
-        "title": "欢迎使用 Onlook",
-        "titleReturn": "欢迎回到 Onlook",
-        "description": "Onlook 是一个开源的 React 应用可视化编辑器，可在您的实时产品中直接进行设计。",
+        "title": "欢迎使用 Analogia",
+        "titleReturn": "欢迎回到 Analogia",
+        "description": "Analogia 是一个开源的 React 应用可视化编辑器，可在您的实时产品中直接进行设计。",
         "alpha": "Alpha",
         "login": {
             "github": "使用 GitHub 登录",
@@ -97,7 +97,7 @@
     "pricing": {
         "plans": {
             "basic": {
-                "name": "Onlook Basic",
+                "name": "Analogia Basic",
                 "price": "$0/月",
                 "description": "轻松在代码中进行原型设计和实验。",
                 "features": [
@@ -109,7 +109,7 @@
                 ]
             },
             "pro": {
-                "name": "Onlook Pro",
+                "name": "Analogia Pro",
                 "price": "$20/月",
                 "description": "释放创意，不受限制。使用 AI 构建惊艳网站。",
                 "features": [
@@ -117,8 +117,8 @@
                     "无限制项目",
                     "每日无限制 AI 聊天消息",
                     "每月无限制聊天",
-                    "移除 Onlook 水印",
-                    "1 个免费使用 Onlook 托管的自定义域名",
+                    "移除 Analogia 水印",
+                    "1 个免费使用 Analogia 托管的自定义域名",
                     "优先支持"
                 ]
             }
@@ -290,7 +290,7 @@
     },
     "help": {
         "menu": {
-            "reloadOnlook": "重新加载 Onlook",
+            "reloadAnalogia": "重新加载 Analogia",
             "theme": {
                 "title": "主题",
                 "light": "浅色",

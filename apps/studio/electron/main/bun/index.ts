@@ -2,7 +2,7 @@ import type {
     DetectedPortResults,
     RunBunCommandOptions,
     RunBunCommandResult,
-} from '@onlook/models';
+} from '@analogia/models';
 import { exec } from 'child_process';
 import { detect } from 'detect-port';
 import { app } from 'electron';

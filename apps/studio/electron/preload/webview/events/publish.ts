@@ -1,6 +1,6 @@
-import type { ActionLocation } from '@onlook/models/actions';
-import { WebviewChannels } from '@onlook/models/constants';
-import type { DomElement } from '@onlook/models/element';
+import type { ActionLocation } from '@analogia/models/actions';
+import { WebviewChannels } from '@analogia/models/constants';
+import type { DomElement } from '@analogia/models/element';
 import { ipcRenderer } from 'electron';
 import { buildLayerTree } from '../dom';
 import { getDomElementByDomId } from '../elements';

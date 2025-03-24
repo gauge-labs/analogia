@@ -1,4 +1,4 @@
-import type { DomElement } from '@onlook/models/element';
+import type { DomElement } from '@analogia/models/element';
 import { reaction } from 'mobx';
 import type { EditorEngine } from '..';
 import type { RectDimensions } from './rect';

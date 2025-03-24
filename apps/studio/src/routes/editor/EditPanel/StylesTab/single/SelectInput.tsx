@@ -1,7 +1,7 @@
 import { useEditorEngine } from '@/components/Context';
 import type { SingleStyle } from '@/lib/editor/styles/models';
-import { Icons } from '@onlook/ui/icons';
-import { ToggleGroup, ToggleGroupItem } from '@onlook/ui/toggle-group';
+import { Icons } from '@analogia/ui/icons';
+import { ToggleGroup, ToggleGroupItem } from '@analogia/ui/toggle-group';
 import { observer } from 'mobx-react-lite';
 import React, { useEffect, useState } from 'react';
 
@@ -123,7 +123,7 @@ const SelectInput = observer(
                 >
                     {elementStyle.params?.options.map((option) => (
                         <ToggleGroupItem
-                            className="capitalize text-xs data-[state=on]:bg-background-onlook/75 data-[state=on]:text-foreground-active hover:text-foreground-hover"
+                            className="capitalize text-xs data-[state=on]:bg-background-analogia/75 data-[state=on]:text-foreground-active hover:text-foreground-hover"
                             value={option}
                             key={option}
                         >
@@ -139,7 +139,7 @@ const SelectInput = observer(
                 <select
                     name={elementStyle.displayName}
                     value={value}
-                    className="p-[6px] w-full px-2 text-start rounded border-none text-xs text-active bg-background-onlook/75 appearance-none focus:outline-none focus:ring-0 capitalize"
+                    className="p-[6px] w-full px-2 text-start rounded border-none text-xs text-active bg-background-analogia/75 appearance-none focus:outline-none focus:ring-0 capitalize"
                     onChange={(event) => handleValueChange(event.currentTarget.value)}
                 >
                     {!elementStyle.params.options.includes(value) && (
@@ -151,7 +151,7 @@ const SelectInput = observer(
                         </option>
                     ))}
                 </select>
-                <div className="text-foreground-onlook absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                <div className="text-foreground-analogia absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                     <Icons.ChevronDown />
                 </div>
             </div>

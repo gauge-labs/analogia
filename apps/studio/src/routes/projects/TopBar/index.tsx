@@ -7,16 +7,16 @@ import {
 import UserProfileDropdown from '@/components/ui/UserProfileDropdown';
 import { SettingsTabValue } from '@/lib/models';
 import { ProjectTabs } from '@/lib/projects';
-import { UsagePlanType } from '@onlook/models/usage';
-import { Button } from '@onlook/ui/button';
+import { UsagePlanType } from '@analogia/models/usage';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 
 export const TopBar = observer(() => {
@@ -41,13 +41,13 @@ export const TopBar = observer(() => {
     return (
         <div className="flex flex-row h-12 px-12 items-center">
             <div className="flex-1 flex items-center justify-start mt-3">
-                <Icons.OnlookTextLogo className="w-24" viewBox="0 0 139 17" />
+                <Icons.AnalogiaTextLogo className="w-24" viewBox="0 0 139 17" />
             </div>
             <div className="flex-1 flex justify-end space-x-2 mt-4 items-center">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button
-                            className="text-sm text-foreground-onlook focus:outline-none"
+                            className="text-sm text-foreground-analogia focus:outline-none"
                             variant="ghost"
                         >
                             <Icons.Plus className="w-5 h-5 mr-2" />

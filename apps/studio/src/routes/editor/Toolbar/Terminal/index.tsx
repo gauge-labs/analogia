@@ -1,9 +1,9 @@
 import { useProjectsManager } from '@/components/Context';
 import { useTheme } from '@/components/ThemeProvider';
 import type { RunManager, TerminalMessage } from '@/lib/projects/run';
-import { MainChannels } from '@onlook/models/constants';
-import { RunState } from '@onlook/models/run';
-import { cn } from '@onlook/ui/utils';
+import { MainChannels } from '@analogia/models/constants';
+import { RunState } from '@analogia/models/run';
+import { cn } from '@analogia/ui/utils';
 import { Terminal as XTerm, type ITheme } from '@xterm/xterm';
 import '@xterm/xterm/css/xterm.css';
 import { observer } from 'mobx-react-lite';

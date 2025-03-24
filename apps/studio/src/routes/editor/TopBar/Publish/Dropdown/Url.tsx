@@ -1,9 +1,9 @@
 import { invokeMainChannel } from '@/lib/utils';
-import { MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons/index';
-import { Input } from '@onlook/ui/input';
-import { getValidUrl } from '@onlook/utility';
+import { MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons/index';
+import { Input } from '@analogia/ui/input';
+import { getValidUrl } from '@analogia/utility';
 
 export const UrlSection = ({ url }: { url: string }) => {
     const openUrl = () => {

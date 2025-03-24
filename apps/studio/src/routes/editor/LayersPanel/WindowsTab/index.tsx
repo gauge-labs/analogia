@@ -1,7 +1,7 @@
 import { useEditorEngine } from '@/components/Context';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Separator } from '@onlook/ui/separator';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Separator } from '@analogia/ui/separator';
 import { observer } from 'mobx-react-lite';
 import { useTranslation } from 'react-i18next';
 import DeviceSettings from './DeviceSettings';

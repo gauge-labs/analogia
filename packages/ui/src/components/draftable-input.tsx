@@ -4,7 +4,7 @@ import { mergeRefs } from 'react-merge-refs';
 
 export function useDraftValue<T>(
     value: T,
-    onChange: (value: T) => void,
+    onChange: (value: T) => void
 ): [
     T, // draft
     (value: T) => void, // on change draft value
@@ -31,7 +31,7 @@ const DraftableInput = React.forwardRef<HTMLInputElement, DraftableInputProps>(
 
         const [draft, onDraftChange, onDraftChangeDone] = useDraftValue<string>(
             value ?? '',
-            onChangeValue ?? (() => {}),
+            onChangeValue ?? (() => {})
         );
 
         React.useEffect(() => {
@@ -56,7 +56,7 @@ const DraftableInput = React.forwardRef<HTMLInputElement, DraftableInputProps>(
                 ref={mergeRefs([inputRef, ref])}
             />
         );
-    },
+    }
 );
 
 DraftableInput.displayName = 'DraftableInput';

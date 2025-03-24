@@ -1,25 +1,25 @@
 {
-    "name": "@onlook/nextjs",
+    "name": "@analogia/nextjs",
     "version": "2.1.1",
-    "description": "SWC plugin for onlook",
+    "description": "SWC plugin for analogia",
     "repository": {
         "type": "git",
-        "url": "https://github.com/onlook-dev/onlook.git"
+        "url": "https://github.com/AnalogiaAI/analogia.git"
     },
     "main": "plugin.wasm",
     "scripts": {
         "dev": "nodemon --watch transform --exec 'npm run build'",
-        "cpy": "cp target/wasm32-wasi/release/swc_plugin_onlook.wasm ./plugin.wasm",
+        "cpy": "cp target/wasm32-wasi/release/swc_plugin_analogia.wasm ./plugin.wasm",
         "build": "cargo build --release --target wasm32-wasi && npm run cpy"
     },
-    "homepage": "https://onlook.com",
+    "homepage": "https://analogia.ai",
     "keywords": [
         "swc",
         "preprocessor",
-        "onlook"
+        "analogia"
     ],
     "preferUnplugged": true,
-    "author": "onlook",
+    "author": "analogia",
     "devDependencies": {
         "nodemon": "^3.1.4"
     }

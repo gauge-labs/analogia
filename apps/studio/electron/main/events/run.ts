@@ -1,5 +1,5 @@
-import type { DetectedPortResults } from '@onlook/models';
-import { MainChannels } from '@onlook/models/constants';
+import type { DetectedPortResults } from '@analogia/models';
+import { MainChannels } from '@analogia/models/constants';
 import { ipcMain } from 'electron';
 import { runBunCommand } from '../bun';
 import run from '../run';

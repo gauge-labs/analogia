@@ -58,10 +58,7 @@ export function object<T extends Record<string, unknown>>(props: {
     [K in keyof T]: AbstractType<T[K]>;
 }): ObjectType<T> {
     const defaultValue = Object.fromEntries(
-        Object.entries(props).map(([key, value]) => [
-            key,
-            (value as AbstractType<unknown>).default,
-        ]),
+        Object.entries(props).map(([key, value]) => [key, (value as AbstractType<unknown>).default])
     );
 
     return {

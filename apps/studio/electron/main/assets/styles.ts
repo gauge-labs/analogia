@@ -7,10 +7,10 @@ import type {
     ColorUpdate,
     ConfigUpdateResult,
     UpdateResult,
-} from '@onlook/models/assets';
-import { Theme } from '@onlook/models/assets';
-import type { CodeDiffRequest } from '@onlook/models/code';
-import { parseHslValue } from '@onlook/utility';
+} from '@analogia/models/assets';
+import { Theme } from '@analogia/models/assets';
+import type { CodeDiffRequest } from '@analogia/models/code';
+import { parseHslValue } from '@analogia/utility';
 import fs from 'fs';
 import path from 'path';
 import type { Root, Rule } from 'postcss';

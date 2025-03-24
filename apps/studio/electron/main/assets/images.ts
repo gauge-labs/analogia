@@ -1,5 +1,5 @@
-import type { ImageContentData } from '@onlook/models/actions';
-import { DefaultSettings } from '@onlook/models/constants';
+import type { ImageContentData } from '@analogia/models/actions';
+import { DefaultSettings } from '@analogia/models/constants';
 import { promises as fs, readFileSync } from 'fs';
 import mime from 'mime-lite';
 import path from 'path';

@@ -1,16 +1,16 @@
 import { useUserManager } from '@/components/Context';
 import { invokeMainChannel } from '@/lib/utils';
-import { DefaultSettings, MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
+import { DefaultSettings, MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Input } from '@onlook/ui/input';
-import { isNullOrUndefined } from '@onlook/utility';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Input } from '@analogia/ui/input';
+import { isNullOrUndefined } from '@analogia/utility';
 import { observer } from 'mobx-react-lite';
 
 const AdvancedTab = observer(() => {
@@ -50,7 +50,7 @@ const AdvancedTab = observer(() => {
             <div className="flex justify-between items-center gap-4">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">{'Default project path'}</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         {'Where to install new projects'}
                     </p>
                 </div>
@@ -69,7 +69,7 @@ const AdvancedTab = observer(() => {
             <div className="flex justify-between items-center gap-4">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">{'Build flags'}</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         {'Additional flags to pass to the build command'}
                     </p>
                 </div>
@@ -84,7 +84,7 @@ const AdvancedTab = observer(() => {
             <div className="flex justify-between items-center gap-4">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">{'Replace npm with bun'}</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         {'Automatically replace npm commands with built-in bun runtime'}
                     </p>
                 </div>

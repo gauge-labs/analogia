@@ -1,9 +1,9 @@
 import { useProjectsManager } from '@/components/Context';
 import { invokeMainChannel } from '@/lib/utils';
-import type { RunBunCommandResult } from '@onlook/models';
-import { MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
+import type { RunBunCommandResult } from '@analogia/models';
+import { MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 

@@ -1,6 +1,6 @@
-import type { ActionTarget, GroupContainer } from '@onlook/models/actions';
-import { EditorAttributes } from '@onlook/models/constants';
-import type { DomElement } from '@onlook/models/element';
+import type { ActionTarget, GroupContainer } from '@analogia/models/actions';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { DomElement } from '@analogia/models/element';
 import { getOrAssignDomId } from '../../ids';
 import { getDomElement } from '../helpers';
 import { elementFromDomId } from '/common/helpers';
@@ -41,7 +41,7 @@ export function groupElements(
     childrenWithIndices.forEach(({ element }) => {
         const newElement = element.cloneNode(true) as HTMLElement;
 
-        newElement.setAttribute(EditorAttributes.DATA_ONLOOK_INSERTED, 'true');
+        newElement.setAttribute(EditorAttributes.DATA_ANALOGIA_INSERTED, 'true');
         containerEl.appendChild(newElement);
         element.style.display = 'none';
         removeIdsFromChildElement(element);
@@ -62,7 +62,7 @@ export function ungroupElements(
     }
 
     const containerEl = Array.from(parentEl.children).find(
-        (child) => child.getAttribute(EditorAttributes.DATA_ONLOOK_DOM_ID) === container.domId,
+        (child) => child.getAttribute(EditorAttributes.DATA_ANALOGIA_DOM_ID) === container.domId,
     ) as HTMLElement | undefined;
     if (!containerEl) {
         console.warn('Failed to find container element', parent.domId);
@@ -71,7 +71,7 @@ export function ungroupElements(
 
     // Insert container children in order into parent behind container
     Array.from(containerEl.children).forEach((child) => {
-        child.setAttribute(EditorAttributes.DATA_ONLOOK_INSERTED, 'true');
+        child.setAttribute(EditorAttributes.DATA_ANALOGIA_INSERTED, 'true');
         parentEl.insertBefore(child, containerEl);
     });
     containerEl.style.display = 'none';
@@ -83,16 +83,16 @@ function createContainerElement(target: GroupContainer): HTMLElement {
     Object.entries(target.attributes).forEach(([key, value]) => {
         containerEl.setAttribute(key, value);
     });
-    containerEl.setAttribute(EditorAttributes.DATA_ONLOOK_INSERTED, 'true');
-    containerEl.setAttribute(EditorAttributes.DATA_ONLOOK_DOM_ID, target.domId);
-    containerEl.setAttribute(EditorAttributes.DATA_ONLOOK_ID, target.oid);
+    containerEl.setAttribute(EditorAttributes.DATA_ANALOGIA_INSERTED, 'true');
+    containerEl.setAttribute(EditorAttributes.DATA_ANALOGIA_DOM_ID, target.domId);
+    containerEl.setAttribute(EditorAttributes.DATA_ANALOGIA_ID, target.oid);
     return containerEl;
 }
 
 function removeIdsFromChildElement(el: HTMLElement) {
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_DOM_ID);
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_ID);
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_INSERTED);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_DOM_ID);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_ID);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_INSERTED);
 
     const children = Array.from(el.children);
     if (children.length === 0) {

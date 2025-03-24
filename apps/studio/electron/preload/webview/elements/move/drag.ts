@@ -1,5 +1,5 @@
-import { EditorAttributes } from '@onlook/models/constants';
-import type { DomElement } from '@onlook/models/element';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { DomElement } from '@analogia/models/element';
 import { getOrAssignDomId } from '../../ids';
 import { getDomElement, restoreElementStyle } from '../helpers';
 import { getDisplayDirection } from './helpers';
@@ -22,7 +22,7 @@ export function startDrag(domId: string): number | null {
     prepareElementForDragging(el);
     createStub(el);
     const pos = getAbsolutePosition(el);
-    el.setAttribute(EditorAttributes.DATA_ONLOOK_DRAG_START_POSITION, JSON.stringify(pos));
+    el.setAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_START_POSITION, JSON.stringify(pos));
     return originalIndex;
 }
 
@@ -34,7 +34,7 @@ export function drag(domId: string, dx: number, dy: number, x: number, y: number
     }
     const styles = window.getComputedStyle(el);
     const pos = JSON.parse(
-        el.getAttribute(EditorAttributes.DATA_ONLOOK_DRAG_START_POSITION) || '{}',
+        el.getAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_START_POSITION) || '{}',
     );
     const left = pos.left + dx - window.scrollX;
     const top = pos.top + dy - window.scrollY;
@@ -87,7 +87,7 @@ export function endDrag(domId: string): {
 }
 
 function prepareElementForDragging(el: HTMLElement) {
-    const saved = el.getAttribute(EditorAttributes.DATA_ONLOOK_DRAG_SAVED_STYLE);
+    const saved = el.getAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_SAVED_STYLE);
     if (saved) {
         return;
     }
@@ -101,21 +101,21 @@ function prepareElementForDragging(el: HTMLElement) {
         top: el.style.top,
     };
 
-    el.setAttribute(EditorAttributes.DATA_ONLOOK_DRAG_SAVED_STYLE, JSON.stringify(style));
-    el.setAttribute(EditorAttributes.DATA_ONLOOK_DRAGGING, 'true');
+    el.setAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_SAVED_STYLE, JSON.stringify(style));
+    el.setAttribute(EditorAttributes.DATA_ANALOGIA_DRAGGING, 'true');
 
-    if (el.getAttribute(EditorAttributes.DATA_ONLOOK_DRAG_DIRECTION) !== null) {
+    if (el.getAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_DIRECTION) !== null) {
         const parent = el.parentElement;
         if (parent) {
             const displayDirection = getDisplayDirection(parent);
-            el.setAttribute(EditorAttributes.DATA_ONLOOK_DRAG_DIRECTION, displayDirection);
+            el.setAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_DIRECTION, displayDirection);
         }
     }
 }
 
 function getDragElement(): HTMLElement | undefined {
     const el = document.querySelector(
-        `[${EditorAttributes.DATA_ONLOOK_DRAGGING}]`,
+        `[${EditorAttributes.DATA_ANALOGIA_DRAGGING}]`,
     ) as HTMLElement | null;
     if (!el) {
         return;
@@ -130,10 +130,10 @@ function cleanUpElementAfterDragging(el: HTMLElement) {
 }
 
 function removeDragAttributes(el: HTMLElement) {
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_DRAG_SAVED_STYLE);
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_DRAGGING);
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_DRAG_DIRECTION);
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_DRAG_START_POSITION);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_SAVED_STYLE);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_DRAGGING);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_DIRECTION);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_DRAG_START_POSITION);
 }
 
 function getAbsolutePosition(element: HTMLElement) {
@@ -146,7 +146,7 @@ function getAbsolutePosition(element: HTMLElement) {
 
 export function endAllDrag() {
     const draggingElements = document.querySelectorAll(
-        `[${EditorAttributes.DATA_ONLOOK_DRAGGING}]`,
+        `[${EditorAttributes.DATA_ANALOGIA_DRAGGING}]`,
     );
     for (const el of draggingElements) {
         cleanUpElementAfterDragging(el as HTMLElement);

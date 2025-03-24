@@ -12,8 +12,8 @@ import {
     parsedValueToString,
     stringToParsedValue,
 } from '@/lib/editor/styles/numberUnit';
-import { Icons } from '@onlook/ui/icons';
-import { toast } from '@onlook/ui/use-toast';
+import { Icons } from '@analogia/ui/icons';
+import { toast } from '@analogia/ui/use-toast';
 import { observer } from 'mobx-react-lite';
 import { type ChangeEvent, useEffect, useState } from 'react';
 
@@ -125,7 +125,7 @@ const AutoLayoutInput = observer(({ elementStyle }: { elementStyle: SingleStyle 
                 <input
                     value={overrideValue()}
                     type="text"
-                    className={`w-16 rounded p-1 px-2 text-xs border-none text-active bg-background-onlook/75 text-start focus:outline-none focus:ring-0`}
+                    className={`w-16 rounded p-1 px-2 text-xs border-none text-active bg-background-analogia/75 text-start focus:outline-none focus:ring-0`}
                     placeholder="--"
                     onChange={(e) => setValue(e.currentTarget.value)}
                     onKeyDown={(e) =>
@@ -141,16 +141,20 @@ const AutoLayoutInput = observer(({ elementStyle }: { elementStyle: SingleStyle 
                     <select
                         name={elementStyle.displayName}
                         value={parseModeAndValue(value).mode}
-                        className="p-[6px] w-full px-2 text-start rounded border-none text-xs text-active bg-background-onlook/75 appearance-none focus:outline-none focus:ring-0 capitalize"
+                        className="p-[6px] w-full px-2 text-start rounded border-none text-xs text-active bg-background-analogia/75 appearance-none focus:outline-none focus:ring-0 capitalize"
                         onChange={handleModeInputChange}
                     >
                         {elementStyle.params?.units?.map((option) => (
-                            <option key={option} className="bg-background-onlook/75" value={option}>
+                            <option
+                                key={option}
+                                className="bg-background-analogia/75"
+                                value={option}
+                            >
                                 {OPTION_OVERRIDES[option] || option}
                             </option>
                         ))}
                     </select>
-                    <div className="text-foreground-onlook absolute inset-y-0 right-0 flex items-center pr-1 pointer-events-none">
+                    <div className="text-foreground-analogia absolute inset-y-0 right-0 flex items-center pr-1 pointer-events-none">
                         <Icons.ChevronDown />
                     </div>
                 </div>

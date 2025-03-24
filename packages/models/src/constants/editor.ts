@@ -1,47 +1,47 @@
 import { DEFAULT_IDE } from '../ide/index.ts';
 
-export const APP_NAME = 'Onlook';
-export const APP_SCHEMA = 'onlook';
-export const HOSTING_DOMAIN = 'onlook.live';
+export const APP_NAME = 'Analogia';
+export const APP_SCHEMA = 'analogia';
+export const HOSTING_DOMAIN = 'analogia.live';
 export const CUSTOM_OUTPUT_DIR = '.next-prod';
 export const MAX_NAME_LENGTH = 50;
 
 export enum EditorAttributes {
     // DOM attributes
-    ONLOOK_TOOLBAR = 'onlook-toolbar',
-    ONLOOK_RECT_ID = 'onlook-rect',
-    ONLOOK_STYLESHEET_ID = 'onlook-stylesheet',
-    ONLOOK_STUB_ID = 'onlook-drag-stub',
-    ONLOOK_MOVE_KEY_PREFIX = 'olk-',
+    ANALOGIA_TOOLBAR = 'analogia-toolbar',
+    ANALOGIA_RECT_ID = 'analogia-rect',
+    ANALOGIA_STYLESHEET_ID = 'analogia-stylesheet',
+    ANALOGIA_STUB_ID = 'analogia-drag-stub',
+    ANALOGIA_MOVE_KEY_PREFIX = 'olk-',
     OVERLAY_CONTAINER_ID = 'overlay-container',
     CANVAS_CONTAINER_ID = 'canvas-container',
 
     // IDs
-    DATA_ONLOOK_ID = 'data-oid',
-    DATA_ONLOOK_INSTANCE_ID = 'data-oiid',
-    DATA_ONLOOK_DOM_ID = 'data-odid',
-    DATA_ONLOOK_COMPONENT_NAME = 'data-ocname',
+    DATA_ANALOGIA_ID = 'data-oid',
+    DATA_ANALOGIA_INSTANCE_ID = 'data-oiid',
+    DATA_ANALOGIA_DOM_ID = 'data-odid',
+    DATA_ANALOGIA_COMPONENT_NAME = 'data-ocname',
 
     // Data attributes
-    DATA_ONLOOK_IGNORE = 'data-onlook-ignore',
-    DATA_ONLOOK_INSERTED = 'data-onlook-inserted',
-    DATA_ONLOOK_DRAG_SAVED_STYLE = 'data-onlook-drag-saved-style',
-    DATA_ONLOOK_DRAGGING = 'data-onlook-dragging',
-    DATA_ONLOOK_DRAG_DIRECTION = 'data-onlook-drag-direction',
-    DATA_ONLOOK_DRAG_START_POSITION = 'data-onlook-drag-start-position',
-    DATA_ONLOOK_NEW_INDEX = 'data-onlook-new-index',
-    DATA_ONLOOK_EDITING_TEXT = 'data-onlook-editing-text',
-    DATA_ONLOOK_DYNAMIC_TYPE = 'data-onlook-dynamic-type',
-    DATA_ONLOOK_CORE_ELEMENT_TYPE = 'data-onlook-core-element-type',
-    ONLOOK_DEFAULT_STYLESHEET_ID = 'onlook-default-stylesheet',
+    DATA_ANALOGIA_IGNORE = 'data-analogia-ignore',
+    DATA_ANALOGIA_INSERTED = 'data-analogia-inserted',
+    DATA_ANALOGIA_DRAG_SAVED_STYLE = 'data-analogia-drag-saved-style',
+    DATA_ANALOGIA_DRAGGING = 'data-analogia-dragging',
+    DATA_ANALOGIA_DRAG_DIRECTION = 'data-analogia-drag-direction',
+    DATA_ANALOGIA_DRAG_START_POSITION = 'data-analogia-drag-start-position',
+    DATA_ANALOGIA_NEW_INDEX = 'data-analogia-new-index',
+    DATA_ANALOGIA_EDITING_TEXT = 'data-analogia-editing-text',
+    DATA_ANALOGIA_DYNAMIC_TYPE = 'data-analogia-dynamic-type',
+    DATA_ANALOGIA_CORE_ELEMENT_TYPE = 'data-analogia-core-element-type',
+    ANALOGIA_DEFAULT_STYLESHEET_ID = 'analogia-default-stylesheet',
 }
 
 export enum Links {
-    DISCORD = 'https://discord.gg/hERDfFZCsH',
-    GITHUB = 'https://github.com/onlook-dev/onlook',
-    USAGE_DOCS = 'https://github.com/onlook-dev/onlook/wiki/How-to-set-up-my-project%3F',
-    WIKI = 'https://github.com/onlook-dev/onlook/wiki',
-    OPEN_ISSUE = 'https://github.com/onlook-dev/onlook/issues/new/choose',
+    DISCORD = 'https://discord.gg/HYzeUDXJvZ',
+    GITHUB = 'https://github.com/AnalogiaAI/analogia',
+    USAGE_DOCS = 'https://github.com/AnalogiaAI/analogia/wiki/How-to-set-up-my-project%3F',
+    WIKI = 'https://github.com/AnalogiaAI/analogia/wiki',
+    OPEN_ISSUE = 'https://github.com/AnalogiaAI/analogia/issues/new/choose',
 }
 
 export enum Orientation {

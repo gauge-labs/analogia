@@ -3,7 +3,7 @@ import generate from '@babel/generator';
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as t from '@babel/types';
-import { CUSTOM_OUTPUT_DIR } from '@onlook/models/constants';
+import { CUSTOM_OUTPUT_DIR } from '@analogia/models/constants';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -22,7 +22,7 @@ import {
     CONFIG_FILE_PATTERN,
     DEPENDENCY_NAME,
     NEXTJS_COMMON_FILES,
-    ONLOOK_PLUGIN,
+    ANALOGIA_PLUGIN,
 } from '../constants';
 
 export const isNextJsProject = async (): Promise<boolean> => {
@@ -65,7 +65,7 @@ export const modifyNextConfig = (configFileExtension: string): void => {
         return;
     }
 
-    console.log(`Adding ${ONLOOK_PLUGIN.NEXTJS} plugin into ${configFileName} file...`);
+    console.log(`Adding ${ANALOGIA_PLUGIN.NEXTJS} plugin into ${configFileName} file...`);
 
     // Read the existing next.config.* file
     fs.readFile(configPath, 'utf8', (err, data) => {
@@ -113,7 +113,7 @@ export const modifyNextConfig = (configFileExtension: string): void => {
                     // If experimental property is not found, create it
                     experimentalProperty = t.objectProperty(
                         t.identifier('experimental'),
-                        t.objectExpression([]),
+                        t.objectExpression([])
                     );
                     properties.push(experimentalProperty);
                 }
@@ -140,7 +140,7 @@ export const modifyNextConfig = (configFileExtension: string): void => {
                     // If swcPlugins property is not found, create it
                     swcPluginsProperty = t.objectProperty(
                         t.identifier('swcPlugins'),
-                        t.arrayExpression([]),
+                        t.arrayExpression([])
                     );
                     experimentalProperties.push(swcPluginsProperty);
                 }
@@ -152,14 +152,14 @@ export const modifyNextConfig = (configFileExtension: string): void => {
 
                 // Add the new plugin configuration to swcPlugins array
                 const pluginConfig = t.arrayExpression([
-                    t.stringLiteral(ONLOOK_PLUGIN.NEXTJS),
+                    t.stringLiteral(ANALOGIA_PLUGIN.NEXTJS),
                     t.objectExpression([
                         t.objectProperty(
                             t.identifier('root'),
                             t.callExpression(
                                 t.memberExpression(t.identifier('path'), t.identifier('resolve')),
-                                [t.stringLiteral('.')],
-                            ),
+                                [t.stringLiteral('.')]
+                            )
                         ),
                     ]),
                 ]);
@@ -206,7 +206,7 @@ export const removeNextCache = (): void => {
 const addConfigProperty = (
     ast: t.File,
     propertyName: string,
-    propertyValue: t.Expression,
+    propertyValue: t.Expression
 ): boolean => {
     let propertyExists = false;
 
@@ -227,9 +227,9 @@ const addConfigProperty = (
                             prop.value.properties
                                 .filter(
                                     (p): p is t.ObjectProperty =>
-                                        t.isObjectProperty(p) && t.isIdentifier(p.key),
+                                        t.isObjectProperty(p) && t.isIdentifier(p.key)
                                 )
-                                .map((p) => [(p.key as t.Identifier).name, p]),
+                                .map((p) => [(p.key as t.Identifier).name, p])
                         );
 
                         // Add or update properties from propertyValue
@@ -268,7 +268,7 @@ const addTypescriptConfig = (ast: t.File): boolean => {
         'typescript',
         t.objectExpression([
             t.objectProperty(t.identifier('ignoreBuildErrors'), t.booleanLiteral(true)),
-        ]),
+        ])
     );
 };
 
@@ -281,13 +281,13 @@ const addDistDirConfig = (ast: t.File): boolean => {
                 '===',
                 t.memberExpression(
                     t.memberExpression(t.identifier('process'), t.identifier('env')),
-                    t.identifier('NODE_ENV'),
+                    t.identifier('NODE_ENV')
                 ),
-                t.stringLiteral('production'),
+                t.stringLiteral('production')
             ),
             t.stringLiteral(CUSTOM_OUTPUT_DIR),
-            t.stringLiteral('.next'),
-        ),
+            t.stringLiteral('.next')
+        )
     );
 };
 
@@ -343,7 +343,7 @@ export const addNextBuildConfig = (projectDir: string): Promise<boolean> => {
                 }
 
                 console.log(
-                    `Successfully updated ${configPath} with standalone output, typescript configuration, and distDir`,
+                    `Successfully updated ${configPath} with standalone output, typescript configuration, and distDir`
                 );
                 resolve(outputExists && typescriptExists && distDirExists);
             });

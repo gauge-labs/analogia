@@ -1,16 +1,16 @@
 import { useUserManager } from '@/components/Context';
 import { useTheme } from '@/components/ThemeProvider';
 import { invokeMainChannel } from '@/lib/utils';
-import { Language, LANGUAGE_DISPLAY_NAMES, MainChannels, Theme } from '@onlook/models/constants';
-import { DEFAULT_IDE } from '@onlook/models/ide';
-import { Button } from '@onlook/ui/button';
+import { Language, LANGUAGE_DISPLAY_NAMES, MainChannels, Theme } from '@analogia/models/constants';
+import { DEFAULT_IDE } from '@analogia/models/ide';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
 import { observer } from 'mobx-react-lite';
 import { useTranslation } from 'react-i18next';
 import { IDE } from '/common/ide';
@@ -43,7 +43,7 @@ const PreferencesTab = observer(() => {
             <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">Language</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         Choose your preferred language
                     </p>
                 </div>
@@ -74,7 +74,7 @@ const PreferencesTab = observer(() => {
             <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">Theme</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         Choose your preferred appearance
                     </p>
                 </div>
@@ -110,7 +110,7 @@ const PreferencesTab = observer(() => {
             <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">Code Editor</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         Choose the IDE where you open your code in
                     </p>
                 </div>
@@ -145,7 +145,7 @@ const PreferencesTab = observer(() => {
             <div className=" flex justify-between items-center gap-4">
                 <div className=" flex flex-col gap-2">
                     <p className="text-largePlus">{'Warn before delete'}</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         {'This adds a warning before deleting elements in the editor'}
                     </p>
                 </div>
@@ -169,7 +169,7 @@ const PreferencesTab = observer(() => {
             <div className="flex justify-between items-center gap-4">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">Analytics</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         This helps our small team of two know what we need to improve with the
                         product.
                     </p>

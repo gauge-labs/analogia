@@ -1,6 +1,6 @@
 import { invokeMainChannel } from '@/lib/utils';
-import { EditorAttributes, MainChannels } from '@onlook/models/constants';
-import type { LayerNode, TemplateNode } from '@onlook/models/element';
+import { EditorAttributes, MainChannels } from '@analogia/models/constants';
+import type { LayerNode, TemplateNode } from '@analogia/models/element';
 import type { WebviewTag } from 'electron';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
@@ -142,7 +142,7 @@ export class AstManager {
                 return;
             }
             const children = htmlParent.querySelectorAll(
-                `[${EditorAttributes.DATA_ONLOOK_ID}='${originalNode.oid}']`,
+                `[${EditorAttributes.DATA_ANALOGIA_ID}='${originalNode.oid}']`,
             );
             const htmlOriginalNode = this.getElementFromDomId(originalNode.domId, webviewId);
             if (!htmlOriginalNode) {
@@ -177,7 +177,7 @@ export class AstManager {
             console.warn('Failed to getNodeFromDomId: Document not found');
             return null;
         }
-        return doc.querySelector(`[${EditorAttributes.DATA_ONLOOK_DOM_ID}='${domId}']`) || null;
+        return doc.querySelector(`[${EditorAttributes.DATA_ANALOGIA_DOM_ID}='${domId}']`) || null;
     }
 
     async getTemplateNodeById(oid: string | null): Promise<TemplateNode | null> {

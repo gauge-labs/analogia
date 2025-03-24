@@ -1,6 +1,6 @@
 import { useEditorEngine } from '@/components/Context';
 import { EditorMode, EditorTabValue } from '@/lib/models';
-import { DefaultSettings } from '@onlook/models/constants';
+import { DefaultSettings } from '@analogia/models/constants';
 import type { ReactNode } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import DeleteKey from './Delete';

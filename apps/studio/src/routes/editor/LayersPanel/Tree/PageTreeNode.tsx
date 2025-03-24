@@ -1,14 +1,14 @@
 import { useEditorEngine } from '@/components/Context';
-import type { PageNode } from '@onlook/models/pages';
+import type { PageNode } from '@analogia/models/pages';
 import {
     ContextMenu,
     ContextMenuContent,
     ContextMenuItem,
     ContextMenuTrigger,
-} from '@onlook/ui/context-menu';
-import { Icons } from '@onlook/ui/icons';
-import { toast } from '@onlook/ui/use-toast';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/context-menu';
+import { Icons } from '@analogia/ui/icons';
+import { toast } from '@analogia/ui/use-toast';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { motion } from 'motion/react';
 import { useState } from 'react';

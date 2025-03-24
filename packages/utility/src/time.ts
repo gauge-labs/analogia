@@ -33,7 +33,7 @@ export const timeAgo = (date: string): string => {
 
 export const formatCommitDate = (
     timeStamp: number,
-    options?: { includeDate?: boolean },
+    options?: { includeDate?: boolean }
 ): string => {
     const then = new Date(timeStamp * 1000);
     return then.toLocaleString('en-US', {

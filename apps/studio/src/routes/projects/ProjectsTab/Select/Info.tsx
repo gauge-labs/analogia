@@ -1,4 +1,4 @@
-import type { Project } from '@onlook/models/projects';
+import type { Project } from '@analogia/models/projects';
 import { observer } from 'mobx-react-lite';
 import { AnimatePresence, motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
@@ -40,7 +40,7 @@ const ProjectInfo = observer(({ project, direction }: { project: Project; direct
                         {project.name}
                     </motion.p>
                 </AnimatePresence>
-                <div className="text-foreground-onlook flex flex-col md:flex-row gap-2 md:gap-7 text-small">
+                <div className="text-foreground-analogia flex flex-col md:flex-row gap-2 md:gap-7 text-small">
                     <p>
                         {t('projects.select.lastEdited', {
                             time: timeSince(new Date(project.updatedAt)),

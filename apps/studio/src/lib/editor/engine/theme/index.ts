@@ -1,10 +1,10 @@
 import type { ProjectsManager } from '@/lib/projects';
 import { invokeMainChannel } from '@/lib/utils';
 import type { ColorItem } from '@/routes/editor/LayersPanel/BrandTab/ColorPanel/ColorPalletGroup';
-import { MainChannels } from '@onlook/models';
-import type { ConfigResult, ParsedColors, ThemeColors } from '@onlook/models/assets';
-import { Theme } from '@onlook/models/assets';
-import { Color } from '@onlook/utility';
+import { MainChannels } from '@analogia/models';
+import type { ConfigResult, ParsedColors, ThemeColors } from '@analogia/models/assets';
+import { Theme } from '@analogia/models/assets';
+import { Color } from '@analogia/utility';
 import { makeAutoObservable } from 'mobx';
 import colors from 'tailwindcss/colors';
 import type { EditorEngine } from '..';

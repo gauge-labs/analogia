@@ -28,7 +28,7 @@ describe('GitManager Integration Tests', () => {
         // Create package.json (required by isomorphic-git)
         fs.writeFileSync(
             path.join(testRepoPath, 'package.json'),
-            JSON.stringify({ name: 'test-repo', version: '1.0.0' }),
+            JSON.stringify({ name: 'test-repo', version: '1.0.0' })
         );
 
         // Initialize Git repository
@@ -136,7 +136,7 @@ describe('GitManager Integration Tests', () => {
 
         // Verify file content is from feature branch
         expect(fs.readFileSync(path.join(testRepoPath, 'test1.txt'), 'utf8')).toBe(
-            'Modified in feature branch',
+            'Modified in feature branch'
         );
     });
 
@@ -152,7 +152,7 @@ describe('GitManager Integration Tests', () => {
 
         // Verify file is modified
         expect(fs.readFileSync(path.join(testRepoPath, 'test1.txt'), 'utf8')).toBe(
-            'Modified content',
+            'Modified content'
         );
 
         // Get the commit history

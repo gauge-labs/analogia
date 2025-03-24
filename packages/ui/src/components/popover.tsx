@@ -82,7 +82,7 @@ const PopoverSeparator = React.forwardRef<
                 'shrink-0 bg-border',
                 orientation === 'horizontal' ? 'h-[1px] w-fill' : 'h-fill w-[1px]',
                 fullLength && orientation === 'horizontal' ? '-ml-2 -mr-[20px]' : '',
-                className,
+                className
             )}
             {...props}
         />

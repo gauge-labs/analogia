@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { checkPattern } from '@onlook/ui/color-picker';
-import { Color, isColorEmpty } from '@onlook/utility';
+import { checkPattern } from '@analogia/ui/color-picker';
+import { Color, isColorEmpty } from '@analogia/utility';
 import { twMerge } from 'tailwind-merge';
 
 const ColorButtonBackground = styled.div`

@@ -1,7 +1,7 @@
-import type { ActionElement, ActionLocation, PasteParams } from '@onlook/models/actions';
-import { CodeActionType, type CodeInsert } from '@onlook/models/actions';
-import { EditorAttributes } from '@onlook/models/constants';
-import { StyleChangeType } from '@onlook/models/style';
+import type { ActionElement, ActionLocation, PasteParams } from '@analogia/models/actions';
+import { CodeActionType, type CodeInsert } from '@analogia/models/actions';
+import { EditorAttributes } from '@analogia/models/constants';
+import { StyleChangeType } from '@analogia/models/style';
 import { twMerge } from 'tailwind-merge';
 import { getTailwindClasses } from './helpers';
 
@@ -25,7 +25,7 @@ export function getInsertedElement(
             actionElement.attributes['class'],
             newClasses,
         ),
-        [EditorAttributes.DATA_ONLOOK_ID]: actionElement.oid,
+        [EditorAttributes.DATA_ANALOGIA_ID]: actionElement.oid,
         ...(actionElement.tagName.toLowerCase() === 'img' && {
             src: actionElement.attributes['src'],
             alt: actionElement.attributes['alt'],

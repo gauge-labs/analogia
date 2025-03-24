@@ -1,7 +1,7 @@
-import type { GitCommit } from '@onlook/git';
-import { GitChannels } from '@onlook/models/constants';
-import { type Project } from '@onlook/models/projects';
-import { toast } from '@onlook/ui/use-toast';
+import type { GitCommit } from '@analogia/git';
+import { GitChannels } from '@analogia/models/constants';
+import { type Project } from '@analogia/models/projects';
+import { toast } from '@analogia/ui/use-toast';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '../editor/engine';
 import { invokeMainChannel, sendAnalytics } from '../utils';
@@ -44,7 +44,7 @@ export class VersionsManager {
     }
 
     createCommit = async (
-        message: string = 'New Onlook backup',
+        message: string = 'New Analogia backup',
         showToast = true,
     ): Promise<{
         success: boolean;

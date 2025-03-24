@@ -1,4 +1,4 @@
-import { cn } from '@onlook/ui/utils';
+import { cn } from '@analogia/ui/utils';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import CodeChangeDisplay from '../CodeChangeDisplay';

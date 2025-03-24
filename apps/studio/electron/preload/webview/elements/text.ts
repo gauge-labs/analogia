@@ -1,5 +1,5 @@
-import { EditorAttributes } from '@onlook/models/constants';
-import type { DomElement } from '@onlook/models/element';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { DomElement } from '@analogia/models/element';
 import { publishEditText } from '../events/publish';
 import { getDomElement, restoreElementStyle } from './helpers';
 import { elementFromDomId } from '/common/helpers';
@@ -65,7 +65,7 @@ export function stopEditingText(domId: string): { newContent: string; domEl: Dom
 }
 
 function prepareElementForEditing(el: HTMLElement) {
-    el.setAttribute(EditorAttributes.DATA_ONLOOK_EDITING_TEXT, 'true');
+    el.setAttribute(EditorAttributes.DATA_ANALOGIA_EDITING_TEXT, 'true');
 }
 
 function cleanUpElementAfterEditing(el: HTMLElement) {
@@ -74,7 +74,7 @@ function cleanUpElementAfterEditing(el: HTMLElement) {
 }
 
 function removeEditingAttributes(el: HTMLElement) {
-    el.removeAttribute(EditorAttributes.DATA_ONLOOK_EDITING_TEXT);
+    el.removeAttribute(EditorAttributes.DATA_ANALOGIA_EDITING_TEXT);
 }
 
 function updateTextContent(el: HTMLElement, content: string): void {

@@ -20,28 +20,28 @@ export class Framework {
         modifyNextConfig,
         NEXT_DEPENDENCIES,
         BUILD_TOOL_NAME.NEXT,
-        removeNextCache,
+        removeNextCache
     );
     static readonly VITE = new Framework(
         'Vite',
         isViteJsProject,
         modifyViteConfig,
         VITE_DEPENDENCIES,
-        BUILD_TOOL_NAME.VITE,
+        BUILD_TOOL_NAME.VITE
     );
     static readonly WEBPACK = new Framework(
         'Webpack',
         isWebpackProject,
         modifyWebpackConfig,
         WEBPACK_DEPENDENCIES,
-        BUILD_TOOL_NAME.WEBPACK,
+        BUILD_TOOL_NAME.WEBPACK
     );
     static readonly CRA = new Framework(
         'Create React App',
         isCRAProject,
         modifyCRAConfig,
         CRA_DEPENDENCIES,
-        BUILD_TOOL_NAME.CRA,
+        BUILD_TOOL_NAME.CRA
     );
 
     private constructor(
@@ -50,7 +50,7 @@ export class Framework {
         public readonly updateConfig: (configFileExtension: string) => void,
         public readonly dependencies: string[],
         public readonly buildToolName: BUILD_TOOL_NAME,
-        public readonly cleanup?: () => void,
+        public readonly cleanup?: () => void
     ) {}
 
     setup = async (callback: SetupCallback): Promise<boolean> => {
@@ -62,7 +62,7 @@ export class Framework {
             callback(SetupStage.CONFIGURING, `Applying ${this.name} configuration...`);
             const configFileExtension = await getFileExtensionByPattern(
                 process.cwd(),
-                CONFIG_FILE_PATTERN[this.buildToolName],
+                CONFIG_FILE_PATTERN[this.buildToolName]
             );
             if (configFileExtension) {
                 await this.updateConfig(configFileExtension);

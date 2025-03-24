@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import EmblaCarousel from './Carousel';
 import ProjectInfo from './Info';
-import type { Project } from '@onlook/models/projects';
+import type { Project } from '@analogia/models/projects';
 
 const SelectProject = observer(() => {
     const { t } = useTranslation();

@@ -4,9 +4,9 @@ import { useProjectsManager } from '@/components/Context';
 import { useTheme } from '@/components/ThemeProvider';
 import { sendAnalytics } from '@/lib/utils';
 import { CreateMethod, getStepName } from '@/routes/projects/helpers';
-import { DefaultSettings, Theme } from '@onlook/models/constants';
-import type { Project } from '@onlook/models/projects';
-import { MotionCard, MotionCardFooter } from '@onlook/ui/motion-card';
+import { DefaultSettings, Theme } from '@analogia/models/constants';
+import type { Project } from '@analogia/models/projects';
+import { MotionCard, MotionCardFooter } from '@analogia/ui/motion-card';
 import { AnimatePresence, motion, MotionConfig } from 'motion/react';
 import { useEffect, useState } from 'react';
 import useResizeObserver from 'use-resize-observer';
@@ -224,7 +224,7 @@ const CreateProject = ({
                                     layout="position"
                                     className="text-sm pb-4"
                                 >
-                                    <p className="text-foreground-onlook">{`${currentStep + 1} of ${steps.length}`}</p>
+                                    <p className="text-foreground-analogia">{`${currentStep + 1} of ${steps.length}`}</p>
                                     <div id="footer-buttons" className="flex ml-auto gap-2">
                                         {steps[currentStep]?.footerButtons({
                                             projectData,

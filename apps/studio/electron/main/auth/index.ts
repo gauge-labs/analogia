@@ -1,6 +1,6 @@
-import { APP_SCHEMA, MainChannels } from '@onlook/models/constants';
-import type { AuthTokens, UserMetadata } from '@onlook/models/settings';
-import supabase from '@onlook/supabase/clients';
+import { APP_SCHEMA, MainChannels } from '@analogia/models/constants';
+import type { AuthTokens, UserMetadata } from '@analogia/models/settings';
+import supabase from '@analogia/supabase/clients';
 import type {
     AuthResponse,
     Session,

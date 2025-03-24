@@ -1,7 +1,7 @@
 import type { NodePath } from '@babel/traverse';
 import * as t from '@babel/types';
-import type { CodeInsert, PasteParams } from '@onlook/models/actions';
-import { EditorAttributes } from '@onlook/models/constants';
+import type { CodeInsert, PasteParams } from '@analogia/models/actions';
+import { EditorAttributes } from '@analogia/models/constants';
 import { parseJsxCodeBlock } from '../helpers';
 import { addKeyToElement, addParamToElement, jsxFilter } from './helpers';
 import { assertNever } from '/common/helpers';
@@ -33,7 +33,7 @@ export function createInsertedElement(insertedChild: CodeInsert): t.JSXElement {
     if (insertedChild.codeBlock) {
         element =
             parseJsxCodeBlock(insertedChild.codeBlock, true) || createJSXElement(insertedChild);
-        addParamToElement(element, EditorAttributes.DATA_ONLOOK_ID, insertedChild.oid);
+        addParamToElement(element, EditorAttributes.DATA_ANALOGIA_ID, insertedChild.oid);
     } else {
         element = createJSXElement(insertedChild);
     }
@@ -45,7 +45,7 @@ export function createInsertedElement(insertedChild: CodeInsert): t.JSXElement {
 }
 
 function addPasteParamsToElement(element: t.JSXElement, pasteParams: PasteParams): void {
-    addParamToElement(element, EditorAttributes.DATA_ONLOOK_ID, pasteParams.oid);
+    addParamToElement(element, EditorAttributes.DATA_ANALOGIA_ID, pasteParams.oid);
 }
 
 function createJSXElement(insertedChild: CodeInsert): t.JSXElement {

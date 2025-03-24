@@ -1,10 +1,10 @@
 import { useProjectsManager } from '@/components/Context';
 import { invokeMainChannel } from '@/lib/utils';
-import { HOSTING_DOMAIN, MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Input } from '@onlook/ui/input';
-import { getValidSubdomain, getValidUrl, timeAgo } from '@onlook/utility';
+import { HOSTING_DOMAIN, MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Input } from '@analogia/ui/input';
+import { getValidSubdomain, getValidUrl, timeAgo } from '@analogia/utility';
 import { observer } from 'mobx-react-lite';
 
 const BaseDomain = observer(() => {

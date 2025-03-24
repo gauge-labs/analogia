@@ -3,10 +3,10 @@ import type { CompoundStyleImpl } from '@/lib/editor/styles';
 import { observer } from 'mobx-react-lite';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import TextInput from '../single/TextInput';
-import { cn } from '@onlook/ui/utils';
+import { cn } from '@analogia/ui/utils';
 import SelectInput from '../single/SelectInput';
-import { Icons } from '@onlook/ui/icons/index';
-import type { DomElement } from '@onlook/models/element';
+import { Icons } from '@analogia/ui/icons/index';
+import type { DomElement } from '@analogia/models/element';
 
 type Position = 'top' | 'bottom' | 'left' | 'right';
 type PositionState = Record<Position, boolean>;
@@ -55,7 +55,7 @@ const PositionLine = ({ position, isActive, onClick }: LineProps) => {
 
 const CenterButton = ({ isCenter, onClick }: { isCenter: boolean; onClick: () => void }) => (
     <div
-        className="bg-background-onlook rounded relative flex items-center justify-center px-2 py-2 border border-background-active"
+        className="bg-background-analogia rounded relative flex items-center justify-center px-2 py-2 border border-background-active"
         onClick={onClick}
     >
         <Icons.Plus
@@ -187,7 +187,7 @@ const PositionInput = observer(({ compoundStyle }: { compoundStyle: CompoundStyl
 
     const renderMainControl = () => (
         <div className="flex flex-row items-center justify-between w-full">
-            <p className="text-xs text-foreground-onlook">{compoundStyle.head.displayName}</p>
+            <p className="text-xs text-foreground-analogia">{compoundStyle.head.displayName}</p>
             <div className="flex flex-row space-x-1">
                 <SelectInput elementStyle={compoundStyle.head} onValueChange={onMainValueChanged} />
             </div>
@@ -196,7 +196,7 @@ const PositionInput = observer(({ compoundStyle }: { compoundStyle: CompoundStyl
 
     const renderLines = useCallback(() => {
         return (
-            <div className="w-16 h-16 bg-background-onlook rounded relative flex items-center justify-center px-4 py-4">
+            <div className="w-16 h-16 bg-background-analogia rounded relative flex items-center justify-center px-4 py-4">
                 <CenterButton isCenter={isCentered} onClick={centerElement} />
                 {(['top', 'right', 'bottom', 'left'] as Position[]).map((position) => (
                     <PositionLine
@@ -239,7 +239,7 @@ const PositionInput = observer(({ compoundStyle }: { compoundStyle: CompoundStyl
                             elementStyle={elementStyle}
                             disabled={!isActive}
                             className={cn(
-                                'absolute w-16 bg-background-onlook text-foreground-onlook text-center rounded p-2',
+                                'absolute w-16 bg-background-analogia text-foreground-analogia text-center rounded p-2',
                                 positionStyles[position],
                                 !isActive && 'opacity-50 cursor-not-allowed',
                             )}

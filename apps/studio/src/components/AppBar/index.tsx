@@ -1,6 +1,6 @@
 import { useRouteManager, useUpdateManager } from '@/components/Context';
 import { Route } from '@/lib/routes';
-import { cn } from '@onlook/ui/utils';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { HelpButton } from './HelpButton';
 import UpdateButton from './UpdateButton';

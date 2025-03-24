@@ -6,8 +6,8 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-} from '@onlook/ui/alert-dialog';
-import { Button } from '@onlook/ui/button';
+} from '@analogia/ui/alert-dialog';
+import { Button } from '@analogia/ui/button';
 import { EditorMode } from '@/lib/models';
 
 export default function DeleteImageModal({

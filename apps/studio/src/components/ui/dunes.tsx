@@ -7,12 +7,12 @@ export function Dunes() {
             <img
                 className="w-full h-full object-cover rounded-xl hidden dark:flex"
                 src={dunesDark}
-                alt="Onlook dunes dark"
+                alt="Analogia dunes dark"
             />
             <img
                 className="w-full h-full object-cover rounded-xl flex dark:hidden"
                 src={dunesLight}
-                alt="Onlook dunes light"
+                alt="Analogia dunes light"
             />
         </div>
     );

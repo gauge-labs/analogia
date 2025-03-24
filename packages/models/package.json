@@ -1,10 +1,10 @@
 {
-    "name": "@onlook/models",
-    "description": "Common models shared between onlook packages",
+    "name": "@analogia/models",
+    "description": "Common models shared between analogia packages",
     "version": "0.0.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/onlook-dev/onlook.git"
+        "url": "https://github.com/AnalogiaAI/analogia.git"
     },
     "type": "module",
     "main": "src/index.ts",
@@ -15,21 +15,21 @@
         "typecheck": "tsc --noEmit"
     },
     "keywords": [
-        "onlook",
+        "analogia",
         "models"
     ],
     "author": {
-        "name": "Onlook",
-        "email": "contact@onlook.com"
+        "name": "Analogia",
+        "email": "contact@analogia.ai"
     },
     "license": "Apache-2.0",
-    "homepage": "https://onlook.com",
+    "homepage": "https://analogia.ai",
     "exports": {
         ".": "./src/index.ts",
         "./*": "./src/*/index.ts"
     },
     "devDependencies": {
-        "@onlook/typescript": "*",
+        "@analogia/typescript": "*",
         "typescript": "^5.5.4"
     },
     "dependencies": {

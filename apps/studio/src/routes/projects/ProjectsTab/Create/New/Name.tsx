@@ -1,7 +1,7 @@
-import { Button } from '@onlook/ui/button';
-import { CardDescription, CardTitle } from '@onlook/ui/card';
-import { Input } from '@onlook/ui/input';
-import { Label } from '@onlook/ui/label';
+import { Button } from '@analogia/ui/button';
+import { CardDescription, CardTitle } from '@analogia/ui/card';
+import { Input } from '@analogia/ui/input';
+import { Label } from '@analogia/ui/label';
 import { getRandomPlaceholder } from '../../../helpers';
 import type { StepComponent } from '../withStepProps';
 

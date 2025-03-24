@@ -1,19 +1,19 @@
-import { Button } from '@onlook/ui/button';
+import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Color } from '@onlook/utility';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Color } from '@analogia/utility';
 import { useState } from 'react';
 import { ColorPopover } from './ColorPopover';
-import { MainChannels } from '@onlook/models/constants';
+import { MainChannels } from '@analogia/models/constants';
 import { invokeMainChannel } from '@/lib/utils';
 import { useEditorEngine } from '@/components/Context';
-import { Tooltip, TooltipContent, TooltipTrigger, TooltipPortal } from '@onlook/ui/tooltip';
-import { Theme } from '@onlook/models/assets';
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipPortal } from '@analogia/ui/tooltip';
+import { Theme } from '@analogia/models/assets';
 
 export interface ColorItem {
     name: string;

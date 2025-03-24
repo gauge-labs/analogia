@@ -1,5 +1,5 @@
-import { MainChannels } from '@onlook/models/constants';
-import type { UserMetadata } from '@onlook/models/settings';
+import { MainChannels } from '@analogia/models/constants';
+import type { UserMetadata } from '@analogia/models/settings';
 import { app, ipcMain } from 'electron';
 import * as Mixpanel from 'mixpanel';
 import { nanoid } from 'nanoid/non-secure';

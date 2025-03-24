@@ -23,7 +23,7 @@ describe('Parse and Apply Code Block Diffs', () => {
     test('should apply single diff correctly', async () => {
         const diffText = await Bun.file(path.resolve(__dirname, './data/single/diff.txt')).text();
         const beforeText = await Bun.file(
-            path.resolve(__dirname, './data/single/before.txt'),
+            path.resolve(__dirname, './data/single/before.txt')
         ).text();
         const afterText = await Bun.file(path.resolve(__dirname, './data/single/after.txt')).text();
 

@@ -1,4 +1,4 @@
-import { CUSTOM_OUTPUT_DIR } from '@onlook/models/constants';
+import { CUSTOM_OUTPUT_DIR } from '@analogia/models/constants';
 import { afterEach, describe, expect, test } from 'bun:test';
 import fs from 'fs';
 import path from 'path';
@@ -49,7 +49,7 @@ module.exports = nextConfig;
             expect(modifiedConfig).toContain('ignoreBuildErrors: true');
             expect(modifiedConfig).toContain('reactStrictMode: true');
             expect(modifiedConfig).toContain(
-                `distDir: process.env.NODE_ENV === "production" ? "${CUSTOM_OUTPUT_DIR}" : ".next"`,
+                `distDir: process.env.NODE_ENV === "production" ? "${CUSTOM_OUTPUT_DIR}" : ".next"`
             );
 
             // Clean up this config file
@@ -99,7 +99,7 @@ module.exports = nextConfig;
         expect(modifiedConfig).toContain('typescript: {');
         expect(modifiedConfig).toContain('ignoreBuildErrors: true');
         expect(modifiedConfig).toContain(
-            `distDir: process.env.NODE_ENV === "production" ? "${CUSTOM_OUTPUT_DIR}" : ".next"`,
+            `distDir: process.env.NODE_ENV === "production" ? "${CUSTOM_OUTPUT_DIR}" : ".next"`
         );
     });
 

@@ -1,8 +1,8 @@
 import { useEditorEngine } from '@/components/Context';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Kbd } from '@onlook/ui/kbd';
-import { Separator } from '@onlook/ui/separator';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Kbd } from '@analogia/ui/kbd';
+import { Separator } from '@analogia/ui/separator';
 import { AnimatePresence, motion } from 'framer-motion';
 import { observer } from 'mobx-react-lite';
 import { Hotkey } from '/common/hotkeys';

@@ -1,6 +1,6 @@
-import type { TemplateNode } from '@onlook/models/element';
-import { IdeType } from '@onlook/models/ide';
-import type { Icons } from '@onlook/ui/icons';
+import type { TemplateNode } from '@analogia/models/element';
+import { IdeType } from '@analogia/models/ide';
+import type { Icons } from '@analogia/ui/icons';
 
 export class IDE {
     static readonly VS_CODE = new IDE('VSCode', IdeType.VS_CODE, 'vscode', 'VSCodeLogo');

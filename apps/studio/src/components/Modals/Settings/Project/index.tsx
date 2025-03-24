@@ -1,10 +1,10 @@
 import { useProjectsManager } from '@/components/Context';
 import { invokeMainChannel } from '@/lib/utils';
-import { DefaultSettings, MainChannels } from '@onlook/models/constants';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Input } from '@onlook/ui/input';
-import { Separator } from '@onlook/ui/separator';
+import { DefaultSettings, MainChannels } from '@analogia/models/constants';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Input } from '@analogia/ui/input';
+import { Separator } from '@analogia/ui/separator';
 import { observer } from 'mobx-react-lite';
 import { ReinstallButton } from './ReinstallButon';
 
@@ -150,7 +150,7 @@ const ProjectTab = observer(() => {
             <div className="flex justify-between items-center p-6">
                 <div className="flex flex-col gap-2">
                     <p className="text-largePlus">Reinstall Dependencies</p>
-                    <p className="text-foreground-onlook text-small">
+                    <p className="text-foreground-analogia text-small">
                         For when project failed to install dependencies
                     </p>
                 </div>

@@ -1,4 +1,4 @@
-import { cn } from '@onlook/ui/utils';
+import { cn } from '@analogia/ui/utils';
 import { forwardRef, useImperativeHandle, useState } from 'react';
 import { coreColors, getContextualSuggestions, searchTailwindClasses } from './twClassGen';
 
@@ -185,7 +185,7 @@ export const AutoComplete = forwardRef<
     return (
         showSuggestions &&
         currentWordInfo && (
-            <div className="z-50 fixed top-50 left-50 w-[90%] mt-1 rounded text-foreground bg-background-onlook overflow-auto">
+            <div className="z-50 fixed top-50 left-50 w-[90%] mt-1 rounded text-foreground bg-background-analogia overflow-auto">
                 {suggestions.map((suggestion, index) => {
                     const colorClass = getColorPreviewValue(suggestion);
                     const { modifiers } = parseModifiers(currentWordInfo.word);

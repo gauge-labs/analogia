@@ -1,3 +1,3 @@
-# Onlook Utils
+# Analogia Utils
 
-A shared utility package for Onlook.
+A shared utility package for Analogia.

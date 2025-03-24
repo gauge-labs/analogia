@@ -1,3 +1,3 @@
 # Security Policy
 
-Please contact us at [contact@onlook.com](mailto:contact@onlook.com) with any security issues.
+Please contact us at [contact@analogia.ai](mailto:contact@analogia.ai) with any security issues.

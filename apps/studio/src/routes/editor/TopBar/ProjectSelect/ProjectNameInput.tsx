@@ -1,5 +1,5 @@
 import { useProjectsManager } from '@/components/Context';
-import { Input } from '@onlook/ui/input';
+import { Input } from '@analogia/ui/input';
 import { observer } from 'mobx-react-lite';
 import type React from 'react';
 import { useEffect, useRef, useState } from 'react';
@@ -66,11 +66,11 @@ const ProjectNameInput = observer(() => {
                     }
                     onKeyDown={handleKeyDown}
                     onBlur={handleRenameProject}
-                    className="mx-0 max-w-[200px] px-1 py-0 h-6 text-foreground-onlook text-small caret-red-500 selection:bg-red-500/50 placeholder:hover:text-red-500 selection:text-red-900 dark:selection:bg-red-500/50 dark:selection:text-red-200"
+                    className="mx-0 max-w-[200px] px-1 py-0 h-6 text-foreground-analogiagia text-small caret-red-500 selection:bg-red-500/50 placeholder:hover:text-red-500 selection:text-red-900 dark:selection:bg-red-500/50 dark:selection:text-red-200"
                 />
             ) : (
                 <span
-                    className="mx-0 max-w-[60px] md:max-w-[100px] lg:max-w-[200px] px-0 text-foreground-onlook text-small truncate cursor-pointer"
+                    className="mx-0 max-w-[60px] md:max-w-[100px] lg:max-w-[200px] px-0 text-foreground-analogia text-small truncate cursor-pointer"
                     onDoubleClick={handleStartEditing}
                 >
                     {projectsManager.project?.name}

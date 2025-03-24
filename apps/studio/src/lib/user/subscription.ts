@@ -1,5 +1,5 @@
-import { MainChannels } from '@onlook/models/constants';
-import { UsagePlanType } from '@onlook/models/usage';
+import { MainChannels } from '@analogia/models/constants';
+import { UsagePlanType } from '@analogia/models/usage';
 import { makeAutoObservable } from 'mobx';
 import { invokeMainChannel } from '../utils';
 

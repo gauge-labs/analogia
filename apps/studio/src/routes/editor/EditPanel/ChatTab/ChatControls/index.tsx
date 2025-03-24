@@ -1,7 +1,7 @@
 import { useEditorEngine } from '@/components/Context';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@onlook/ui/tooltip';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@analogia/ui/tooltip';
 import { TooltipArrow } from '@radix-ui/react-tooltip';
 import { observer } from 'mobx-react-lite';
 
@@ -19,7 +19,7 @@ export const ChatControls = observer(() => {
                     <Button
                         variant={'ghost'}
                         size={'icon'}
-                        className="p-2 w-fit h-fit hover:bg-background-onlook"
+                        className="p-2 w-fit h-fit hover:bg-background-analogia"
                         onClick={handleNewChat}
                         disabled={editorEngine.chat.isWaiting}
                     >

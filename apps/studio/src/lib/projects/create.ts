@@ -1,6 +1,6 @@
-import type { CreateProjectResponse } from '@onlook/models';
-import type { ImageMessageContext } from '@onlook/models/chat';
-import { MainChannels } from '@onlook/models/constants';
+import type { CreateProjectResponse } from '@analogia/models';
+import type { ImageMessageContext } from '@analogia/models/chat';
+import { MainChannels } from '@analogia/models/constants';
 import { makeAutoObservable } from 'mobx';
 import { ProjectTabs, type ProjectsManager } from '.';
 import { invokeMainChannel, sendAnalytics } from '../utils';

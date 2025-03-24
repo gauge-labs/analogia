@@ -1,4 +1,4 @@
-import type { CodeDiff, CodeDiffRequest } from '@onlook/models/code';
+import type { CodeDiff, CodeDiffRequest } from '@analogia/models/code';
 import runManager from '../../run';
 import { GENERATE_CODE_OPTIONS } from '../../run/helpers';
 import { readFile } from '../files';

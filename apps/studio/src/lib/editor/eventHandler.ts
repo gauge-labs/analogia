@@ -1,5 +1,5 @@
-import { WebviewChannels } from '@onlook/models/constants';
-import type { DomElement, LayerNode } from '@onlook/models/element';
+import { WebviewChannels } from '@analogia/models/constants';
+import type { DomElement, LayerNode } from '@analogia/models/element';
 import { debounce } from 'lodash';
 import { EditorMode } from '../models';
 import type { EditorEngine } from './engine';

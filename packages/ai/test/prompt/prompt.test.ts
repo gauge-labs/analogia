@@ -1,4 +1,4 @@
-import { MessageContextType } from '@onlook/models/chat';
+import { MessageContextType } from '@analogia/models/chat';
 import { describe, expect, test } from 'bun:test';
 import path from 'path';
 import { SEARCH_REPLACE_EXAMPLE_CONVERSATION } from 'src/prompt/edit';
@@ -31,7 +31,7 @@ describe('Prompt', () => {
         const examplesPath = path.resolve(__dirname, './data/examples.txt');
 
         const prompt = new PromptProvider().getExampleConversation(
-            SEARCH_REPLACE_EXAMPLE_CONVERSATION,
+            SEARCH_REPLACE_EXAMPLE_CONVERSATION
         );
         if (SHOULD_WRITE_EXAMPLES) {
             await Bun.write(examplesPath, prompt);
@@ -131,7 +131,7 @@ describe('Prompt', () => {
                     type: MessageContextType.HIGHLIGHT,
                     displayName: 'test.txt',
                 },
-            ],
+            ]
         );
 
         if (SHOULD_WRITE_FILE_CONTENT) {

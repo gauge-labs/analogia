@@ -1,9 +1,9 @@
 import { useEditorEngine } from '@/components/Context';
-import { MouseAction } from '@onlook/models/editor';
-import type { DomElement, LayerNode } from '@onlook/models/element';
-import { Icons } from '@onlook/ui/icons';
-import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@onlook/ui/tooltip';
-import { cn } from '@onlook/ui/utils';
+import { MouseAction } from '@analogia/models/editor';
+import type { DomElement, LayerNode } from '@analogia/models/element';
+import { Icons } from '@analogia/ui/icons';
+import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@analogia/ui/tooltip';
+import { cn } from '@analogia/ui/utils';
 import { TooltipArrow } from '@radix-ui/react-tooltip';
 import { observer } from 'mobx-react-lite';
 import { motion } from 'motion/react';
@@ -117,7 +117,7 @@ const TreeNode = observer(
                             isComponentAncestor(node) && !node.data.instanceId && !hovered,
                         'text-purple-500 dark:text-purple-200':
                             isComponentAncestor(node) && !node.data.instanceId && hovered,
-                        'text-foreground-onlook':
+                        'text-foreground-analogia':
                             !isComponentAncestor(node) &&
                             !node.data.instanceId &&
                             !selected &&
@@ -130,7 +130,7 @@ const TreeNode = observer(
                         'rounded-t': selected && node.isInternal,
                         'rounded-b': isParentSelected && parentGroupEnd(node),
                         'rounded-none': isParentSelected && node.nextSibling,
-                        'bg-background-onlook': hovered,
+                        'bg-background-analogia': hovered,
                         'bg-[#FA003C] dark:bg-[#FA003C]/90': selected,
                         'bg-[#FA003C]/10 dark:bg-[#FA003C]/10': isParentSelected,
                         'bg-[#FA003C]/20 dark:bg-[#FA003C]/20': hovered && isParentSelected,

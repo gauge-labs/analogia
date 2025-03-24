@@ -26,7 +26,7 @@ export async function getAllFiles(
         patterns: ['**/*'],
         ignore: IGNORE_PATHS,
         maxDepth: 5,
-    },
+    }
 ): Promise<{ success: boolean; files?: string[]; error?: string }> {
     try {
         const files = await fg(options.patterns, {

@@ -23,7 +23,7 @@
         --np-secondary-icon-shape: #ccfbf1; /* teal 100*/
 
         --background: 0 0% 100%; /* white */
-        --background-onlook: 0 0% 90%; /* light gray */
+        --background-analogia: 0 0% 90%; /* light gray */
         --background-brand: 171 100% 67%; /* lighter teal */
         --background-brand-secondary: 171 100% 77%; /* even lighter teal */
         --background-primary: 0 0% 100%; /* white */
@@ -36,7 +36,7 @@
         --background-disabled: 0 0% 95%; /* very light gray */
 
         --foreground: 0 0% 10%; /* black */
-        --foreground-onlook: 0 0% 20%; /* dark gray */
+        --foreground-analogia: 0 0% 20%; /* dark gray */
         --foreground-brand: 344 100% 66%; /* red */
         --foreground-primary: 0 0% 10%; /* black */
         --foreground-secondary: 0 0% 20%; /* dark gray */
@@ -103,7 +103,7 @@
         --np-secondary-icon-shape: #ccfbf1; /* teal 100*/
 
         --background: 20 14.3% 4.1%; /* shadcn */
-        --background-onlook: 0 0% 10%; /* gray[900] */
+        --background-analogia: 0 0% 10%; /* gray[900] */
         --background-brand: 171 100% 17%; /* teal[700] */
         --background-brand-secondary: 171 100% 27%; /* teal[500] */
         --background-primary: 0 0% 10%; /* gray[900] */
@@ -116,7 +116,7 @@
         --background-disabled: 0 0% 10%; /* gray[900] */
 
         --foreground: 60 9.1% 97.8%; /* shadcn */
-        --foreground-onlook: 0 0% 67%; /* gray[200] */
+        --foreground-analogia: 0 0% 67%; /* gray[200] */
         --foreground-brand: 344 100% 66%; /* red[DEFAULT] */
         --foreground-primary: 0 0% 100%; /* gray[50] */
         --foreground-secondary: 0 0% 67%; /* gray[200] */

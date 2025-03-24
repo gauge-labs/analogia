@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';
 
 const toggleVariants = cva(
-    'inline-flex items-center justify-center rounded text-sm text-foreground-onlook font-medium transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-foreground-active',
+    'inline-flex items-center justify-center rounded text-sm text-foreground-analogia font-medium transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-foreground-active',
     {
         variants: {
             variant: {
@@ -26,7 +26,7 @@ const toggleVariants = cva(
             variant: 'default',
             size: 'default',
         },
-    },
+    }
 );
 
 const Toggle = React.forwardRef<

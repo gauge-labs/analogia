@@ -1,6 +1,6 @@
-import { CreateStage, SetupStage, type CreateCallback, type SetupCallback } from '@onlook/models';
-import type { ImageMessageContext } from '@onlook/models/chat';
-import { MainChannels } from '@onlook/models/constants';
+import { CreateStage, SetupStage, type CreateCallback, type SetupCallback } from '@analogia/models';
+import type { ImageMessageContext } from '@analogia/models/chat';
+import { MainChannels } from '@analogia/models/constants';
 import { ipcMain } from 'electron';
 import { mainWindow } from '..';
 import projectCreator from '../create';

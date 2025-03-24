@@ -63,7 +63,7 @@ impl VisitMut for TransformVisitor {
         let data_attribute: JSXAttrOrSpread = JSXAttrOrSpread::JSXAttr(JSXAttr {
             span: el.span,
             name: JSXAttrName::Ident(Ident {
-                sym: "data-onlook-id".into(),
+                sym: "data-analogia-id".into(),
                 span: el.span,
                 optional: false,
             }),

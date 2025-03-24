@@ -1,4 +1,4 @@
-import { getAllFiles } from '@onlook/ai/src/tools/helpers';
+import { getAllFiles } from '@analogia/ai/src/tools/helpers';
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
 import { mkdirSync, rmSync, writeFileSync } from 'fs';
 import { join } from 'path';

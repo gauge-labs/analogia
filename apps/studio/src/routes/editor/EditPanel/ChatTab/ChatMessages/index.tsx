@@ -1,8 +1,8 @@
 import { useEditorEngine } from '@/components/Context';
 import type { AssistantChatMessageImpl } from '@/lib/editor/engine/chat/message/assistant';
 import type { UserChatMessageImpl } from '@/lib/editor/engine/chat/message/user';
-import { ChatMessageRole } from '@onlook/models/chat';
-import { Icons } from '@onlook/ui/icons';
+import { ChatMessageRole } from '@analogia/models/chat';
+import { Icons } from '@analogia/ui/icons';
 import { observer } from 'mobx-react-lite';
 import { AnimatePresence, motion } from 'motion/react';
 import { useCallback, useEffect, useRef } from 'react';

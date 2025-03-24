@@ -1,17 +1,17 @@
 import { useEditorEngine, useUserManager } from '@/components/Context';
 import { EditorTabValue } from '@/lib/models';
-import type { DomElement } from '@onlook/models/element';
-import { DEFAULT_IDE } from '@onlook/models/ide';
+import type { DomElement } from '@analogia/models/element';
+import { DEFAULT_IDE } from '@analogia/models/ide';
 import {
     ContextMenu,
     ContextMenuContent,
     ContextMenuItem,
     ContextMenuSeparator,
     ContextMenuTrigger,
-} from '@onlook/ui/context-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Kbd } from '@onlook/ui/kbd';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/context-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Kbd } from '@analogia/ui/kbd';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
 import { Hotkey } from '/common/hotkeys';

@@ -11,7 +11,11 @@ export function compress(json: Object) {
 
 export function decompress(base64: string) {
     // Decompress base64 to JSON
-    const buffer = new Uint8Array(atob(base64).split('').map(c => c.charCodeAt(0)));
+    const buffer = new Uint8Array(
+        atob(base64)
+            .split('')
+            .map((c) => c.charCodeAt(0))
+    );
     const decompressed = decompressSync(buffer);
     const str = strFromU8(decompressed);
     return JSON.parse(str);

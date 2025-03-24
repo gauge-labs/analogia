@@ -1,17 +1,17 @@
 import { useEditorEngine, useProjectsManager, useUserManager } from '@/components/Context';
 import { SettingsTabValue } from '@/lib/models';
-import type { DomElement } from '@onlook/models/element';
-import { DEFAULT_IDE } from '@onlook/models/ide';
+import type { DomElement } from '@analogia/models/element';
+import { DEFAULT_IDE } from '@analogia/models/ide';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@onlook/ui/tooltip';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@analogia/ui/tooltip';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useState } from 'react';

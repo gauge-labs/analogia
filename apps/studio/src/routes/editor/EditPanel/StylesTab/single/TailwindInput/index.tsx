@@ -1,14 +1,14 @@
 import { useEditorEngine } from '@/components/Context';
 import { StyleMode } from '@/lib/editor/engine/style';
 import { invokeMainChannel, sendAnalytics } from '@/lib/utils';
-import type { CodeDiffRequest } from '@onlook/models/code';
-import { MainChannels } from '@onlook/models/constants';
-import type { ClassParsingResult, DomElement } from '@onlook/models/element';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { Textarea } from '@onlook/ui/textarea';
-import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@onlook/ui/tooltip';
-import { cn } from '@onlook/ui/utils';
+import type { CodeDiffRequest } from '@analogia/models/code';
+import { MainChannels } from '@analogia/models/constants';
+import type { ClassParsingResult, DomElement } from '@analogia/models/element';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { Textarea } from '@analogia/ui/textarea';
+import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@analogia/ui/tooltip';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useRef, useState } from 'react';
 import { AutoComplete, type SuggestionsListRef } from './AutoComplete';
@@ -379,7 +379,7 @@ const TailwindInput = observer(() => {
     };
 
     return (
-        <div className="flex flex-col gap-2 text-xs text-foreground-onlook shadow-none">
+        <div className="flex flex-col gap-2 text-xs text-foreground-analogia shadow-none">
             {selectedEl?.oid && (
                 <div className="relative">
                     <div className="group cursor-pointer">

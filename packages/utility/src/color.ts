@@ -27,7 +27,7 @@ export function parseHslValue(value: string): Color | null {
 
     if (value.includes('hsl')) {
         const hslMatch = value.match(
-            /hsla?\(\s*([^,\s]+)(?:deg)?\s*[,\s]\s*([^,\s]+)%\s*[,\s]\s*([^,\s]+)%\s*(?:[,/]\s*([^)]+))?\s*\)/,
+            /hsla?\(\s*([^,\s]+)(?:deg)?\s*[,\s]\s*([^,\s]+)%\s*[,\s]\s*([^,\s]+)%\s*(?:[,/]\s*([^)]+))?\s*\)/
         );
 
         if (hslMatch) {

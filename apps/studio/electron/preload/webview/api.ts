@@ -12,7 +12,7 @@ import {
     getActionElementByDomId,
     getActionLocation,
     getElementType,
-    getFirstOnlookElement,
+    getFirstAnalogiaElement,
     setElementType,
 } from './elements/dom/helpers';
 import { getInsertLocation } from './elements/dom/insert';
@@ -31,7 +31,7 @@ export function setApi() {
         getComputedStyleByDomId,
         updateElementInstance,
         setWebviewId,
-        getFirstOnlookElement,
+        getFirstAnalogiaElement,
 
         // Elements
         getElementAtLoc,

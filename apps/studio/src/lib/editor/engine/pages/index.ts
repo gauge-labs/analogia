@@ -1,7 +1,7 @@
 import type { ProjectsManager } from '@/lib/projects';
 import { invokeMainChannel, sendAnalytics } from '@/lib/utils';
-import { MainChannels } from '@onlook/models/constants';
-import type { PageNode } from '@onlook/models/pages';
+import { MainChannels } from '@analogia/models/constants';
+import type { PageNode } from '@analogia/models/pages';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
 import { doesRouteExist, normalizeRoute, validateNextJsRoute } from './helper';

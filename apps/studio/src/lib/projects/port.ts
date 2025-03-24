@@ -1,4 +1,4 @@
-import { MainChannels, RunState, type DetectedPortResults, type Project } from '@onlook/models';
+import { MainChannels, RunState, type DetectedPortResults, type Project } from '@analogia/models';
 import { makeAutoObservable, reaction } from 'mobx';
 import { invokeMainChannel } from '../utils';
 import type { RunManager } from './run';

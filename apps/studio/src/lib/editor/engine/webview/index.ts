@@ -1,14 +1,14 @@
 import type { ProjectsManager } from '@/lib/projects';
-import { RunState } from '@onlook/models/run';
+import { RunState } from '@analogia/models/run';
 import { makeAutoObservable } from 'mobx';
 import type { EditorEngine } from '..';
-import { isOnlookInDoc } from '/common/helpers';
+import { isAnalogiaInDoc } from '/common/helpers';
 
 export enum WebviewState {
     NOT_RUNNING,
     RUNNING_NO_DOM,
-    DOM_NO_ONLOOK,
-    DOM_ONLOOK_ENABLED,
+    DOM_NO_ANALOGIA,
+    DOM_ANALOGIA_ENABLED,
 }
 
 interface WebviewData {
@@ -126,13 +126,13 @@ export class WebviewManager {
             return WebviewState.RUNNING_NO_DOM;
         }
 
-        const hasOnlook = isOnlookInDoc(doc);
-        if (hasOnlook) {
+        const hasAnalogia = isAnalogiaInDoc(doc);
+        if (hasAnalogia) {
             this.editorEngine.errors.shouldShowErrors = false;
-            return WebviewState.DOM_ONLOOK_ENABLED;
+            return WebviewState.DOM_ANALOGIA_ENABLED;
         }
         this.editorEngine.errors.shouldShowErrors = true;
-        return WebviewState.DOM_NO_ONLOOK;
+        return WebviewState.DOM_NO_ANALOGIA;
     }
 
     observeState(id: string, observer: StateObserver): void {

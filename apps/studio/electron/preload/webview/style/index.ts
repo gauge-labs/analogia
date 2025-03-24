@@ -1,5 +1,5 @@
-import { EditorAttributes } from '@onlook/models/constants';
-import type { StyleChange } from '@onlook/models/style';
+import { EditorAttributes } from '@analogia/models/constants';
+import type { StyleChange } from '@analogia/models/style';
 import type { CssNode, Declaration, Raw, Rule, SelectorList } from 'css-tree';
 import { cssTree } from '../bundles/';
 import { selectorFromDomId } from '/common/helpers';
@@ -11,9 +11,9 @@ class CSSManager {
     public injectDefaultStyles() {
         try {
             const styleElement = document.createElement('style');
-            styleElement.id = EditorAttributes.ONLOOK_DEFAULT_STYLESHEET_ID;
+            styleElement.id = EditorAttributes.ANALOGIA_DEFAULT_STYLESHEET_ID;
             styleElement.textContent = `
-            [${EditorAttributes.DATA_ONLOOK_EDITING_TEXT}="true"] {
+            [${EditorAttributes.DATA_ANALOGIA_EDITING_TEXT}="true"] {
                 opacity: 0;
             }
         `;
@@ -32,7 +32,7 @@ class CSSManager {
 
     private get stylesheet(): CssNode {
         const styleElement: HTMLStyleElement = (document.getElementById(
-            EditorAttributes.ONLOOK_STYLESHEET_ID,
+            EditorAttributes.ANALOGIA_STYLESHEET_ID,
         ) || this.createStylesheet()) as HTMLStyleElement;
         styleElement.textContent = styleElement.textContent || '';
         return cssTree.parse(styleElement.textContent);
@@ -40,14 +40,14 @@ class CSSManager {
 
     private set stylesheet(ast: CssNode) {
         const styleElement: HTMLStyleElement = (document.getElementById(
-            EditorAttributes.ONLOOK_STYLESHEET_ID,
+            EditorAttributes.ANALOGIA_STYLESHEET_ID,
         ) || this.createStylesheet()) as HTMLStyleElement;
         styleElement.textContent = cssTree.generate(ast);
     }
 
     private createStylesheet(): HTMLStyleElement {
         const styleElement = document.createElement('style');
-        styleElement.id = EditorAttributes.ONLOOK_STYLESHEET_ID;
+        styleElement.id = EditorAttributes.ANALOGIA_STYLESHEET_ID;
         document.head.appendChild(styleElement);
         return styleElement;
     }

@@ -1,8 +1,8 @@
 import type { ProjectsManager } from '@/lib/projects';
 import { invokeMainChannel, sendAnalytics } from '@/lib/utils';
-import type { ChatSuggestion, Project } from '@onlook/models';
-import type { ImageMessageContext, ProjectSuggestions } from '@onlook/models/chat';
-import { MainChannels } from '@onlook/models/constants';
+import type { ChatSuggestion, Project } from '@analogia/models';
+import type { ImageMessageContext, ProjectSuggestions } from '@analogia/models/chat';
+import { MainChannels } from '@analogia/models/constants';
 import type { CoreMessage, CoreSystemMessage, ImagePart, TextPart } from 'ai';
 import { makeAutoObservable, reaction } from 'mobx';
 

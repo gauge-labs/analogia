@@ -1,5 +1,5 @@
-import { DefaultSettings, MainChannels } from '@onlook/models/constants';
-import type { ChatSettings, EditorSettings, UserSettings } from '@onlook/models/settings';
+import { DefaultSettings, MainChannels } from '@analogia/models/constants';
+import type { ChatSettings, EditorSettings, UserSettings } from '@analogia/models/settings';
 import { makeAutoObservable } from 'mobx';
 import { invokeMainChannel } from '../utils';
 

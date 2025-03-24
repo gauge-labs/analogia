@@ -6,8 +6,8 @@ import {
     parsedValueToString,
     stringToParsedValue,
 } from '@/lib/editor/styles/numberUnit';
-import { toast } from '@onlook/ui/use-toast';
-import { cn } from '@onlook/ui/utils';
+import { toast } from '@analogia/ui/use-toast';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import type React from 'react';
 import { useEffect, useState } from 'react';
@@ -87,7 +87,7 @@ const TextInput = observer(
             <input
                 type="text"
                 className={cn(
-                    'w-full p-[6px] text-xs px-2 rounded border-none text-active bg-background-onlook/75 text-start focus:outline-none focus:ring-0 appearance-none',
+                    'w-full p-[6px] text-xs px-2 rounded border-none text-active bg-background-analogia/75 text-start focus:outline-none focus:ring-0 appearance-none',
                     className,
                 )}
                 placeholder="--"

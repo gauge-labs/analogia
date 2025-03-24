@@ -1,9 +1,14 @@
 import { useProjectsManager } from '@/components/Context';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@onlook/ui/accordion';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons/index';
-import { Separator } from '@onlook/ui/separator';
-import { formatCommitDate } from '@onlook/utility';
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from '@analogia/ui/accordion';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons/index';
+import { Separator } from '@analogia/ui/separator';
+import { formatCommitDate } from '@analogia/utility';
 import { observer } from 'mobx-react-lite';
 import React, { useState } from 'react';
 import { NoVersions } from './EmptyState/Version';

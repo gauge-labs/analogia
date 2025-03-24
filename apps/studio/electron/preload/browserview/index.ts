@@ -1,4 +1,4 @@
-import type { Channels } from '@onlook/models/constants';
+import type { Channels } from '@analogia/models/constants';
 import type { IpcRendererEvent } from 'electron';
 import { contextBridge, ipcRenderer, webFrame } from 'electron';
 

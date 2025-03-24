@@ -1,4 +1,4 @@
-import type { TemplateNode } from '@onlook/models/element';
+import type { TemplateNode } from '@analogia/models/element';
 import { compressSync, decompressSync, strFromU8, strToU8 } from 'fflate';
 
 export function encode(templateNode: TemplateNode) {

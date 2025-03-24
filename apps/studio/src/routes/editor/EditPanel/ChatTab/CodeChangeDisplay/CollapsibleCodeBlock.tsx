@@ -1,9 +1,9 @@
 import { useUserManager } from '@/components/Context';
 import { getTruncatedFileName } from '@/lib/utils';
-import { Button } from '@onlook/ui/button';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@onlook/ui/collapsible';
-import { Icons } from '@onlook/ui/icons';
-import { cn } from '@onlook/ui/utils';
+import { Button } from '@analogia/ui/button';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@analogia/ui/collapsible';
+import { Icons } from '@analogia/ui/icons';
+import { cn } from '@analogia/ui/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { CodeBlock } from './CodeBlock';

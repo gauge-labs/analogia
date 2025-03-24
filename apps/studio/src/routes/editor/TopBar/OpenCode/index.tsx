@@ -1,15 +1,15 @@
 import { useEditorEngine, useProjectsManager, useUserManager } from '@/components/Context';
-import type { DomElement } from '@onlook/models/element';
-import { DEFAULT_IDE } from '@onlook/models/ide';
+import type { DomElement } from '@analogia/models/element';
+import { DEFAULT_IDE } from '@analogia/models/ide';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
-import { Tooltip, TooltipContent, TooltipTrigger, TooltipPortal } from '@onlook/ui/tooltip';
-import { cn } from '@onlook/ui/utils';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipPortal } from '@analogia/ui/tooltip';
+import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { AnimatePresence, motion, useAnimate } from 'motion/react';
 import { useEffect, useMemo, useState } from 'react';
@@ -102,7 +102,7 @@ const OpenCode = observer(() => {
     };
 
     return (
-        <div className="inline-flex items-center justify-center whitespace-nowrap overflow-hidden rounded-md transition-colors focus-visible:outline-none h-8 border border-input shadow-sm bg-background hover:bg-background-onlook hover:text-foreground-active/90 hover:border-foreground-active/30 text-xs space-x-0 p-0 mr-1">
+        <div className="inline-flex items-center justify-center whitespace-nowrap overflow-hidden rounded-md transition-colors focus-visible:outline-none h-8 border border-input shadow-sm bg-background hover:bg-background-analogia hover:text-foreground-active/90 hover:border-foreground-active/30 text-xs space-x-0 p-0 mr-1">
             <Tooltip>
                 <TooltipTrigger asChild>
                     <div>
@@ -113,7 +113,7 @@ const OpenCode = observer(() => {
                                 disabled={!instance && !root}
                             >
                                 <button
-                                    className="flex items-center text-smallPlus justify-center disabled:text-foreground-onlook h-8 px-2.5 rounded-l-md hover:text-foreground-active/90 transition-all duration-300 ease-in-out"
+                                    className="flex items-center text-smallPlus justify-center disabled:text-foreground-analogia h-8 px-2.5 rounded-l-md hover:text-foreground-active/90 transition-all duration-300 ease-in-out"
                                     disabled={!folderPath && !instance && !root}
                                     onClick={() => {
                                         if (folderPath) {

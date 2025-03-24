@@ -1,6 +1,6 @@
 import type React from 'react';
 import type { StepProps } from './index';
-import { MotionCardContent, MotionCardHeader } from '@onlook/ui/motion-card';
+import { MotionCardContent, MotionCardHeader } from '@analogia/ui/motion-card';
 
 interface StepComponentProps {
     props: StepProps;

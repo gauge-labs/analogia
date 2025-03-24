@@ -1,4 +1,4 @@
-import { type ChatMessageContext } from '@onlook/models/chat';
+import { type ChatMessageContext } from '@analogia/models/chat';
 import { getContextIcon, getTruncatedName } from './helpers';
 
 export function SentContextPill({ context }: { context: ChatMessageContext }) {

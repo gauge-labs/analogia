@@ -1,6 +1,6 @@
 import type { NodePath } from '@babel/traverse';
 import * as t from '@babel/types';
-import { CodeActionType, type CodeGroup, type CodeUngroup } from '@onlook/models/actions';
+import { CodeActionType, type CodeGroup, type CodeUngroup } from '@analogia/models/actions';
 import { addKeyToElement, getOidFromJsxElement, jsxFilter } from './helpers';
 import { createInsertedElement, insertAtIndex } from './insert';
 import { removeElementAtIndex } from './remove';

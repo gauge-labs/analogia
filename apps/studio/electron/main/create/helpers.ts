@@ -4,7 +4,7 @@ import { PersistentStorage } from '../storage';
 
 export function getDefaultCreateProjectPath() {
     const documentsPath = app.getPath('documents');
-    const projectsPath = path.join(documentsPath, 'Onlook', 'Projects');
+    const projectsPath = path.join(documentsPath, 'Analogia', 'Projects');
     return projectsPath;
 }
 

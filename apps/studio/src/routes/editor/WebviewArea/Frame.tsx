@@ -3,13 +3,13 @@ import { WebviewState } from '@/lib/editor/engine/webview';
 import type { WebviewMessageBridge } from '@/lib/editor/messageBridge';
 import { EditorMode } from '@/lib/models';
 import type { SizePreset } from '@/lib/sizePresets';
-import { DefaultSettings } from '@onlook/models/constants';
-import type { FrameSettings } from '@onlook/models/projects';
-import { RunState } from '@onlook/models/run';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { ShineBorder } from '@onlook/ui/shine-border';
-import { cn } from '@onlook/ui/utils';
+import { DefaultSettings } from '@analogia/models/constants';
+import type { FrameSettings } from '@analogia/models/projects';
+import { RunState } from '@analogia/models/run';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { ShineBorder } from '@analogia/ui/shine-border';
+import { cn } from '@analogia/ui/utils';
 import { motion } from 'framer-motion';
 import debounce from 'lodash/debounce';
 import { observer } from 'mobx-react-lite';
@@ -96,7 +96,7 @@ const Frame = observer(
             const state = editorEngine.webviews.computeState(body);
             editorEngine.webviews.setState(webview, state);
 
-            if (state === WebviewState.DOM_ONLOOK_ENABLED) {
+            if (state === WebviewState.DOM_ANALOGIA_ENABLED) {
                 setTimeout(() => {
                     selectFirstElement(webview);
                 }, 1000);
@@ -313,10 +313,10 @@ const Frame = observer(
             if (editorEngine.mode === EditorMode.PREVIEW) {
                 return 'outline-blue-400';
             }
-            if (domState === WebviewState.DOM_ONLOOK_ENABLED) {
+            if (domState === WebviewState.DOM_ANALOGIA_ENABLED) {
                 return 'outline-teal-400';
             }
-            if (domState === WebviewState.DOM_NO_ONLOOK) {
+            if (domState === WebviewState.DOM_NO_ANALOGIA) {
                 return 'outline-amber-400';
             }
             if (domState === WebviewState.NOT_RUNNING && editorEngine.mode === EditorMode.DESIGN) {
@@ -384,7 +384,7 @@ const Frame = observer(
         }
 
         async function selectFirstElement(webview: Electron.WebviewTag) {
-            const domEl = await webview.executeJavaScript(`window.api?.getFirstOnlookElement()`);
+            const domEl = await webview.executeJavaScript(`window.api?.getFirstAnalogiaElement()`);
             if (domEl) {
                 editorEngine.elements.click([domEl], webview);
             }

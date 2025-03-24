@@ -7,7 +7,7 @@ import {
     Links,
     MainChannels,
     Theme,
-} from '@onlook/models/constants';
+} from '@analogia/models/constants';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -17,8 +17,8 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
-} from '@onlook/ui/dropdown-menu';
-import { Icons } from '@onlook/ui/icons';
+} from '@analogia/ui/dropdown-menu';
+import { Icons } from '@analogia/ui/icons';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -47,7 +47,7 @@ export const HelpDropdown = observer(() => {
             >
                 <DropdownMenuItem onClick={() => invokeMainChannel(MainChannels.RELOAD_APP)}>
                     <Icons.Reload className="w-4 h-4 mr-2" />
-                    {t('help.menu.reloadOnlook')}
+                    {t('help.menu.reloadAnalogia')}
                 </DropdownMenuItem>
                 <DropdownMenuSub>
                     <DropdownMenuSubTrigger className="text-sm">
@@ -125,7 +125,7 @@ export const HelpDropdown = observer(() => {
                     </DropdownMenuSubTrigger>
                     <DropdownMenuSubContent className="w-48 ml-2">
                         <DropdownMenuItem
-                            onClick={() => window.open('https://onlook.com', '_blank')}
+                            onClick={() => window.open('https://analogia.ai', '_blank')}
                         >
                             <Icons.Globe className="w-4 h-4 mr-2" />
                             {t('help.menu.contactUs.website')}
@@ -142,7 +142,7 @@ export const HelpDropdown = observer(() => {
                             onClick={() =>
                                 invokeMainChannel(
                                     MainChannels.OPEN_EXTERNAL_WINDOW,
-                                    'mailto:contact@onlook.com',
+                                    'mailto:contact@analogia.ai',
                                 )
                             }
                         >

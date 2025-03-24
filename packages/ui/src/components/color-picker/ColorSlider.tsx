@@ -57,13 +57,13 @@ export function createGradient(
     direction: 'right' | 'top',
     length: number,
     handleSize: number,
-    colors: [string, number][],
+    colors: [string, number][]
 ): string {
     const offset = handleSize / 2 / length;
     const gradientLength = (length - handleSize) / length;
 
     const stops = colors.map(
-        ([color, pos]) => `${color} ${(pos * gradientLength + offset) * 100}%`,
+        ([color, pos]) => `${color} ${(pos * gradientLength + offset) * 100}%`
     );
 
     return `linear-gradient(${direction === 'right' ? 'to right' : 'to top'}, ${stops.join(',')})`;
@@ -96,7 +96,7 @@ export const ColorSlider: React.FC<{
         direction,
         length,
         handleSize,
-        colorStops.map((stop, i) => [stop, i / (colorStops.length - 1)]),
+        colorStops.map((stop, i) => [stop, i / (colorStops.length - 1)])
     );
     const range = length - handleSize;
 

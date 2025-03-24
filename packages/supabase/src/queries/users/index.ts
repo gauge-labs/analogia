@@ -7,7 +7,7 @@ export type GetUserParams = {
 export async function getUserQuery(
     { user_id }: GetUserParams,
     supabase: Client,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (!user_id) {
         throw new Error('user_id is required');
@@ -19,7 +19,7 @@ export async function getUserQuery(
             `
       *,
       organizations (id, account_name, avatar_url)
-    `,
+    `
         )
         .eq('id', user_id);
 

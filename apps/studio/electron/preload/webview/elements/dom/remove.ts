@@ -1,4 +1,4 @@
-import type { RemoveElementAction } from '@onlook/models/actions';
+import type { RemoveElementAction } from '@analogia/models/actions';
 import { getElementLocation } from '../helpers';
 import { getActionElement } from './helpers';
 import { elementFromDomId } from '/common/helpers';

@@ -1,7 +1,7 @@
 import { useProjectsManager } from '@/components/Context';
 import { invokeMainChannel } from '@/lib/utils';
-import { DefaultSettings, MainChannels } from '@onlook/models/constants';
-import { RunState } from '@onlook/models/run';
+import { DefaultSettings, MainChannels } from '@analogia/models/constants';
+import { RunState } from '@analogia/models/run';
 import {
     AlertDialog,
     AlertDialogContent,
@@ -9,10 +9,10 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-} from '@onlook/ui/alert-dialog';
-import { Button } from '@onlook/ui/button';
-import { Icons } from '@onlook/ui/icons';
-import { toast } from '@onlook/ui/use-toast';
+} from '@analogia/ui/alert-dialog';
+import { Button } from '@analogia/ui/button';
+import { Icons } from '@analogia/ui/icons';
+import { toast } from '@analogia/ui/use-toast';
 import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 

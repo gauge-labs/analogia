@@ -7,7 +7,7 @@ export interface SearchReplaceStrategy {
     (
         searchText: string,
         replaceText: string,
-        originalText: string,
+        originalText: string
     ): Promise<SearchReplaceResult> | SearchReplaceResult;
 }
 
@@ -114,7 +114,7 @@ function normalizeSpaces(text: string): string {
 export function searchAndReplace(
     searchText: string,
     replaceText: string,
-    originalText: string,
+    originalText: string
 ): SearchReplaceResult {
     try {
         const occurrences = originalText.split(searchText).length - 1;
@@ -138,7 +138,7 @@ export function searchAndReplace(
 export function dmpLinesApply(
     searchText: string,
     replaceText: string,
-    originalText: string,
+    originalText: string
 ): SearchReplaceResult {
     try {
         const dmp = new diff_match_patch();
@@ -190,7 +190,7 @@ export async function flexibleSearchAndReplace(
     searchText: string,
     replaceText: string,
     originalText: string,
-    options: Partial<PreprocessOptions> = {},
+    options: Partial<PreprocessOptions> = {}
 ): Promise<SearchReplaceResult> {
     const {
         stripBlankLines: useStripBlank = true,
@@ -215,7 +215,7 @@ export async function flexibleSearchAndReplace(
             (!combo.stripBlank || useStripBlank) &&
             (!combo.relIndent || useRelativeIndent) &&
             (!combo.rev || useReverse) &&
-            (!combo.normalize || useNormalizeSpaces),
+            (!combo.normalize || useNormalizeSpaces)
     );
 
     // Try each preprocessing combination with each strategy
@@ -254,7 +254,7 @@ export async function flexibleSearchAndReplace(
 
         for (const strategy of strategies) {
             const result = await Promise.resolve(
-                strategy(processedSearch, processedReplace, processedOriginal),
+                strategy(processedSearch, processedReplace, processedOriginal)
             );
 
             if (result.success && result.text) {

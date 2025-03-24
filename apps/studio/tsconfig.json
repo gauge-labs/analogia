@@ -1,5 +1,5 @@
 {
-    "extends": "@onlook/typescript/vite-react.json",
+    "extends": "@analogia/typescript/vite-react.json",
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
