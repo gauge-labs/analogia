@@ -158,7 +158,7 @@ const PagesTab = observer(() => {
     return (
         <div
             ref={ref}
-            className="flex flex-col gap-2 h-[calc(100vh-8.25rem)] text-xs text-active flex-grow w-full p-3"
+            className="flex flex-col gap-2 h-[calc(100vh-8.25rem)] text-xs text-active flex-grow w-full overflow-hidden p-3"
         >
             <div className="flex flex-row justify-between items-center gap-2 m-0">
                 <div className="relative flex-grow">
@@ -172,6 +172,7 @@ const PagesTab = observer(() => {
                     />
                     {searchQuery && (
                         <button
+                            title="Clear search"
                             className="absolute right-[1px] top-[1px] bottom-[1px] aspect-square hover:bg-background-analogia active:bg-transparent flex items-center justify-center rounded-r-[calc(theme(borderRadius.md)-1px)] group"
                             onClick={() => setSearchQuery('')}
                         >

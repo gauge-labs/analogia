@@ -227,6 +227,9 @@ const ImagesTab = observer(() => {
     return (
         <div className="w-full h-full flex flex-col gap-2 p-3 overflow-x-hidden">
             <input
+                aria-label="Upload images"
+                title="Upload images"
+                placeholder="Upload images"
                 type="file"
                 accept="image/*"
                 className="hidden"
@@ -257,6 +260,8 @@ const ImagesTab = observer(() => {
                         />
                         {search && (
                             <button
+                                type="button"
+                                title="Clear search"
                                 className="absolute right-[1px] top-[1px] bottom-[1px] aspect-square hover:bg-background-analogiagia active:bg-transparent flex items-center justify-center rounded-r-[calc(theme(borderRadius.md)-1px)] group"
                                 onClick={() => setSearch('')}
                             >
@@ -315,11 +320,11 @@ const ImagesTab = observer(() => {
                         No images found
                     </div>
                 ) : (
-                    <div className="w-full flex flex-wrap gap-3 p-0">
+                    <div className="w-full grid grid-cols-2 gap-3 p-0">
                         {filteredImages.map((image) => (
                             <div
                                 key={image.fileName}
-                                className="relative group flex-shrink-0 w-[116px]"
+                                className="relative group w-full"
                                 draggable
                                 onDragStart={(e) => handleImageDragStart(e, image)}
                                 onDragEnd={() => {
@@ -331,7 +336,7 @@ const ImagesTab = observer(() => {
                                 onMouseDown={() => (editorEngine.mode = EditorMode.INSERT_IMAGE)}
                                 onMouseUp={() => (editorEngine.mode = EditorMode.DESIGN)}
                             >
-                                <div className="w-full h-[120px] flex flex-col justify-center rounded-lg overflow-hidden items-center cursor-move">
+                                <div className="w-full aspect-square flex flex-col justify-center rounded-lg overflow-hidden items-center cursor-move border-[0.5px] border-border">
                                     <img
                                         className="w-full h-full object-cover"
                                         src={image.content}
@@ -341,6 +346,9 @@ const ImagesTab = observer(() => {
                                 <span className="text-xs block w-full text-center truncate">
                                     {imageToRename === image.fileName ? (
                                         <input
+                                            aria-label="Rename image"
+                                            title="Enter new image name"
+                                            placeholder="Enter new image name"
                                             type="text"
                                             className="w-full p-1 text-center bg-background-active rounded "
                                             defaultValue={image.fileName.replace(/\.[^/.]+$/, '')}

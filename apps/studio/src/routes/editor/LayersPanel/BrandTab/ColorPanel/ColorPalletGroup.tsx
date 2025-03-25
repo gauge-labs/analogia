@@ -6,7 +6,7 @@ import {
     DropdownMenuTrigger,
 } from '@analogia/ui/dropdown-menu';
 import { Icons } from '@analogia/ui/icons';
-import { Color } from '@analogia/utility';
+import { Color, toNormalCase } from '@analogia/utility';
 import { useState } from 'react';
 import { ColorPopover } from './ColorPopover';
 import { MainChannels } from '@analogia/models/constants';
@@ -105,6 +105,7 @@ export const BrandPalletGroup = ({
     const handleRenameClick = () => {
         setNewGroupName(title);
         setIsRenaming(true);
+        setLocalError(null);
     };
 
     const validateName = (value: string) => {
@@ -279,7 +280,9 @@ export const BrandPalletGroup = ({
                                                                 <TooltipContent side="top">
                                                                     <div className="flex flex-col">
                                                                         <span className="text-sm">
-                                                                            {color.name}
+                                                                            {toNormalCase(
+                                                                                color.name,
+                                                                            )}
                                                                         </span>
                                                                         <span className="text-xs text-muted-foreground">
                                                                             {getColorValue(color)}
@@ -305,7 +308,7 @@ export const BrandPalletGroup = ({
                                                         />
                                                         <div className="flex flex-col">
                                                             <span className="text-sm text-foreground">
-                                                                {color.name}
+                                                                {toNormalCase(color.name)}
                                                             </span>
                                                             <span className="text-xs text-muted-foreground">
                                                                 {getColorValue(color)}

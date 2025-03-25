@@ -68,6 +68,14 @@ const config: Configuration = {
         desktop: {
             Name: 'Analogia',
         },
+        executableName: 'Analogia',
+        icon: 'build/icon.icns',
+        protocols: [
+            {
+                name: 'analogia',
+                schemes: ['analogia'],
+            },
+        ],
     },
     nsis: {},
     publish: {
