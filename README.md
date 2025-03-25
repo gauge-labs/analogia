@@ -2,7 +2,7 @@
 
 <a id="readme-top"></a>
 
-![image](https://github.com/user-attachments/assets/7b787ac7-96cd-44fd-90da-46996e1e1bf5)
+<!-- ![image](https://github.com/user-attachments/assets/7b787ac7-96cd-44fd-90da-46996e1e1bf5) -->
 
 <div align="center">
 <h3 align="center">Analogia</h3>
@@ -12,8 +12,8 @@
     <a href="https://github.com/AnalogiaAI/analogia/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://youtu.be/RSX_3EaO5eU?feature=shared">View Demo</a>
-    ·
+    <!-- <a href="https://youtu.be/RSX_3EaO5eU?feature=shared">View Demo</a> -->
+    <!-- · -->
     <a href="https://github.com/AnalogiaAI/analogia/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
     <a href="https://github.com/AnalogiaAI/analogia/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
@@ -35,7 +35,8 @@
 [![Discord][discord-shield]][discord-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Twitter][twitter-shield]][twitter-url]
-[![Weave][weave-shield]][weave-url]
+
+<!-- [![Weave][weave-shield]][weave-url] -->
 
 </div>
 
@@ -44,7 +45,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
+    <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -57,9 +58,9 @@
 
 Seamlessly integrate with any website or web app running on React + TailwindCSS, and make live edits directly in the browser DOM. Customize your design, control your codebase, and push your changes without compromise.
 
-https://github.com/user-attachments/assets/c8782d1e-fedc-46f3-8735-c3a762d4db16
+<!-- https://github.com/user-attachments/assets/c8782d1e-fedc-46f3-8735-c3a762d4db16
 
-![Analogia-GitHub-Example](https://github.com/user-attachments/assets/642de37a-72cc-4056-8eb7-8eb42714cdc4)
+![Analogia-GitHub-Example](https://github.com/user-attachments/assets/642de37a-72cc-4056-8eb7-8eb42714cdc4) -->
 
 ### Built With
 
@@ -70,7 +71,7 @@ https://github.com/user-attachments/assets/c8782d1e-fedc-46f3-8735-c3a762d4db16
 
 ## Stay up-to-date
 
-Analogia officially launched our first version of Analogia on July 08, 2024 and we've shipped a ton since then. Watch releases of this repository to be notified of future updates, and you can follow along with us on [LinkedIn](https://www.linkedin.com/company/onlook-dev) or [Medium](https://medium.com/@analogia) where we write a weekly newsletter.
+Analogia officially launched our first version of Analogia on June 11, 2025 and we've shipped a ton since then. Watch releases of this repository to be notified of future updates, and you can follow along with us on [LinkedIn](https://www.linkedin.com/company/onlook-dev) or [Medium](https://medium.com/@analogia) where we write a weekly newsletter.
 
 <!-- ![Starproject](https://github.com/user-attachments/assets/07742b21-dd98-4be3-b6a6-13d8132af398) -->
 
@@ -83,7 +84,7 @@ Analogia officially launched our first version of Analogia on July 08, 2024 and 
 1.  Visit [analogia.ai](https://analogia.ai/) to download the app.
 2.  Run locally following [this guide](https://github.com/AnalogiaAI/analogia/wiki/Building-from-source)
 
-### Usage
+<!-- ### Usage
 
 Analogia will run on any React project, bring your own React project or create one using Analogia
 
@@ -93,13 +94,13 @@ Use the chat to create or edit a project you're working on. At any time, you can
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/4ad9f411-b172-4430-81ef-650f4f314666" />
 
-<img width="403" alt="image" src="https://github.com/user-attachments/assets/44339458-05a7-46c3-b4f8-b7e125260216" />
+<img width="403" alt="image" src="https://github.com/user-attachments/assets/44339458-05a7-46c3-b4f8-b7e125260216" /> -->
 
 ## Roadmap
 
 ![image](https://github.com/user-attachments/assets/f64b51df-03be-44d1-ae35-82e6dc960d06)
 
-See how we're tracking towards major [milestones](<[url](https://github.com/AnalogiaAI/analogia/milestones)>), and read the [wiki](https://github.com/AnalogiaAI/analogia/wiki/Roadmap) for details on each version of Analogia. Here's a rough overview of some of the major features we're looking at:
+See how we're tracking towards major milestones, and read the [wiki](https://github.com/AnalogiaAI/analogia/wiki/Roadmap) for details on each version of Analogia. Here's a rough overview of some of the major features we're looking at:
 
 - [x] Browser
 - [x] Editor

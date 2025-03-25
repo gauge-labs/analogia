@@ -2,7 +2,7 @@ import { DEFAULT_IDE } from '../ide/index.ts';
 
 export const APP_NAME = 'Analogia';
 export const APP_SCHEMA = 'analogia';
-export const HOSTING_DOMAIN = 'analogia.live';
+export const HOSTING_DOMAIN = 'analogia.app';
 export const CUSTOM_OUTPUT_DIR = '.next-prod';
 export const MAX_NAME_LENGTH = 50;
 

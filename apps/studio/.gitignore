@@ -4,3 +4,6 @@ vite.config.ts.timestamp-*.mjs
 
 # Bun binary
 resources/bun/*
+
+# Env variables
+.env

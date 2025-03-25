@@ -18,6 +18,7 @@ import {
 import { Icons } from '@analogia/ui/icons';
 import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
+import { useTranslation } from 'react-i18next';
 
 export const TopBar = observer(() => {
     const editorEngine = useEditorEngine();
@@ -25,6 +26,7 @@ export const TopBar = observer(() => {
     const authManager = useAuthManager();
     const userManager = useUserManager();
     const plan = userManager.subscription?.plan;
+    const { t } = useTranslation();
 
     function signOut() {
         authManager.signOut();
@@ -51,7 +53,7 @@ export const TopBar = observer(() => {
                             variant="ghost"
                         >
                             <Icons.Plus className="w-5 h-5 mr-2" />
-                            New Project
+                            {t('projects.actions.newProject')}
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -65,7 +67,7 @@ export const TopBar = observer(() => {
                             onSelect={openPromptCreation}
                         >
                             <Icons.FilePlus className="w-4 h-4 mr-2" />
-                            Start from scratch
+                            {t('projects.actions.startFromScratch')}
                         </DropdownMenuItem>
                         <DropdownMenuItem
                             className={cn(
@@ -77,7 +79,7 @@ export const TopBar = observer(() => {
                             onSelect={openImportProject}
                         >
                             <Icons.Download className="w-4 h-4 mr-2" />
-                            Import existing project
+                            {t('projects.actions.importProject')}
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
