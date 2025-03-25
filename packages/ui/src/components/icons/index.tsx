@@ -129,6 +129,7 @@ import H6Icon from './header-level-icons/h6Icon';
 
 export interface IconProps {
     className?: string;
+    theme?: 'dark' | 'light';
     [key: string]: any;
 }
 
@@ -258,9 +259,12 @@ export const Icons = {
     ),
     AnalogiaTextLogo: ({ className, ...props }: IconProps) => (
         <picture>
-            {/* <source srcSet="/analogia_white.svg" media="(prefers-color-scheme: dark)" />
-            <source srcSet="/analogia_black.svg" media="(prefers-color-scheme: light)" /> */}
-            <img src="/analogia_white.svg" alt="Name Logo" className={className} {...props} />
+            <img
+                src={props.theme === 'dark' ? '/analogia_white.svg' : '/analogia_black.svg'}
+                alt="Name Logo"
+                className={className}
+                {...props}
+            />
         </picture>
 
         // AnalogiaTextLogo: ({ className, ...props }: IconProps) => (

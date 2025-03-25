@@ -5,9 +5,14 @@
 <!-- ![image](https://github.com/user-attachments/assets/7b787ac7-96cd-44fd-90da-46996e1e1bf5) -->
 
 <div align="center">
-<h3 align="center">Analogia</h3>
+
+<p align="center">
+  <img src="./assets/logo.svg" width="200" />
+</p>
+
+<h1 align="center">Analogia</h1>
   <p align="center">
-    Cursor for Designers
+    AI crafted code, live edited to perfection
     <br />
     <a href="https://github.com/AnalogiaAI/analogia/wiki"><strong>Explore the docs »</strong></a>
     <br />
@@ -32,15 +37,16 @@
 [![Issues][issues-shield]][issues-url]
 [![Apache License][license-shield]][license-url] -->
 
-[![Discord][discord-shield]][discord-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![Twitter][twitter-shield]][twitter-url]
+[![Discord](https://img.shields.io/badge/-Discord-black?logo=discord&colorB=555)](https://discord.gg/HYzeUDXJvZ)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555)](https://www.linkedin.com/company/AnalogiaAI)
+[![Twitter](https://img.shields.io/badge/-Twitter-black?logo=x&colorB=555)](https://x.com/analogia_ai)
 
 <!-- [![Weave][weave-shield]][weave-url] -->
 
 </div>
 
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -54,7 +60,7 @@
   </ol>
 </details>
 
-# The open-source Cursor for Designers
+# AI crafted code, live edited to perfection
 
 Seamlessly integrate with any website or web app running on React + TailwindCSS, and make live edits directly in the browser DOM. Customize your design, control your codebase, and push your changes without compromise.
 
@@ -64,10 +70,10 @@ Seamlessly integrate with any website or web app running on React + TailwindCSS,
 
 ### Built With
 
-- [![React][React.js]][React-url]
-- [![Electron][Electron.js]][Electron-url]
-- [![Tailwind][TailwindCSS]][Tailwind-url]
-- [![Vite][Vite.js]][Vite-url]
+- [![React](https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
+- [![Electron](https://img.shields.io/badge/Electron-191970?logo=Electron&logoColor=white)](https://www.electronjs.org/)
+- [![Tailwind](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+- [![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?logo=vite&logoColor=white)](https://vitejs.dev/)
 
 ## Stay up-to-date
 
@@ -77,12 +83,12 @@ Analogia officially launched our first version of Analogia on June 11, 2025 and 
 
 ## Getting Started
 
-![image](https://github.com/user-attachments/assets/18b6ad5a-1d5a-4396-af8c-8b85936acf39)
+![1.00](https://github.com/user-attachments/assets/18b6ad5a-1d5a-4396-af8c-8b85936acf39)
 
 ### Installation
 
-1.  Visit [analogia.ai](https://analogia.ai/) to download the app.
-2.  Run locally following [this guide](https://github.com/AnalogiaAI/analogia/wiki/Building-from-source)
+1. Visit [analogia.ai](https://analogia.ai/) to download the app.
+2. Run locally following [this guide](https://github.com/AnalogiaAI/analogia/wiki/Building-from-source)
 
 <!-- ### Usage
 
@@ -98,7 +104,7 @@ Use the chat to create or edit a project you're working on. At any time, you can
 
 ## Roadmap
 
-![image](https://github.com/user-attachments/assets/f64b51df-03be-44d1-ae35-82e6dc960d06)
+![1.00](https://github.com/user-attachments/assets/f64b51df-03be-44d1-ae35-82e6dc960d06)
 
 See how we're tracking towards major milestones, and read the [wiki](https://github.com/AnalogiaAI/analogia/wiki/Roadmap) for details on each version of Analogia. Here's a rough overview of some of the major features we're looking at:
 
@@ -114,7 +120,7 @@ Also check the [open issues](https://github.com/AnalogiaAI/analogia/issues) for 
 
 ## Contributing
 
-![image](https://github.com/user-attachments/assets/ecc94303-df23-46ae-87dc-66b040396e0b)
+![1.00](https://github.com/user-attachments/assets/ecc94303-df23-46ae-87dc-66b040396e0b)
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also [open issues](https://github.com/AnalogiaAI/analogia/issues).
 
@@ -128,11 +134,11 @@ See the [CONTRIBUTING.md](CONTRIBUTING.md) for instructions and code of conduct.
 
 ## Contact
 
-![image](https://github.com/user-attachments/assets/60684b68-1925-4550-8efd-51a1509fc953)
+![1.00](https://github.com/user-attachments/assets/60684b68-1925-4550-8efd-51a1509fc953)
 
 - Team: [Discord](https://discord.gg/HYzeUDXJvZ) - [Twitter](https://twitter.com/analogia_ai) - [LinkedIn](https://www.linkedin.com/company/onlook-dev/) - [Email](mailto:contact@analogia.ai)
-- Project: [https://github.com/AnalogiaAI/analogia](https://github.com/AnalogiaAI/analogia)
-- Website: [https://analogia.ai](https://analogia.ai)
+- Project: <https://github.com/AnalogiaAI/analogia>
+- Website: <https://analogia.ai>
 
 ## Acknowledgments
 
@@ -149,31 +155,3 @@ Projects we're inspired by:
 Distributed under the Apache 2.0 License. See [LICENSE.md](LICENSE.md) for more information.
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/AnalogiaAI/studio.svg?style=for-the-badge
-[contributors-url]: https://github.com/AnalogiaAI/analogia/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AnalogiaAI/studio.svg?style=for-the-badge
-[forks-url]: https://github.com/AnalogiaAI/analogia/network/members
-[stars-shield]: https://img.shields.io/github/stars/AnalogiaAI/studio.svg?style=for-the-badge
-[stars-url]: https://github.com/AnalogiaAI/analogia/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AnalogiaAI/studio.svg?style=for-the-badge
-[issues-url]: https://github.com/AnalogiaAI/analogia/issues
-[license-shield]: https://img.shields.io/github/license/AnalogiaAI/studio.svg?style=for-the-badge
-[license-url]: https://github.com/AnalogiaAI/analogia/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/company/AnalogiaAI
-[twitter-shield]: https://img.shields.io/badge/-Twitter-black?logo=x&colorB=555
-[twitter-url]: https://x.com/analogia_ai
-[discord-shield]: https://img.shields.io/badge/-Discord-black?logo=discord&colorB=555
-[discord-url]: https://discord.gg/HYzeUDXJvZ
-[React.js]: https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB
-[React-url]: https://reactjs.org/
-[TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?logo=tailwind-css&logoColor=white
-[Tailwind-url]: https://tailwindcss.com/
-[Electron.js]: https://img.shields.io/badge/Electron-191970?logo=Electron&logoColor=white
-[Electron-url]: https://www.electronjs.org/
-[Vite.js]: https://img.shields.io/badge/vite-%23646CFF.svg?logo=vite&logoColor=white
-[Vite-url]: https://vitejs.dev/
-[product-screenshot]: assets/brand.png
-[weave-shield]: https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_pWcXBHJo3Li2Te2Y4WkCPA33%2F820087727&cacheSeconds=3600&labelColor=#131313
-[weave-url]: https://app.workweave.ai/reports/repository/org_pWcXBHJo3Li2Te2Y4WkCPA33/820087727

@@ -19,6 +19,7 @@ import { Icons } from '@analogia/ui/icons';
 import { cn } from '@analogia/ui/utils';
 import { observer } from 'mobx-react-lite';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@/components/ThemeProvider';
 
 export const TopBar = observer(() => {
     const editorEngine = useEditorEngine();
@@ -27,6 +28,7 @@ export const TopBar = observer(() => {
     const userManager = useUserManager();
     const plan = userManager.subscription?.plan;
     const { t } = useTranslation();
+    const { theme } = useTheme();
 
     function signOut() {
         authManager.signOut();
@@ -43,7 +45,11 @@ export const TopBar = observer(() => {
     return (
         <div className="flex flex-row h-12 px-12 items-center">
             <div className="flex-1 flex items-center justify-start mt-3">
-                <Icons.AnalogiaTextLogo className="w-24" viewBox="0 0 139 17" />
+                <Icons.AnalogiaTextLogo
+                    className="w-24"
+                    theme={theme === 'system' ? 'dark' : theme}
+                    viewBox="0 0 139 17"
+                />
             </div>
             <div className="flex-1 flex justify-end space-x-2 mt-4 items-center">
                 <DropdownMenu>
@@ -101,11 +107,11 @@ export const TopBar = observer(() => {
                         }}
                     >
                         <Icons.Gear className="w-4 h-4 mr-2" />
-                        Settings
+                        {t('projects.actions.settings')}
                     </DropdownMenuItem>
                     <DropdownMenuItem disabled={!authManager.isAuthEnabled} onSelect={signOut}>
                         <Icons.Exit className="w-4 h-4 mr-2" />
-                        Sign out
+                        {t('projects.actions.signOut')}
                     </DropdownMenuItem>
                 </UserProfileDropdown>
             </div>

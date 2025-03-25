@@ -41,7 +41,12 @@ export const HelpButton = observer(() => {
     return (
         <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
             <DropdownMenuTrigger asChild>
-                <button className="w-12 h-12 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2 px-4 text-muted-foreground hover:text-foreground">
+                <button
+                    type="button"
+                    title="Help Menu"
+                    aria-label="Open help menu"
+                    className="w-12 h-12 rounded-xl flex flex-col items-center justify-center gap-1.5 p-2 px-4 text-muted-foreground hover:text-foreground"
+                >
                     <Icons.QuestionMarkCircled className="w-5 h-5" />
                 </button>
             </DropdownMenuTrigger>
@@ -119,7 +124,7 @@ export const HelpButton = observer(() => {
                         </DropdownMenuItem>
                     </DropdownMenuSubContent>
                 </DropdownMenuSub>
-                <DropdownMenuItem
+                {/* <DropdownMenuItem
                     className="text-sm"
                     onClick={() => {
                         editorEngine.isSettingsOpen = true;
@@ -128,7 +133,7 @@ export const HelpButton = observer(() => {
                 >
                     <Icons.Gear className="w-4 h-4 mr-2" />
                     {t('help.menu.openSettings')}
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuSeparator />
                 <DropdownMenuSub>
                     <DropdownMenuSubTrigger className="text-sm">
