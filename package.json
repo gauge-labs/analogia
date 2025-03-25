@@ -28,12 +28,10 @@
         "ci:build": "bun run build:foundation && bun --filter '*' build",
         "dev": "bun --elide-lines 0 --filter '*' dev",
         "test": "bun --elide-lines 0 --filter '*' test",
-
         "lint": "node -e \"process.stdout.isTTY ? process.exit(0) : process.exit(1)\" && bun --elide-lines 0 --filter @analogia/studio lint || bun --filter @analogia/studio lint",
         "format": "node -e \"process.stdout.isTTY ? process.exit(0) : process.exit(1)\" && bun --elide-lines 0 --filter '*' format || bun --filter '*' format",
         "format:precommit": "bun --filter '*' format",
         "lint:precommit": "bun --filter @analogia/studio lint",
-
         "typecheck": "bun --elide-lines 0 --filter '*' typecheck",
         "increment_tag": "./scripts/increment_tag.sh",
         "publish_tag": "./scripts/publish_tag.sh",
