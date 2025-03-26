@@ -77,7 +77,7 @@ Seamlessly integrate with any website or web app running on React + TailwindCSS,
 
 ## Stay up-to-date
 
-Analogia officially launched our first version of Analogia on June 11, 2025 and we've shipped a ton since then. Watch releases of this repository to be notified of future updates, and you can follow along with us on [LinkedIn](https://www.linkedin.com/company/onlook-dev) or [Medium](https://medium.com/@analogia) where we write a weekly newsletter.
+Analogia officially launched our first version of Analogia on June 11, 2025 and we've shipped a ton since then. Watch releases of this repository to be notified of future updates, and you can follow along with us on [LinkedIn](https://www.linkedin.com/company/analogia) or [Medium](https://medium.com/@analogia) where we write a weekly newsletter.
 
 <!-- ![Starproject](https://github.com/user-attachments/assets/07742b21-dd98-4be3-b6a6-13d8132af398) -->
 
@@ -136,7 +136,7 @@ See the [CONTRIBUTING.md](CONTRIBUTING.md) for instructions and code of conduct.
 
 ![1.00](https://github.com/user-attachments/assets/60684b68-1925-4550-8efd-51a1509fc953)
 
-- Team: [Discord](https://discord.gg/HYzeUDXJvZ) - [Twitter](https://twitter.com/analogia_ai) - [LinkedIn](https://www.linkedin.com/company/onlook-dev/) - [Email](mailto:contact@analogia.ai)
+- Team: [Discord](https://discord.gg/HYzeUDXJvZ) - [Twitter](https://twitter.com/analogia_ai) - [LinkedIn](https://www.linkedin.com/company/analogia) - [Email](mailto:contact@analogia.ai)
 - Project: <https://github.com/AnalogiaAI/analogia>
 - Website: <https://analogia.ai>
 

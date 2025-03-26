@@ -1,3 +1,7 @@
+import { useEditorEngine } from '@/components/Context';
+import { invokeMainChannel } from '@/lib/utils';
+import { Theme } from '@analogia/models/assets';
+import { MainChannels } from '@analogia/models/constants';
 import { Button } from '@analogia/ui/button';
 import {
     DropdownMenu,
@@ -6,14 +10,10 @@ import {
     DropdownMenuTrigger,
 } from '@analogia/ui/dropdown-menu';
 import { Icons } from '@analogia/ui/icons';
+import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger } from '@analogia/ui/tooltip';
 import { Color, toNormalCase } from '@analogia/utility';
 import { useState } from 'react';
 import { ColorPopover } from './ColorPopover';
-import { MainChannels } from '@analogia/models/constants';
-import { invokeMainChannel } from '@/lib/utils';
-import { useEditorEngine } from '@/components/Context';
-import { Tooltip, TooltipContent, TooltipTrigger, TooltipPortal } from '@analogia/ui/tooltip';
-import { Theme } from '@analogia/models/assets';
 
 export interface ColorItem {
     name: string;
@@ -284,7 +284,7 @@ export const BrandPalletGroup = ({
                                                                                 color.name,
                                                                             )}
                                                                         </span>
-                                                                        <span className="text-xs text-muted-foreground">
+                                                                        <span className="text-xs text-background-tertiary">
                                                                             {getColorValue(color)}
                                                                         </span>
                                                                     </div>
