@@ -60,6 +60,8 @@ const OpenCodeMini = observer(() => {
                 <TooltipTrigger asChild>
                     <DropdownMenuTrigger asChild>
                         <button
+                            type="button"
+                            title={`Open ${instance || root ? 'selected element' : 'folder'} in ${ide.displayName}`}
                             className="w-16 h-14 rounded-xl text-small flex flex-col items-center justify-center gap-1.5 text-muted-foreground hover:text-foreground"
                             disabled={!instance && !root && !folderPath}
                         >

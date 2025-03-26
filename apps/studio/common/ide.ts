@@ -7,6 +7,7 @@ export class IDE {
     static readonly CURSOR = new IDE('Cursor', IdeType.CURSOR, 'cursor', 'CursorLogo');
     static readonly ZED = new IDE('Zed', IdeType.ZED, 'zed', 'ZedLogo');
     static readonly WINDSURF = new IDE('Windsurf', IdeType.WINDSURF, 'windsurf', 'WindsurfLogo');
+    static readonly TRAE = new IDE('Trae', IdeType.TRAE, 'trae', 'TraeLogo');
 
     private constructor(
         public readonly displayName: string,
@@ -29,13 +30,15 @@ export class IDE {
                 return IDE.ZED;
             case IdeType.WINDSURF:
                 return IDE.WINDSURF;
+            case IdeType.TRAE:
+                return IDE.TRAE;
             default:
                 throw new Error(`Unknown IDE type: ${type}`);
         }
     }
 
     static getAll(): IDE[] {
-        return [this.VS_CODE, this.CURSOR, this.ZED, this.WINDSURF];
+        return [this.VS_CODE, this.CURSOR, this.ZED, this.WINDSURF, this.TRAE];
     }
 
     getCodeCommand(templateNode: TemplateNode) {

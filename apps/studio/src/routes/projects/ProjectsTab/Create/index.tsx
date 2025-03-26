@@ -1,5 +1,5 @@
-import backgroundImageDark from '@/assets/dunes-create-dark.png';
-import backgroundImageLight from '@/assets/dunes-create-light.png';
+import backgroundImageDark from '@/assets/net-create-dark.png';
+import backgroundImageLight from '@/assets/net-create-light.png';
 import { useProjectsManager } from '@/components/Context';
 import { useTheme } from '@/components/ThemeProvider';
 import { sendAnalytics } from '@/lib/utils';

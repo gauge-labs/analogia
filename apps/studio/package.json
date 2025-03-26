@@ -1,7 +1,7 @@
 {
     "productName": "Analogia",
     "name": "@analogia/studio",
-    "version": "0.2.20",
+    "version": "0.0.1",
     "homepage": "https://analogia.ai",
     "main": "dist-electron/main/index.js",
     "description": "The first-ever devtool for designers",
@@ -21,6 +21,12 @@
         }
     },
     "type": "module",
+    "build": {
+        "files": [
+            "dist/**/*",
+            "public/**/*"
+        ]
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
@@ -37,12 +43,12 @@
     },
     "dependencies": {
         "@ai-sdk/anthropic": "^1.1.17",
-        "@emotion/react": "^11.13.3",
-        "@emotion/styled": "^11.13.0",
-        "@fontsource-variable/inter": "^5.1.0",
         "@analogia/foundation": "*",
         "@analogia/supabase": "*",
         "@analogia/ui": "*",
+        "@emotion/react": "^11.13.3",
+        "@emotion/styled": "^11.13.0",
+        "@fontsource-variable/inter": "^5.1.0",
         "@parcel/watcher": "^2.5.1",
         "@shikijs/monaco": "^1.22.0",
         "@supabase/supabase-js": "^2.45.6",
@@ -89,8 +95,8 @@
         "zod": "^3.23.8"
     },
     "devDependencies": {
-        "@eslint/js": "^9.7.0",
         "@analogia/typescript": "*",
+        "@eslint/js": "^9.7.0",
         "@playwright/test": "^1.42.1",
         "@tailwindcss/typography": "^0.5.15",
         "@types/babel-generator": "^6.25.8",
@@ -114,8 +120,8 @@
         "eslint": "9.x",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-react": "^7.34.3",
-        "globals": "^15.8.0",
         "glob": "^11.0.1",
+        "globals": "^15.8.0",
         "mobx": "^6.12.4",
         "mobx-react-lite": "^4.0.7",
         "postcss": "^8.5.3",

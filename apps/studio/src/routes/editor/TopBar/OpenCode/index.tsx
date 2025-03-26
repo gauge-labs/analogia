@@ -212,6 +212,8 @@ const OpenCode = observer(() => {
                         <DropdownMenu onOpenChange={handleIDEDropdownOpenChange}>
                             <DropdownMenuTrigger asChild>
                                 <button
+                                    type="button"
+                                    title="Change IDE settings"
                                     className="text-foreground-active bg-transperant hover:text-foreground-active/90 w-8 h-8 flex items-center justify-center"
                                     onClick={() => viewSource(instance || root)}
                                 >

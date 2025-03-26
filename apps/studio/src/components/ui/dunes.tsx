@@ -1,5 +1,5 @@
-import dunesDark from '@/assets/dunes-login-dark.png';
-import dunesLight from '@/assets/dunes-login-light.png';
+import dunesDark from '@/assets/net-login-dark.png';
+import dunesLight from '@/assets/net-login-light.png';
 
 export function Dunes() {
     return (

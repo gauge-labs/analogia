@@ -11,7 +11,7 @@
     },
     "apps/studio": {
       "name": "@analogia/studio",
-      "version": "0.2.20",
+      "version": "0.0.1",
       "dependencies": {
         "@ai-sdk/anthropic": "^1.1.17",
         "@analogia/foundation": "*",
