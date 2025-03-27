@@ -7,6 +7,7 @@
             "/*": ["./*"]
         }
     },
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "ES2023"],
     "include": ["src", "electron", "common", "data", "tests"],
     "exclude": ["node_modules"]
 }

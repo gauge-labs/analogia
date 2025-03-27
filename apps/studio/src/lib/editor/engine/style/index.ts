@@ -126,7 +126,7 @@ export class StyleManager {
     private onSelectedElementsChanged(selectedElements: DomElement[]) {
         const newSelected = selectedElements
             .map((el) => el.domId)
-            .toSorted()
+            .sort()
             .join();
         if (newSelected !== this.prevSelected) {
             this.mode = StyleMode.Root;

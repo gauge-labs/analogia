@@ -40,7 +40,7 @@ export async function createProject(
 
 async function downloadTemplate(fullPath: string) {
     try {
-        const zipUrl = `https://github.com/AnalogiaAI/starter/archive/refs/heads/main.zip`;
+        const zipUrl = `https://github.com/AnalogiaAI/starter/archive/refs/heads/master.zip`;
         await download(zipUrl, fullPath, {
             extract: true,
             strip: 1,

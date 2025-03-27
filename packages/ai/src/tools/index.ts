@@ -1,5 +1,5 @@
 import { anthropic } from '@ai-sdk/anthropic';
-import { deepseek } from '@ai-sdk/deepseek';
+// import { deepseek } from '@ai-sdk/deepseek';
 import { tool, type ToolSet } from 'ai';
 import { readFile } from 'fs/promises';
 import { z } from 'zod';

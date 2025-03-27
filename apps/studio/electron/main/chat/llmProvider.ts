@@ -63,12 +63,14 @@ async function getDeepSeekProvider(
     payload: AnalogiaPayload,
 ): Promise<LanguageModelV1> {
     const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY;
+    // const proxyUrl = `${import.meta.env.VITE_SUPABASE_API_URL}${FUNCTIONS_ROUTE}${BASE_PROXY_ROUTE}${ProxyRoutes.DEEPSEEK}`;
     const proxyUrl = `https://api.deepseek.com/v1`;
 
     const config: {
         apiKey?: string;
         baseURL?: string;
         headers?: Record<string, string>;
+        disableFunctionCalling?: boolean;
     } = {};
 
     if (apiKey) {
@@ -86,8 +88,14 @@ async function getDeepSeekProvider(
         };
     }
 
+    // Disable function calling for DeepSeek models
+    config.disableFunctionCalling = true;
+
     const deepseek = createDeepSeek(config);
+    // const deepseek = createDeepSeek({
+    //     apiKey: apiKey ?? '',
+    // });
     return deepseek(model, {
-        cacheControl: true,
+        // cacheControl: true,
     });
 }

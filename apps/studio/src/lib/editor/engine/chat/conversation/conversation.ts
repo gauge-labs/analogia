@@ -114,7 +114,10 @@ export class ChatConversationImpl implements ChatConversation {
     }
 
     getLastUserMessage() {
-        return this.messages.findLast((message) => message.role === ChatMessageRole.USER);
+        return this.messages
+            .slice()
+            .reverse()
+            .find((message) => message.role === ChatMessageRole.USER);
     }
 
     updateMessage(message: UserChatMessageImpl | AssistantChatMessageImpl) {

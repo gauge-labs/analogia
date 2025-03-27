@@ -63,9 +63,10 @@ class LlmManager {
         options?: {
             abortController?: AbortController;
             skipSystemPrompt?: boolean;
+            forceProvider?: 'anthropic' | 'deepseek';
         },
-    ): Promise<CompletedStreamResponse> {
-        const { abortController, skipSystemPrompt } = options || {};
+    ): Promise<CompletedStreamResponse | undefined> {
+        const { abortController, skipSystemPrompt, forceProvider } = options || {};
         this.abortController = abortController || new AbortController();
         try {
             if (!skipSystemPrompt) {
@@ -80,12 +81,20 @@ class LlmManager {
                 messages = [systemMessage, ...messages];
             }
 
-            // const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.SONNET, {
-            //     requestType,
-            // });
-            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_R1, {
-                requestType,
-            });
+            // Determine which provider to use based on forceProvider option
+            let model;
+            if (forceProvider === 'deepseek') {
+                model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_V3, {
+                    requestType,
+                });
+            } else {
+                model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.SONNET, {
+                    requestType,
+                });
+            }
+
+            // Check if we're using DeepSeek model
+            const isDeepSeek = !forceProvider || forceProvider === 'deepseek';
 
             const { usage, fullStream, text, response } = await streamText({
                 model,
@@ -96,8 +105,9 @@ class LlmManager {
                     throw error;
                 },
                 maxSteps: 10,
-                tools: chatToolSet,
-                maxTokens: 64000,
+                // Only include tools for non-DeepSeek models
+                tools: isDeepSeek ? undefined : chatToolSet,
+                maxTokens: isDeepSeek ? 4096 : 64000, // Limit tokens for DeepSeek
                 headers: {
                     'llm-beta': 'output-128k-2025-02-19',
                 },
@@ -114,31 +124,45 @@ class LlmManager {
                 text: await text,
             };
         } catch (error: any) {
+            // Inside the stream method, update the error handling
             try {
-                console.error('Error', error);
-                if (error?.error?.statusCode) {
-                    if (error?.error?.statusCode === 403) {
-                        const rateLimitError = JSON.parse(
-                            error.error.responseBody,
-                        ) as UsageCheckResult;
-                        return {
-                            type: 'rate-limited',
-                            rateLimitResult: rateLimitError,
-                        };
-                    } else {
+                // ... existing code ...
+            } catch (error: any) {
+                try {
+                    console.error('Error in stream:', error);
+
+                    // Handle EPIPE errors specifically
+                    if (error.code === 'EPIPE') {
                         return {
                             type: 'error',
-                            message: error.error.responseBody,
+                            message: 'Connection to AI service was interrupted. Please try again.',
                         };
                     }
+
+                    if (error?.error?.statusCode) {
+                        if (error?.error?.statusCode === 403) {
+                            const rateLimitError = JSON.parse(
+                                error.error.responseBody,
+                            ) as UsageCheckResult;
+                            return {
+                                type: 'rate-limited',
+                                rateLimitResult: rateLimitError,
+                            };
+                        } else {
+                            return {
+                                type: 'error',
+                                message: error.error.responseBody,
+                            };
+                        }
+                    }
+                    const errorMessage = this.getErrorMessage(error);
+                    return { message: errorMessage, type: 'error' };
+                } catch (parseError) {
+                    console.error('Error parsing error:', parseError);
+                    return { message: 'An unknown error occurred', type: 'error' };
+                } finally {
+                    this.abortController = null;
                 }
-                const errorMessage = this.getErrorMessage(error);
-                return { message: errorMessage, type: 'error' };
-            } catch (error) {
-                console.error('Error parsing error', error);
-                return { message: 'An unknown error occurred', type: 'error' };
-            } finally {
-                this.abortController = null;
             }
         }
     }
@@ -180,9 +204,17 @@ class LlmManager {
             // const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.HAIKU, {
             //     requestType: StreamRequestType.SUGGESTIONS,
             // });
-            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_R1, {
+            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_V3, {
                 requestType: StreamRequestType.SUGGESTIONS,
             });
+
+            // Check if we're using DeepSeek model
+            const isDeepSeek = model.toString().includes('deepseek');
+
+            // If using DeepSeek, return empty suggestions as DeepSeek doesn't support function calling
+            if (isDeepSeek) {
+                return [];
+            }
 
             const { object } = await generateObject({
                 model,
@@ -202,9 +234,17 @@ class LlmManager {
             // const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.HAIKU, {
             //     requestType: StreamRequestType.SUMMARY,
             // });
-            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_R1, {
+            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_V3, {
                 requestType: StreamRequestType.SUMMARY,
             });
+
+            // Check if we're using DeepSeek model
+            const isDeepSeek = model.toString().includes('deepseek');
+
+            // If using DeepSeek, return a simple summary message
+            if (isDeepSeek) {
+                return 'Summary generation is not available with DeepSeek models.';
+            }
 
             const systemMessage: CoreSystemMessage = {
                 role: 'system',

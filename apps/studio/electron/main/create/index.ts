@@ -107,10 +107,16 @@ export class ProjectCreator {
         const response = await Chat.stream([systemMessage, ...messages], StreamRequestType.CREATE, {
             abortController: this.abortController,
             skipSystemPrompt: true,
+            forceProvider: 'deepseek', // Force using DeepSeek for this functionality
         });
 
-        if (response.type !== 'full') {
-            throw new Error('Failed to generate page. ' + this.getStreamErrorMessage(response));
+        if (!response || response.type !== 'full') {
+            throw new Error(
+                'Failed to generate page. ' +
+                    this.getStreamErrorMessage(
+                        response || { type: 'error', message: 'No response received' },
+                    ),
+            );
         }
 
         const content = extractCodeBlocks(response.text);
