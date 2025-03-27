@@ -1,6 +1,6 @@
 import { PromptProvider } from '@analogia/ai/src/prompt/provider';
 import { chatToolSet } from '@analogia/ai/src/tools';
-import { CLAUDE_MODELS, LLMProvider } from '@analogia/models';
+import { CLAUDE_MODELS, DEEPSEEK_MODELS, LLMProvider } from '@analogia/models';
 import {
     ChatSuggestionSchema,
     ChatSummarySchema,
@@ -73,12 +73,17 @@ class LlmManager {
                     role: 'system',
                     content: this.promptProvider.getSystemPrompt(process.platform),
                     experimental_providerMetadata: {
-                        anthropic: { cacheControl: { type: 'ephemeral' } },
+                        //anthropic: { cacheControl: { type: 'ephemeral' } },
+                        deepseek: { cacheControl: { type: 'ephemeral' } },
                     },
                 } as CoreSystemMessage;
                 messages = [systemMessage, ...messages];
             }
-            const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.SONNET, {
+
+            // const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.SONNET, {
+            //     requestType,
+            // });
+            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_R1, {
                 requestType,
             });
 
@@ -94,7 +99,7 @@ class LlmManager {
                 tools: chatToolSet,
                 maxTokens: 64000,
                 headers: {
-                    'anthropic-beta': 'output-128k-2025-02-19',
+                    'llm-beta': 'output-128k-2025-02-19',
                 },
             });
             const streamParts: TextStreamPart<ToolSet>[] = [];
@@ -172,7 +177,10 @@ class LlmManager {
 
     public async generateSuggestions(messages: CoreMessage[]): Promise<ChatSuggestion[]> {
         try {
-            const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.HAIKU, {
+            // const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.HAIKU, {
+            //     requestType: StreamRequestType.SUGGESTIONS,
+            // });
+            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_R1, {
                 requestType: StreamRequestType.SUGGESTIONS,
             });
 
@@ -191,7 +199,10 @@ class LlmManager {
 
     public async generateChatSummary(messages: CoreMessage[]): Promise<string | null> {
         try {
-            const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.HAIKU, {
+            // const model = await initModel(LLMProvider.ANTHROPIC, CLAUDE_MODELS.HAIKU, {
+            //     requestType: StreamRequestType.SUMMARY,
+            // });
+            const model = await initModel(LLMProvider.DEEPSEEK, DEEPSEEK_MODELS.DEEPSEEK_R1, {
                 requestType: StreamRequestType.SUMMARY,
             });
 
@@ -199,7 +210,8 @@ class LlmManager {
                 role: 'system',
                 content: this.promptProvider.getSummaryPrompt(),
                 experimental_providerMetadata: {
-                    anthropic: { cacheControl: { type: 'ephemeral' } },
+                    // anthropic: { cacheControl: { type: 'ephemeral' } },
+                    deepseek: { cacheControl: { type: 'ephemeral' } },
                 },
             };
 

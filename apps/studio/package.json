@@ -43,6 +43,7 @@
     },
     "dependencies": {
         "@ai-sdk/anthropic": "^1.1.17",
+        "@ai-sdk/deepseek": "^0.2.2",
         "@analogia/foundation": "*",
         "@analogia/supabase": "*",
         "@analogia/ui": "*",

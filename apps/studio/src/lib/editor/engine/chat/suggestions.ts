@@ -86,7 +86,8 @@ export class SuggestionManager {
             content:
                 'You are a React and Tailwind CSS expert. You will be given a generated website and the prompt the user used to describe it. Please generate 3 more prompts that they can use to further improve the page. Try to reply in the same language as the original prompt.',
             experimental_providerMetadata: {
-                anthropic: { cacheControl: { type: 'ephemeral' } },
+                // anthropic: { cacheControl: { type: 'ephemeral' } },
+                deepseek: { cacheControl: { type: 'ephemeral' } },
             },
         };
 
@@ -113,7 +114,8 @@ export class SuggestionManager {
             content:
                 'Given the conversation above, please give 3 more prompts the users can use to improve their website. Please make sure the prompts are realistic, detailed, and implementable within their current project. The suggestions are aimed to make the site better for the original intent. Try to answer in the same language as the user.',
             experimental_providerMetadata: {
-                anthropic: { cacheControl: { type: 'ephemeral' } },
+                // anthropic: { cacheControl: { type: 'ephemeral' } },
+                deepseek: { cacheControl: { type: 'ephemeral' } },
             },
         };
 

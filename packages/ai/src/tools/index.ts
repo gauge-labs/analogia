@@ -1,4 +1,5 @@
 import { anthropic } from '@ai-sdk/anthropic';
+import { deepseek } from '@ai-sdk/deepseek';
 import { tool, type ToolSet } from 'ai';
 import { readFile } from 'fs/promises';
 import { z } from 'zod';
@@ -63,6 +64,7 @@ interface FileOperationHandlers {
 
 export const getStrReplaceEditorTool = (handlers: FileOperationHandlers) => {
     const strReplaceEditorTool = anthropic.tools.textEditor_20250124({
+        // const strReplaceEditorTool = deepseek.tools.textEditor_20250124({
         execute: async ({
             command,
             path,

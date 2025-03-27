@@ -16,6 +16,7 @@ export enum ApiRoutes {
 export const BASE_PROXY_ROUTE = '/proxy';
 export enum ProxyRoutes {
     ANTHROPIC = '/anthropic',
+    DEEPSEEK = '/deepseek',
 }
 export const REDIRECT_APP_URL = 'https://analogia.ai/redirect-app';
 export const REQUEST_TYPE_HEADER = 'X-Analogia-Request-Type';

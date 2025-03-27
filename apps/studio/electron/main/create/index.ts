@@ -99,7 +99,8 @@ export class ProjectCreator {
             role: 'system',
             content: systemPrompt,
             experimental_providerMetadata: {
-                anthropic: { cacheControl: { type: 'ephemeral' } },
+                // anthropic: { cacheControl: { type: 'ephemeral' } },
+                deepseek: { cacheControl: { type: 'ephemeral' } },
             },
         };
 
