@@ -111,6 +111,11 @@ class LlmManager {
                 headers: {
                     'llm-beta': 'output-128k-2025-02-19',
                 },
+                onStepFinish: ({ toolResults }) => {
+                    for (const toolResult of toolResults) {
+                        this.emitMessagePart(toolResult);
+                    }
+                },
             });
             const streamParts: TextStreamPart<ToolSet>[] = [];
             for await (const partialStream of fullStream) {
