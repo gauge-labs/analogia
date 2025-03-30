@@ -19,7 +19,7 @@ export async function createProject(
             );
         }
 
-        onProgress(CreateStage.CLONING, `Cloning template...`);
+        onProgress(CreateStage.CLONING, `Generating now....`);
         await downloadTemplate(fullPath);
 
         // Install dependencies
