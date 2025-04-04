@@ -11,7 +11,7 @@
     },
     "workspaces": [
         "packages/*",
-        "apps/studio",
+        "apps/*",
         "tooling/*"
     ],
     "scripts": {
@@ -26,7 +26,8 @@
         "dev:studio": "bun --filter @analogia/studio dev",
         "build": "bun --filter '*' build",
         "ci:build": "bun run build:foundation && bun --filter '*' build",
-        "dev": "bun --filter '*' dev",
+        "dev": "bun --filter '!@analogia/web' dev",
+        "dev:web": "bun --filter @analogia/web dev",
         "test": "bun --filter '*' test",
         "format": "bun --filter '*' format",
         "lint": "bun --filter @analogia/studio lint",

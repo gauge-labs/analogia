@@ -1,10 +1,10 @@
-import { colors } from '@analogia/ui/tokens';
+import { useEditorEngine } from '@/components/Context';
+import type { RectDimensions } from '@/lib/editor/engine/overlay/rect';
+import { adaptRectToCanvas, adaptValueToCanvas } from '@/lib/editor/engine/overlay/utils';
 import { EditorAttributes } from '@analogia/models/constants';
-import type { RectDimensions } from '../../../../lib/editor/engine/overlay/rect';
+import { colors } from '@analogia/ui/tokens';
 import React, { memo, useMemo } from 'react';
 import { BaseRect } from './BaseRect';
-import { useEditorEngine } from '@/components/Context';
-import { adaptRectToCanvas, adaptValueToCanvas } from '@/lib/editor/engine/overlay/utils';
 
 interface Point {
     x: number;
@@ -405,7 +405,6 @@ export const MeasurementOverlay: React.FC<MeasurementProps> = memo(({ fromRect, 
                 strokeLinecap="round"
                 strokeLinejoin="round"
             />
-            {/* Distance lines and labels */}
 
             {/* Distance lines and labels */}
             {distances.map((distance, index) => {

@@ -1,0 +1,13 @@
+{
+  "extends": "@analogia/typescript/next-react.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "/*": ["./*"],
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "tests", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

@@ -9,6 +9,7 @@ import { observer } from 'mobx-react-lite';
 import { useState } from 'react';
 import type { FontFile } from './FontFiles';
 import FontFiles from './FontFiles';
+import { extractFontParts } from '@analogia/utility';
 
 interface UploadModalProps {
     isOpen: boolean;
@@ -19,27 +20,45 @@ interface UploadModalProps {
 const UploadModal = observer(({ isOpen, onOpenChange, onUpload }: UploadModalProps) => {
     const [fontFiles, setFontFiles] = useState<FontFile[]>([]);
 
-    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
-            const newFiles = Array.from(event.target.files).map((file) => ({
-                name: file.name.split('.')[0],
-                file,
-                weight: 'Regular (400)',
-                style: 'Regular',
-            }));
+            const newFiles = await Promise.all(
+                Array.from(event.target.files).map(async (file) => {
+                    const buffer = await file.arrayBuffer();
+                    const parts = extractFontParts(file.name);
+                    return {
+                        name: parts.family,
+                        file: {
+                            name: file.name,
+                            buffer: Array.from(new Uint8Array(buffer)),
+                        },
+                        weight: parts.weight,
+                        style: parts.style,
+                    };
+                }),
+            );
             setFontFiles([...fontFiles, ...newFiles]);
         }
     };
 
-    const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+    const handleDrop = async (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
         if (event.dataTransfer.files) {
-            const newFiles = Array.from(event.dataTransfer.files).map((file) => ({
-                name: file.name.split('.')[0],
-                file,
-                weight: 'Regular (400)',
-                style: 'Regular',
-            }));
+            const newFiles = await Promise.all(
+                Array.from(event.dataTransfer.files).map(async (file) => {
+                    const buffer = await file.arrayBuffer();
+                    const parts = extractFontParts(file.name);
+                    return {
+                        name: parts.family,
+                        file: {
+                            name: file.name,
+                            buffer: Array.from(new Uint8Array(buffer)),
+                        },
+                        weight: parts.weight,
+                        style: parts.style,
+                    };
+                }),
+            );
             setFontFiles([...fontFiles, ...newFiles]);
         }
     };
@@ -146,12 +165,15 @@ const UploadModal = observer(({ isOpen, onOpenChange, onUpload }: UploadModalPro
                             TTF, OTF, EOT and WOFF formats.
                         </p>
                         <input
+                            aria-label="Upload font files"
+                            title="Upload font files"
+                            placeholder="Upload font files"
                             id="font-upload"
                             type="file"
                             accept=".ttf,.otf,.eot,.woff,.woff2"
                             multiple
                             className="hidden"
-                            onChange={handleFileChange}
+                            onChange={(e) => handleFileChange(e)}
                         />
                     </div>
 
