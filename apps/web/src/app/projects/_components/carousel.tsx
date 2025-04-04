@@ -132,7 +132,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, onSlideChange }) => {
       setPreviewImages(images);
     };
     void loadPreviewImages().catch((error) => {
-      console.error('Failed to load preview images:', error);
+      console.error("Failed to load preview images:", error);
     });
   }, [slides]);
 

@@ -18,7 +18,7 @@ export default function Main() {
       setUser(user);
     };
     void fetchUser().catch((error) => {
-      console.error('Failed to fetch user:', error);
+      console.error("Failed to fetch user:", error);
     });
   }, []);
 
@@ -48,7 +48,7 @@ export default function Main() {
         <p className="text-lg">Cursor for Designers</p>
         <div className="flex flex-col gap-2">
           <label htmlFor="prompt-input">Enter your prompt</label>
-          <textarea 
+          <textarea
             id="prompt-input"
             className="h-32 w-96 rounded-md border-2 border-gray-300 p-4"
             placeholder="Type your prompt here..."

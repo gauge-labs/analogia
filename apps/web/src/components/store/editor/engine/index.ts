@@ -54,9 +54,8 @@ export class EditorEngine {
   // readonly group: GroupManager = new GroupManager(this);
   // readonly ast: AstManager = new AstManager(this);
 
-  constructor() // private projectsManager: ProjectsManager,
-  // private userManager: UserManager,
-  {
+  constructor() {
+    // private userManager: UserManager, // private projectsManager: ProjectsManager,
     makeAutoObservable(this);
     this.canvas = new CanvasManager();
     // this.chat = new ChatManager(this, this.projectsManager, this.userManager);
