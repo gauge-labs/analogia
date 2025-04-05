@@ -2,7 +2,6 @@ import { useEditorEngine } from '@/components/Context';
 import { EditorMode, LayersPanelTabValue } from '@/lib/models';
 import { Icons } from '@analogia/ui/icons';
 import { cn } from '@analogia/ui/utils';
-
 import { observer } from 'mobx-react-lite';
 import { useTranslation } from 'react-i18next';
 import AppsTab from './AppsTab';

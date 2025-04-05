@@ -1,10 +1,8 @@
 import * as fs from 'fs';
 import * as t from '@babel/types';
 import { getConfigPath, modifyTailwindConfig } from '../helpers';
-
 import type { Font } from '@analogia/models/assets';
 import { camelCase, kebabCase } from 'lodash';
-
 import { formatContent, writeFile } from '../../code/files';
 
 /**

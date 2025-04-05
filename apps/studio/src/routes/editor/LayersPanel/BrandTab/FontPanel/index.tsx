@@ -8,7 +8,6 @@ import { observer } from 'mobx-react-lite';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { FontFamily } from './FontFamily';
 import type { FontFile } from './FontFiles';
-
 import UploadModal from './UploadModal';
 
 const FontPanel = observer(() => {

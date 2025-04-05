@@ -1,7 +1,6 @@
 import { useEditorEngine } from '@/components/Context';
 import { BrandTabValue } from '@/lib/models';
 import { Button } from '@analogia/ui/button';
-
 import { observer } from 'mobx-react-lite';
 import ColorPanel from './ColorPanel';
 import FontPanel from './FontPanel';
