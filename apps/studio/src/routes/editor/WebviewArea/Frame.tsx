@@ -384,13 +384,6 @@ const Frame = observer(
             );
         }
 
-        async function selectFirstElement(webview: Electron.WebviewTag) {
-            const domEl = await webview.executeJavaScript(`window.api?.getFirstAnalogiaElement()`);
-            if (domEl) {
-                editorEngine.elements.click([domEl], webview);
-            }
-        }
-
         return (
             <div
                 className="flex flex-col fixed"

@@ -1,8 +1,10 @@
 import * as fs from 'fs';
 import * as t from '@babel/types';
 import { getConfigPath, modifyTailwindConfig } from '../helpers';
+
 import type { Font } from '@analogia/models/assets';
-import { camelCase } from 'lodash';
+import { camelCase, kebabCase } from 'lodash';
+
 import { formatContent, writeFile } from '../../code/files';
 
 /**
@@ -54,7 +56,7 @@ export async function updateTailwindFontConfig(projectRoot: string, font: Font):
                                 prop.key.name === font.id,
                         );
                         if (!fontExists) {
-                            const fontVarName = `var(--font-${font.id})`;
+                            const fontVarName = `var(--font-${kebabCase(font.id)})`;
                             const fallback = font.type === 'google' ? 'sans-serif' : 'monospace';
 
                             const fontArray = t.arrayExpression([
